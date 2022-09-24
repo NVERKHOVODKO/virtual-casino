@@ -1,0 +1,91 @@
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGames.resources
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesCups.resources
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormAccount.resources
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\FireSharp.dll
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.App.config
+C:\Users\user\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\FireSharp.dll
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.App.config
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormAccount.resources
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGames.resources
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesCups.resources
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesJew.resources
+C:\Users\user\Desktop\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesSapper.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\FireSharp.dll
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\Newtonsoft.Json.dll
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\System.Net.Http.Extensions.dll
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\System.Net.Http.Primitives.dll
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\Newtonsoft.Json.xml
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\System.Net.Http.Extensions.xml
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\System.Net.Http.Primitives.xml
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.App.config
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.SuggestedBindingRedirects.cache
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormAccount.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGames.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesCups.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesJew.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesSapper.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
