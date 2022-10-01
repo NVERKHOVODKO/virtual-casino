@@ -334,6 +334,42 @@
   <ItemGroup>
     <None Include="Resources\Sapper game icon1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map10.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

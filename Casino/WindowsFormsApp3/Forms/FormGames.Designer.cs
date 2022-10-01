@@ -37,7 +37,7 @@
             // 
             // panelGames
             // 
-            this.panelGames.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.casino;
+            this.panelGames.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panelGames.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelGames.Controls.Add(this.button1);
             this.panelGames.Controls.Add(this.buttonGames_2);

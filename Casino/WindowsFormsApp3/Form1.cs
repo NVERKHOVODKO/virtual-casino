@@ -4,8 +4,6 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using FireSharp.Interfaces;
-using FireSharp.Config;
 
 namespace WindowsFormsApp3
 {
@@ -86,7 +84,7 @@ namespace WindowsFormsApp3
 				}
 			}
 		}
-		private void OpenChildForm(Form childForm, object btnSender)
+		private void OpenChildForm(Form childForm, object btnSender, string titleText)
 		{
 			if (activeForm != null)
 				activeForm.Close();
@@ -99,7 +97,9 @@ namespace WindowsFormsApp3
 			this.panelDesktopPanel.Tag = childForm;
 			childForm.BringToFront();
 			childForm.Show();
-		}
+			labelMain.Text = titleText;
+
+        }
 
 		private void Reset()
 		{
@@ -115,6 +115,7 @@ namespace WindowsFormsApp3
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+
 			ActivateButton(sender);
 		}
 
@@ -124,7 +125,7 @@ namespace WindowsFormsApp3
 
 		private void buttonGames_Click(object sender, EventArgs e)
 		{
-			OpenChildForm(new Forms.FormGames(), sender);
+			OpenChildForm(new Forms.FormGames(), sender, "GAMES");
 		}
 
 		private void buttonLiders_Click(object sender, EventArgs e)
@@ -155,7 +156,7 @@ namespace WindowsFormsApp3
 
 		private void btnBalance_Click(object sender, EventArgs e)
 		{
-			OpenChildForm(new Forms.FormAccount(), sender);
+			OpenChildForm(new Forms.FormAccount(), sender, "ACCOUNT");
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -175,6 +176,7 @@ namespace WindowsFormsApp3
 
 		private void buttonClose_Click(object sender, EventArgs e)
 		{
+			soundPlayer.Stop();
 			if (activeForm != null)
 				activeForm.Close();
 			Reset();

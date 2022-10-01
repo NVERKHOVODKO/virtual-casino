@@ -32,18 +32,19 @@
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.panelAccount = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelAccount.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(96, 244);
+            this.button1.Location = new System.Drawing.Point(117, 244);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 63);
             this.button1.TabIndex = 0;
@@ -53,20 +54,23 @@
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxLogin.Location = new System.Drawing.Point(96, 106);
+            this.textBoxLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLogin.Location = new System.Drawing.Point(117, 106);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(180, 30);
+            this.textBoxLogin.Size = new System.Drawing.Size(180, 38);
             this.textBoxLogin.TabIndex = 1;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPassword.Location = new System.Drawing.Point(96, 164);
+            this.textBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxPassword.BackColor = System.Drawing.Color.White;
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPassword.Location = new System.Drawing.Point(117, 164);
             this.textBoxPassword.MaxLength = 15;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(180, 30);
+            this.textBoxPassword.Size = new System.Drawing.Size(180, 38);
             this.textBoxPassword.TabIndex = 2;
             // 
             // panelAccount
@@ -79,29 +83,32 @@
             this.panelAccount.TabIndex = 3;
             this.panelAccount.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAccount_Paint);
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Location = new System.Drawing.Point(31, 344);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(313, 32);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Already have account? Sign in.";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.textBoxLogin);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.textBoxPassword);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(227, 12);
+            this.panel1.Location = new System.Drawing.Point(183, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 392);
+            this.panel1.Size = new System.Drawing.Size(412, 438);
             this.panel1.TabIndex = 4;
             this.panel1.Tag = "";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Location = new System.Drawing.Point(52, 344);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(313, 32);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Already have account? Sign in.";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // FormAccount
             // 

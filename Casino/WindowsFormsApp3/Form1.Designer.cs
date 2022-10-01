@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.labelLogo = new System.Windows.Forms.Label();
@@ -76,11 +77,12 @@
             this.labelLogo.AutoSize = true;
             this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLogo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelLogo.Location = new System.Drawing.Point(43, 22);
+            this.labelLogo.Location = new System.Drawing.Point(39, 26);
             this.labelLogo.Name = "labelLogo";
-            this.labelLogo.Size = new System.Drawing.Size(116, 29);
+            this.labelLogo.Size = new System.Drawing.Size(127, 29);
             this.labelLogo.TabIndex = 0;
-            this.labelLogo.Text = "Kurva Bet";
+            this.labelLogo.Text = "More Gold";
+            this.labelLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelLogo.Click += new System.EventHandler(this.labelLogo_Click);
             // 
             // btnAccount
@@ -154,7 +156,7 @@
             this.labelMain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelMain.AutoSize = true;
             this.labelMain.Font = new System.Drawing.Font("Malgun Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMain.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelMain.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelMain.Location = new System.Drawing.Point(413, 18);
             this.labelMain.Name = "labelMain";
             this.labelMain.Size = new System.Drawing.Size(117, 45);
@@ -209,8 +211,9 @@
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "More Gold";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

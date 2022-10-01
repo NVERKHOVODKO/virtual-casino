@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 
 namespace WindowsFormsApp3.Forms
 {
@@ -22,12 +23,11 @@ namespace WindowsFormsApp3.Forms
         static string SONG_2 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_2.wav";
         static string SONG_3 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_3.wav";
         static string SONG;
-        private Form activeForm;
 
 
         private void choiseSong()
         {
-            switch (rnd.Next(1, 4))
+            switch (rnd.Next(3, 3))
             {
                 case 1:
                     SONG = SONG_1;
@@ -47,7 +47,7 @@ namespace WindowsFormsApp3.Forms
             InitializeComponent();
             Player.Play(SONG);
             pictureBomb1.Visible = false;
-			labelBet.Visible = false;
+			labelBet.Visible = true;
 			panelWin.Visible = false;
 			buttonTake.Visible = false;
         }
@@ -128,11 +128,11 @@ namespace WindowsFormsApp3.Forms
 			{
 				bet = tempBet;
 				buttonStart.Visible = false;
-				labelTitle.Visible = false;
                 bet = Int32.Parse(textBoxBet.Text);
 				textBoxBet.Visible = false;
 				labelBet.Visible = true;
 				buttonTake.Visible = true;
+                labelBet.Text = tempBet.ToString();
             }
         }
 
@@ -161,6 +161,31 @@ namespace WindowsFormsApp3.Forms
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelWin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -197,7 +222,7 @@ namespace WindowsFormsApp3.Forms
             {
                 int random = rnd.Next(1, 4);
                 pictureBomb1.Visible = true;
-
+          
                 switch (random)
                 {
                     case 1:
@@ -213,6 +238,7 @@ namespace WindowsFormsApp3.Forms
                 btn1.Dispose();
                 btn2.Dispose();
                 btn3.Dispose();
+
                 switch (numOfLine)
                 {
                     case 1:
@@ -243,19 +269,15 @@ namespace WindowsFormsApp3.Forms
                 }
                 if (random == numOfButton)
                 {
+                    labelBet.Dispose();
                     buttonTake.Dispose();
                     isFifthlineActive = false;
                     isFourthlineActive = false;
                     isThirdlineActive = false;
                     isSecondlineActive = false;
                     label1.Text = "You lose!";
+                    label1.Visible = true;
                     panelWin.Visible = true;
-                    labelBet.Dispose();
-                    Player.Stop();
-                    Player.Play(BOMB);
-                    Thread.Sleep(4000);
-                    Player.Stop();
-                    Player.Play(SONG);
                     labelWin.Visible = false;
                 }
                 else
@@ -263,6 +285,21 @@ namespace WindowsFormsApp3.Forms
                     labelBet.Visible = true;
                     labelBet.Text = bet.ToString();
                 }
+                if (random == numOfButton)
+                {
+                    Player.Stop();
+                    Player.Play(BOMB);
+                    Thread.Sleep(3500);
+                    Player.Stop();
+                    Player.Play(SONG);
+                }
+            }
+            else
+            {
+                if(bet < 1)
+                    MessageBox.Show("Place a bet");
+                else
+                    MessageBox.Show("Unlock bottom buttons");
             }
         }
 

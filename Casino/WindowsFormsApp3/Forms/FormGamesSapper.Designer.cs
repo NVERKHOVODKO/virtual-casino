@@ -30,14 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGamesSapper));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelBet = new System.Windows.Forms.Label();
             this.buttonTake = new System.Windows.Forms.Button();
             this.panelWin = new System.Windows.Forms.Panel();
             this.buttonTryAgain = new System.Windows.Forms.Button();
             this.labelWin = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelBet = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxBet = new System.Windows.Forms.TextBox();
             this.panelBoxes = new System.Windows.Forms.Panel();
             this.pictureBomb1 = new System.Windows.Forms.PictureBox();
@@ -64,13 +63,12 @@
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.sea;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.labelBet);
             this.panel2.Controls.Add(this.buttonTake);
             this.panel2.Controls.Add(this.panelWin);
-            this.panel2.Controls.Add(this.labelBet);
             this.panel2.Controls.Add(this.buttonStart);
-            this.panel2.Controls.Add(this.labelTitle);
             this.panel2.Controls.Add(this.textBoxBet);
             this.panel2.Controls.Add(this.panelBoxes);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,6 +77,18 @@
             this.panel2.Size = new System.Drawing.Size(800, 450);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // labelBet
+            // 
+            this.labelBet.AutoSize = true;
+            this.labelBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBet.ForeColor = System.Drawing.Color.Red;
+            this.labelBet.Location = new System.Drawing.Point(555, 73);
+            this.labelBet.Name = "labelBet";
+            this.labelBet.Size = new System.Drawing.Size(120, 69);
+            this.labelBet.TabIndex = 10;
+            this.labelBet.Text = "Bet";
+            this.labelBet.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // buttonTake
             // 
@@ -102,10 +112,11 @@
             this.panelWin.Controls.Add(this.buttonTryAgain);
             this.panelWin.Controls.Add(this.labelWin);
             this.panelWin.Controls.Add(this.label1);
-            this.panelWin.Location = new System.Drawing.Point(425, 21);
+            this.panelWin.Location = new System.Drawing.Point(436, 23);
             this.panelWin.Name = "panelWin";
-            this.panelWin.Size = new System.Drawing.Size(352, 404);
+            this.panelWin.Size = new System.Drawing.Size(370, 410);
             this.panelWin.TabIndex = 8;
+            this.panelWin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelWin_Paint);
             // 
             // buttonTryAgain
             // 
@@ -128,7 +139,7 @@
             this.labelWin.Font = new System.Drawing.Font("Leelawadee UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWin.Location = new System.Drawing.Point(97, 139);
             this.labelWin.Name = "labelWin";
-            this.labelWin.Size = new System.Drawing.Size(146, 46);
+            this.labelWin.Size = new System.Drawing.Size(143, 45);
             this.labelWin.TabIndex = 1;
             this.labelWin.Text = "You win:";
             // 
@@ -138,24 +149,12 @@
             this.label1.BackColor = System.Drawing.Color.OldLace;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(21, 44);
+            this.label1.Location = new System.Drawing.Point(39, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(290, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Congratulations!";
-            // 
-            // labelBet
-            // 
-            this.labelBet.AutoSize = true;
-            this.labelBet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelBet.Image = global::WindowsFormsApp3.Properties.Resources.wood_button1;
-            this.labelBet.Location = new System.Drawing.Point(532, 23);
-            this.labelBet.Name = "labelBet";
-            this.labelBet.Size = new System.Drawing.Size(0, 69);
-            this.labelBet.TabIndex = 7;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonStart
             // 
@@ -172,18 +171,6 @@
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTitle.ForeColor = System.Drawing.Color.Yellow;
-            this.labelTitle.Location = new System.Drawing.Point(476, 21);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(321, 54);
-            this.labelTitle.TabIndex = 4;
-            this.labelTitle.Text = "Place your bet";
-            // 
             // textBoxBet
             // 
             this.textBoxBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -196,7 +183,7 @@
             // 
             // panelBoxes
             // 
-            this.panelBoxes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelBoxes.BackgroundImage")));
+            this.panelBoxes.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.map10;
             this.panelBoxes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelBoxes.Controls.Add(this.pictureBomb1);
             this.panelBoxes.Controls.Add(this.btn5_2);
@@ -216,7 +203,7 @@
             this.panelBoxes.Controls.Add(this.btn3_3);
             this.panelBoxes.Location = new System.Drawing.Point(42, 21);
             this.panelBoxes.Name = "panelBoxes";
-            this.panelBoxes.Size = new System.Drawing.Size(363, 406);
+            this.panelBoxes.Size = new System.Drawing.Size(370, 410);
             this.panelBoxes.TabIndex = 3;
             this.panelBoxes.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -225,7 +212,7 @@
             this.pictureBomb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.pictureBomb1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.bomb5;
             this.pictureBomb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBomb1.Location = new System.Drawing.Point(266, 321);
+            this.pictureBomb1.Location = new System.Drawing.Point(249, 321);
             this.pictureBomb1.Name = "pictureBomb1";
             this.pictureBomb1.Size = new System.Drawing.Size(70, 70);
             this.pictureBomb1.TabIndex = 21;
@@ -471,12 +458,11 @@
         private System.Windows.Forms.Panel panelBet;
         private System.Windows.Forms.TextBox textBoxBet;
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Label labelBet;
         private System.Windows.Forms.Panel panelWin;
         private System.Windows.Forms.Label labelWin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonTake;
         private System.Windows.Forms.Button buttonTryAgain;
+        private System.Windows.Forms.Label labelBet;
     }
 }
