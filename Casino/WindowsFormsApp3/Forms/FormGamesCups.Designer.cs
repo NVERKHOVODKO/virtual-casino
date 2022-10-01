@@ -29,58 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGamesCups));
-            this.panelCup2 = new System.Windows.Forms.Panel();
-            this.panelCup3 = new System.Windows.Forms.Panel();
-            this.panelCup1 = new System.Windows.Forms.Panel();
-            this.btnStart = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelBet = new System.Windows.Forms.Label();
             this.labelBalance = new System.Windows.Forms.Label();
             this.panelEnterBet = new System.Windows.Forms.Panel();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.panelCup2 = new System.Windows.Forms.Panel();
+            this.panelCup3 = new System.Windows.Forms.Panel();
+            this.panelCup1 = new System.Windows.Forms.Panel();
             this.panelEnterBet.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelCup2
-            // 
-            this.panelCup2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCup2.BackgroundImage")));
-            this.panelCup2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelCup2.Location = new System.Drawing.Point(350, 245);
-            this.panelCup2.Name = "panelCup2";
-            this.panelCup2.Size = new System.Drawing.Size(150, 150);
-            this.panelCup2.TabIndex = 2;
-            // 
-            // panelCup3
-            // 
-            this.panelCup3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCup3.BackgroundImage")));
-            this.panelCup3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelCup3.Location = new System.Drawing.Point(130, 245);
-            this.panelCup3.Name = "panelCup3";
-            this.panelCup3.Size = new System.Drawing.Size(150, 150);
-            this.panelCup3.TabIndex = 2;
-            // 
-            // panelCup1
-            // 
-            this.panelCup1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCup1.BackgroundImage")));
-            this.panelCup1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelCup1.Location = new System.Drawing.Point(570, 245);
-            this.panelCup1.Name = "panelCup1";
-            this.panelCup1.Size = new System.Drawing.Size(150, 150);
-            this.panelCup1.TabIndex = 1;
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.Red;
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStart.Location = new System.Drawing.Point(18, 124);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(178, 56);
-            this.btnStart.TabIndex = 3;
-            this.btnStart.Text = "Go!";
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // textBox1
             // 
@@ -125,12 +83,55 @@
             this.panelEnterBet.Size = new System.Drawing.Size(210, 199);
             this.panelEnterBet.TabIndex = 7;
             // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.Red;
+            this.btnStart.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.Jew_icon1;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnStart.Location = new System.Drawing.Point(18, 124);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(178, 56);
+            this.btnStart.TabIndex = 3;
+            this.btnStart.Text = "Go!";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // panelCup2
+            // 
+            this.panelCup2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCup2.BackgroundImage")));
+            this.panelCup2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelCup2.Location = new System.Drawing.Point(350, 245);
+            this.panelCup2.Name = "panelCup2";
+            this.panelCup2.Size = new System.Drawing.Size(150, 150);
+            this.panelCup2.TabIndex = 2;
+            // 
+            // panelCup3
+            // 
+            this.panelCup3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCup3.BackgroundImage")));
+            this.panelCup3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelCup3.Location = new System.Drawing.Point(130, 245);
+            this.panelCup3.Name = "panelCup3";
+            this.panelCup3.Size = new System.Drawing.Size(150, 150);
+            this.panelCup3.TabIndex = 2;
+            // 
+            // panelCup1
+            // 
+            this.panelCup1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCup1.BackgroundImage")));
+            this.panelCup1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelCup1.Location = new System.Drawing.Point(570, 245);
+            this.panelCup1.Name = "panelCup1";
+            this.panelCup1.Size = new System.Drawing.Size(150, 150);
+            this.panelCup1.TabIndex = 1;
+            // 
             // FormGamesCups
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(898, 577);
             this.Controls.Add(this.panelEnterBet);
             this.Controls.Add(this.labelBalance);
             this.Controls.Add(this.panelCup2);

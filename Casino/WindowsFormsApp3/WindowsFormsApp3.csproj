@@ -370,6 +370,54 @@
   <ItemGroup>
     <None Include="Resources\map10.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fruits icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jew icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jew icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jew icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jew icon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bell icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fruits icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bhardvaj-lukhi-1-edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sci_fi_corridor_tunnel_169861_1280x720.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saturn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shema.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saturn1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

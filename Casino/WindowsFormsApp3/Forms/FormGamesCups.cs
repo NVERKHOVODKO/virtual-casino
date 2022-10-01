@@ -65,7 +65,7 @@ namespace WindowsFormsApp3.Forms
                 {
                     Thread.Sleep(1);
                     panel.Location = new Point(x1, y1);
-                    x1 -= 20;
+                    x1 -= 30;
                 }
             else if (x1 < x2) 
                 while (x2 > x1)
@@ -76,26 +76,53 @@ namespace WindowsFormsApp3.Forms
                 }
         }
 
+        private void moveCup(Panel panel)
+        {
+            Random random = new Random();
+            Point point1 = new Point(570, 245);
+            Point point2 = new Point(340, 245);
+            Point point3 = new Point(130, 245);
+
+            switch (random.Next(1, 4))
+            {
+                case 1:
+                    changeLocation(panel, point1);
+                    break;
+                case 2:
+                    changeLocation(panel, point2);
+                    break;
+                case 3:
+                    changeLocation(panel, point3);
+                    break;
+            }
+        }
+
         private void moveCups()
         {
 
             //создать массив п1 -п2 и менять стакны местами
-            Point point1 = new Point(570, 245);
+            /*Point point1 = new Point(570, 245);
             Point point2 = new Point(340, 245);
-            Point point3 = new Point(130, 245);
+            Point point3 = new Point(130, 245);*/
 
             /*panelCup1.Location = point1;
             panelCup2.Location = point2;
             panelCup3.Location = point3;*/
 
-            changeLocation(panelCup1, point3);
-            changeLocation(panelCup3, point1);
-            changeLocation(panelCup2, point3);
-            changeLocation(panelCup1, point1);
-            changeLocation(panelCup2, point2);
-            changeLocation(panelCup3, point1);
-            changeLocation(panelCup2, point2);
-            changeLocation(panelCup1, point3);
+            for (int i = 0; i < 200; i++)
+            {
+                moveCup(panelCup1);
+                moveCup(panelCup2);
+                moveCup(panelCup3);
+            }
+            /*changeLocation(panelCup1, point3);
+             changeLocation(panelCup3, point1);
+             changeLocation(panelCup2, point3);
+             changeLocation(panelCup1, point1);
+             changeLocation(panelCup2, point2);
+             changeLocation(panelCup3, point1);
+             changeLocation(panelCup2, point2);
+             changeLocation(panelCup1, point3);*/
 
         }
     }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,65 +14,133 @@ namespace WindowsFormsApp3.Forms
 {
     public partial class FormGamesJew : Form
     {
-        string picture1 = @"c:\\Users\\user\\Desktop\\Casino\\Bell icon.png";
-        string picture2 = @"c:\\Users\\user\\Desktop\\Casino\\Coin icon.png";
-        string picture3 = @"c:\\Users\\user\\Desktop\\Casino\\Jew icon.png";
+        static string SONG_PHONK_1 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\phonk_1.wav";
+        static string SONG_PHONK_2 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\phonk_2.wav";
+
         Random rnd = new Random();
+        int a, b, c, move, bet;
+
+        private void textBoxBet_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bet = Int32.Parse(textBoxBet.Text);
+            }
+            catch
+            {
+                textBoxBet.Text = "";
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         public FormGamesJew()
         {
+
             InitializeComponent();
+            pictureBox1.Size = new Size(200, 200);
+            pictureBox2.Size = new Size(200, 200);
+            pictureBox3.Size = new Size(200, 200);
+
+            Player.Play(SONG_PHONK_2);
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < 100; i++)
-            {
-                pictureBox1.Image = Image.FromFile(picture1);
-                Thread.Sleep(10);
-
-                pictureBox1.Image = Image.FromFile(picture2);
-                Thread.Sleep(10);
-
-                pictureBox1.Image = Image.FromFile(picture3);
-                /*switch (rnd.Next(1, 4))
-                {
-                    case 1:
-                        pictureBox1.BackgroundImage = Image.FromFile(picture1);
-                        break;
-                    case 2:
-                        pictureBox1.BackgroundImage = Image.FromFile(picture2);
-                        break;
-                    case 3:
-                        pictureBox1.BackgroundImage = Image.FromFile(picture3);
-                        break;
-                }
-                switch (rnd.Next(1, 4))
-                {
-                    case 1:
-                        pictureBox2.BackgroundImage = Image.FromFile(picture1);
-                        break;
-                    case 2:
-                        pictureBox2.BackgroundImage = Image.FromFile(picture2);
-                        break;
-                    case 3:
-                        pictureBox2.BackgroundImage = Image.FromFile(picture3);
-                        break;
-                }
-                switch (rnd.Next(1, 4))
-                {
-                    case 1:
-                        pictureBox3.BackgroundImage = Image.FromFile(picture1);
-                        break;
-                    case 2:
-                        pictureBox3.BackgroundImage = Image.FromFile(picture2);
-                        break;
-                    case 3:
-                        pictureBox3.BackgroundImage = Image.FromFile(picture3);
-                        break;
-                }*/
-                Thread.Sleep(10);
+            if (textBoxBet.Text != "")
+			{
+                bet = Int32.Parse(textBoxBet.Text);
             }
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(move != 5)
+            {
+                move++;
+                a = rnd.Next(4);
+                b = rnd.Next(4);
+                c = rnd.Next(4);
+
+                switch (a)
+                {
+                    case 1:
+                        pictureBox1.Image = Properties.Resources.sun;
+                        break;
+                    case 2:
+                        pictureBox1.Image = Properties.Resources.moon;
+                        break;
+                    case 3:
+                        pictureBox1.Image = Properties.Resources.saturn;
+                        break;
+                }
+                switch (b)
+                {
+                    case 1:
+                        pictureBox2.Image = Properties.Resources.sun;
+                        break;
+                    case 2:
+                        pictureBox2.Image = Properties.Resources.moon;
+                        break;
+                    case 3:
+                        pictureBox2.Image = Properties.Resources.saturn;
+                        break;
+                }
+                switch (c)
+                {
+                    case 1:
+                        pictureBox3.Image = Properties.Resources.sun;
+                        break;
+                    case 2:
+                        pictureBox3.Image = Properties.Resources.moon;
+                        break;
+                    case 3:
+                        pictureBox3.Image = Properties.Resources.saturn;
+                        break;
+                }
+            }
+            else
+            {
+                timer1.Enabled = false;
+                move = 0;
+            }
+            if(move == 5 && pictureBox1.Image == pictureBox2.Image && pictureBox1.Image == pictureBox3.Image)
+            {
+                Image image1 = pictureBox1.Image;
+                Image image2 = pictureBox2.Image;
+                Image image3 = pictureBox3.Image;
+
+                pictureBox1.Image = Properties.Resources.red;
+                pictureBox2.Image = Properties.Resources.red;
+                pictureBox3.Image = Properties.Resources.red;
+                
+                /*
+                Thread.Sleep(10);
+                pictureBox1.Image = image1;
+                pictureBox2.Image = image2;
+                pictureBox3.Image = image3;
+*/
+
+                if (pictureBox1.Image == Properties.Resources.sun)
+                {
+                    MessageBox.Show("You win " + bet * 30);
+                }
+                MessageBox.Show("You win " + bet * 10);
+            }else if(move == 5)
+            {
+                MessageBox.Show("You lose");
+
+            }
+
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApp3
 {
     internal class Player
@@ -21,11 +22,8 @@ namespace WindowsFormsApp3
             catch
             {
                 MessageBox.Show("Can't find music" + fileName);
-            }
-            
+            }            
         }
-
-
 
         public static void Stop()
         {

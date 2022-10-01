@@ -43,6 +43,7 @@ namespace WindowsFormsApp3.Forms
 
         public FormGamesSapper()
 		{
+
             choiseSong();
             InitializeComponent();
             Player.Play(SONG);
@@ -125,9 +126,7 @@ namespace WindowsFormsApp3.Forms
 		private void buttonStart_Click(object sender, EventArgs e)
 		{
             if (textBoxBet.Text != "" && (tempBet > 0 || tempBet < 1000))
-			{
-				bet = tempBet;
-				buttonStart.Visible = false;
+            {
                 bet = Int32.Parse(textBoxBet.Text);
 				textBoxBet.Visible = false;
 				labelBet.Visible = true;
@@ -138,14 +137,31 @@ namespace WindowsFormsApp3.Forms
 
 		private void buttonTake_Click(object sender, EventArgs e)
 		{
-			buttonTake.Dispose();
-			labelBet.Dispose();
+			buttonTake.Visible = false;
+			labelBet.Visible = false;
 			labelWin.Text = "You win " + bet.ToString();
 			panelWin.Visible = true;
 		}
 
         private void buttonTryAgain_Click(object sender, EventArgs e)
         {
+            btn1_1.Visible = true;
+            btn1_2.Visible = true;
+            btn1_3.Visible = true;
+            btn2_1.Visible = true;
+            btn2_2.Visible = true;
+            btn2_3.Visible = true;
+            btn3_1.Visible = true;
+            btn3_2.Visible = true;
+            btn3_3.Visible = true;
+            btn4_1.Visible = true;
+            btn4_2.Visible = true;
+            btn4_3.Visible = true;
+            btn5_1.Visible = true;
+            btn5_2.Visible = true;
+            btn5_3.Visible = true;
+            pictureBomb1.Visible = false;
+            panelBet.Visible = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -235,9 +251,9 @@ namespace WindowsFormsApp3.Forms
                         pictureBomb1.Location = btn3.Location;
                         break;
                 }
-                btn1.Dispose();
-                btn2.Dispose();
-                btn3.Dispose();
+                btn1.Visible = false;
+                btn2.Visible = false;
+                btn3.Visible = false;
 
                 switch (numOfLine)
                 {
@@ -261,16 +277,15 @@ namespace WindowsFormsApp3.Forms
                     case 5:
                         bet /= 4;
                         bet *= 5;
-                        buttonTake.Dispose();
-                        labelBet.Dispose();
+                        buttonTake.Visible = false;
+                        labelBet.Visible = false;
                         labelWin.Text = "You win " + bet.ToString();
                         panelWin.Visible = true;
                         break;
                 }
                 if (random == numOfButton)
                 {
-                    labelBet.Dispose();
-                    buttonTake.Dispose();
+                    buttonTake.Visible = false;
                     isFifthlineActive = false;
                     isFourthlineActive = false;
                     isThirdlineActive = false;
@@ -287,11 +302,11 @@ namespace WindowsFormsApp3.Forms
                 }
                 if (random == numOfButton)
                 {
-                    Player.Stop();
+                    /*Player.Stop();
                     Player.Play(BOMB);
                     Thread.Sleep(3500);
                     Player.Stop();
-                    Player.Play(SONG);
+                    Player.Play(SONG);*/
                 }
             }
             else
@@ -301,6 +316,7 @@ namespace WindowsFormsApp3.Forms
                 else
                     MessageBox.Show("Unlock bottom buttons");
             }
+        
         }
 
         private void btn1_2_Click(object sender, EventArgs e)
