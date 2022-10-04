@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FireSharp.Interfaces;
 using FireSharp.Config;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp3.Forms
 {
@@ -55,16 +56,22 @@ namespace WindowsFormsApp3.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Account account = new Account()
-            {
-                Login = textBoxLogin.Text,
-                Password = textBoxPassword.Text,
-                Balance = 0,
-                Access = 1
-            };
-            /*var setter = account.Set("AccountList/", account);
-            MessageBox.Show("Success");*/
+            String loginUser = textBoxLogin.Text;
+            String passwordUser = textBoxPassword.Text;
 
+
+            Database database = new Database();
+            DataTable datatable = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM accounts WHERE login = loginUser AND password = passwordUser", database.getConnection());
+
+            adapter.SelectCommand = cmd;
+            adapter.Fill(datatable);
+
+            if (datatable.Rows.Count > 0)
+                MessageBox.Show("+"); 
+            MessageBox.Show("-");
         }
 
         private void panelAccount_Paint(object sender, PaintEventArgs e)

@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
+
 
 
 namespace WindowsFormsApp3
 {
     internal class Player
     {
-        static System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
-
+        static MediaPlayer player = new MediaPlayer();
+   
         public static void Play(string fileName)
         {
             try
             {
-                soundPlayer.SoundLocation = fileName;
-                soundPlayer.Play();
+                player.Open(new Uri(fileName));
+                player.Play();
             }
             catch
             {
@@ -27,7 +30,7 @@ namespace WindowsFormsApp3
 
         public static void Stop()
         {
-            soundPlayer.Stop();
+            player.Stop();
         }
         
     }

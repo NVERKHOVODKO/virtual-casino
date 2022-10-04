@@ -54,7 +54,7 @@ namespace WindowsFormsApp3.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormGamesJew(), sender);
+            OpenChildForm(new Forms.FormGamesWildWest(), sender);
         }
 
         private void buttonGames_2_Click(object sender, EventArgs e)

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace WindowsFormsApp3.Forms
         static string SONG_3 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_3.wav";
         static string SONG;
 
+        
 
         private void choiseSong()
         {
@@ -161,7 +163,7 @@ namespace WindowsFormsApp3.Forms
             btn5_2.Visible = true;
             btn5_3.Visible = true;
             pictureBomb1.Visible = false;
-            panelBet.Visible = false;
+            //panelBet.Visible = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -202,6 +204,11 @@ namespace WindowsFormsApp3.Forms
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBomb1_Click(object sender, EventArgs e)
         {
 
         }
@@ -302,11 +309,9 @@ namespace WindowsFormsApp3.Forms
                 }
                 if (random == numOfButton)
                 {
-                    /*Player.Stop();
-                    Player.Play(BOMB);
-                    Thread.Sleep(3500);
-                    Player.Stop();
-                    Player.Play(SONG);*/
+                    MediaPlayer bomb = new MediaPlayer();
+                    bomb.Open(new Uri(BOMB));
+                    bomb.Play();
                 }
             }
             else

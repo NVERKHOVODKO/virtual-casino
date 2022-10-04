@@ -217,6 +217,7 @@
             this.pictureBomb1.Size = new System.Drawing.Size(70, 70);
             this.pictureBomb1.TabIndex = 21;
             this.pictureBomb1.TabStop = false;
+            this.pictureBomb1.Click += new System.EventHandler(this.pictureBomb1_Click);
             // 
             // btn5_2
             // 
