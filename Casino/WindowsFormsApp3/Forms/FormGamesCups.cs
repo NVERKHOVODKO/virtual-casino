@@ -51,9 +51,18 @@ namespace WindowsFormsApp3.Forms
             if (textBox1.Text != "")
                 panelEnterBet.Visible = false;
 
-            moveCups();
+            System.Timers.Timer myTimer = new System.Timers.Timer(17);
+            myTimer.Elapsed += new System.Timers.ElapsedEventHandler(myTimer_Elapsed);
+            myTimer.Start();
+            //moveCups();
             //moving
 
+        }
+        void myTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            panelCup3.Invoke((Action)(() => {
+                panelCup3.Location = new Point(panelCup3.Location.X + 10, panelCup3.Location.Y);
+            }));
         }
 
 
@@ -109,12 +118,12 @@ namespace WindowsFormsApp3.Forms
             panelCup2.Location = point2;
             panelCup3.Location = point3;*/
 
-            for (int i = 0; i < 200; i++)
+            /*for (int i = 0; i < 200; i++)
             {
                 moveCup(panelCup1);
                 moveCup(panelCup2);
                 moveCup(panelCup3);
-            }
+            }*/
             /*changeLocation(panelCup1, point3);
              changeLocation(panelCup3, point1);
              changeLocation(panelCup2, point3);
@@ -123,6 +132,16 @@ namespace WindowsFormsApp3.Forms
              changeLocation(panelCup3, point1);
              changeLocation(panelCup2, point2);
              changeLocation(panelCup1, point3);*/
+
+        }
+
+        private void panelCup3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormGamesCups_Load(object sender, EventArgs e)
+        {
 
         }
     }

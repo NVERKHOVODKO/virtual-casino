@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGamesSapper));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.labelBet = new System.Windows.Forms.Label();
-            this.buttonTake = new System.Windows.Forms.Button();
-            this.panelWin = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelLogInfo = new System.Windows.Forms.Panel();
+            this.panelInfo = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.buttonTryAgain = new System.Windows.Forms.Button();
-            this.labelWin = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.buttonTake = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.textBoxBet = new System.Windows.Forms.TextBox();
             this.panelBoxes = new System.Windows.Forms.Panel();
@@ -56,7 +56,7 @@
             this.btn4_2 = new System.Windows.Forms.Button();
             this.btn3_3 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            this.panelWin.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panelBoxes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBomb1)).BeginInit();
             this.SuspendLayout();
@@ -65,30 +65,75 @@
             // 
             this.panel2.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.sea;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.labelBet);
-            this.panel2.Controls.Add(this.buttonTake);
-            this.panel2.Controls.Add(this.panelWin);
-            this.panel2.Controls.Add(this.buttonStart);
-            this.panel2.Controls.Add(this.textBoxBet);
-            this.panel2.Controls.Add(this.panelBoxes);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panelLogInfo);
+            this.panel2.Controls.Add(this.panelInfo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 450);
+            this.panel2.Size = new System.Drawing.Size(1137, 727);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // labelBet
+            // panel3
             // 
-            this.labelBet.AutoSize = true;
-            this.labelBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBet.ForeColor = System.Drawing.Color.Red;
-            this.labelBet.Location = new System.Drawing.Point(555, 73);
-            this.labelBet.Name = "labelBet";
-            this.labelBet.Size = new System.Drawing.Size(120, 69);
-            this.labelBet.TabIndex = 10;
-            this.labelBet.Text = "Bet";
-            this.labelBet.Click += new System.EventHandler(this.label2_Click_1);
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wooden_board;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.panelBoxes);
+            this.panel3.Controls.Add(this.buttonTryAgain);
+            this.panel3.Controls.Add(this.buttonTake);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.buttonStart);
+            this.panel3.Controls.Add(this.textBoxBet);
+            this.panel3.Location = new System.Drawing.Point(203, 92);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(800, 500);
+            this.panel3.TabIndex = 15;
+            // 
+            // panelLogInfo
+            // 
+            this.panelLogInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelLogInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.panelLogInfo.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.infIcon;
+            this.panelLogInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLogInfo.Location = new System.Drawing.Point(1037, 627);
+            this.panelLogInfo.Name = "panelLogInfo";
+            this.panelLogInfo.Size = new System.Drawing.Size(100, 100);
+            this.panelLogInfo.TabIndex = 14;
+            // 
+            // panelInfo
+            // 
+            this.panelInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.panelInfo.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.sapperInfo1;
+            this.panelInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelInfo.Location = new System.Drawing.Point(1074, 402);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(470, 300);
+            this.panelInfo.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(527, 39);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(219, 213);
+            this.panel1.TabIndex = 11;
+            // 
+            // buttonTryAgain
+            // 
+            this.buttonTryAgain.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wood_button;
+            this.buttonTryAgain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTryAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTryAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTryAgain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttonTryAgain.Location = new System.Drawing.Point(527, 381);
+            this.buttonTryAgain.Name = "buttonTryAgain";
+            this.buttonTryAgain.Size = new System.Drawing.Size(219, 68);
+            this.buttonTryAgain.TabIndex = 10;
+            this.buttonTryAgain.Text = "Try Again";
+            this.buttonTryAgain.UseVisualStyleBackColor = true;
+            this.buttonTryAgain.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonTake
             // 
@@ -97,64 +142,13 @@
             this.buttonTake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTake.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonTake.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonTake.Location = new System.Drawing.Point(527, 359);
+            this.buttonTake.Location = new System.Drawing.Point(527, 381);
             this.buttonTake.Name = "buttonTake";
             this.buttonTake.Size = new System.Drawing.Size(219, 68);
             this.buttonTake.TabIndex = 9;
             this.buttonTake.Text = "Take!";
             this.buttonTake.UseVisualStyleBackColor = true;
             this.buttonTake.Click += new System.EventHandler(this.buttonTake_Click);
-            // 
-            // panelWin
-            // 
-            this.panelWin.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.map_with_pirat;
-            this.panelWin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelWin.Controls.Add(this.buttonTryAgain);
-            this.panelWin.Controls.Add(this.labelWin);
-            this.panelWin.Controls.Add(this.label1);
-            this.panelWin.Location = new System.Drawing.Point(436, 23);
-            this.panelWin.Name = "panelWin";
-            this.panelWin.Size = new System.Drawing.Size(370, 410);
-            this.panelWin.TabIndex = 8;
-            this.panelWin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelWin_Paint);
-            // 
-            // buttonTryAgain
-            // 
-            this.buttonTryAgain.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wood_button;
-            this.buttonTryAgain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonTryAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTryAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTryAgain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonTryAgain.Location = new System.Drawing.Point(70, 281);
-            this.buttonTryAgain.Name = "buttonTryAgain";
-            this.buttonTryAgain.Size = new System.Drawing.Size(219, 68);
-            this.buttonTryAgain.TabIndex = 10;
-            this.buttonTryAgain.Text = "Try Again";
-            this.buttonTryAgain.UseVisualStyleBackColor = true;
-            this.buttonTryAgain.Click += new System.EventHandler(this.buttonTryAgain_Click);
-            // 
-            // labelWin
-            // 
-            this.labelWin.AutoSize = true;
-            this.labelWin.Font = new System.Drawing.Font("Leelawadee UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWin.Location = new System.Drawing.Point(97, 139);
-            this.labelWin.Name = "labelWin";
-            this.labelWin.Size = new System.Drawing.Size(143, 45);
-            this.labelWin.TabIndex = 1;
-            this.labelWin.Text = "You win:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.OldLace;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(39, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Congratulations!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonStart
             // 
@@ -163,7 +157,7 @@
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonStart.Location = new System.Drawing.Point(527, 359);
+            this.buttonStart.Location = new System.Drawing.Point(527, 381);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(219, 68);
             this.buttonStart.TabIndex = 5;
@@ -174,7 +168,7 @@
             // textBoxBet
             // 
             this.textBoxBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxBet.Location = new System.Drawing.Point(527, 267);
+            this.textBoxBet.Location = new System.Drawing.Point(527, 285);
             this.textBoxBet.Name = "textBoxBet";
             this.textBoxBet.Size = new System.Drawing.Size(219, 75);
             this.textBoxBet.TabIndex = 0;
@@ -201,7 +195,7 @@
             this.panelBoxes.Controls.Add(this.btn4_3);
             this.panelBoxes.Controls.Add(this.btn4_2);
             this.panelBoxes.Controls.Add(this.btn3_3);
-            this.panelBoxes.Location = new System.Drawing.Point(42, 21);
+            this.panelBoxes.Location = new System.Drawing.Point(42, 39);
             this.panelBoxes.Name = "panelBoxes";
             this.panelBoxes.Size = new System.Drawing.Size(370, 410);
             this.panelBoxes.TabIndex = 3;
@@ -421,15 +415,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1137, 727);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "FormGamesSapper";
             this.Text = "FormGamesSapper";
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panelWin.ResumeLayout(false);
-            this.panelWin.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panelBoxes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBomb1)).EndInit();
             this.ResumeLayout(false);
@@ -459,11 +452,11 @@
         private System.Windows.Forms.Panel panelBet;
         private System.Windows.Forms.TextBox textBoxBet;
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Panel panelWin;
-        private System.Windows.Forms.Label labelWin;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonTake;
         private System.Windows.Forms.Button buttonTryAgain;
-        private System.Windows.Forms.Label labelBet;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelInfo;
+        private System.Windows.Forms.Panel panelLogInfo;
+        private System.Windows.Forms.Panel panel3;
     }
 }

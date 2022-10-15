@@ -23,9 +23,12 @@ namespace WindowsFormsApp3.Forms
         static string SONG_1 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_1.wav";
         static string SONG_2 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_2.wav";
         static string SONG_3 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_3.wav";
+        static string KNOCK = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\wooden_knock";
+        static string PAPER = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\filing_paper.mp3";
+        static string COIN = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\coin.mp3";
         static string SONG;
+        bool isBlownedUp = false;
 
-        
 
         private void choiseSong()
         {
@@ -45,17 +48,39 @@ namespace WindowsFormsApp3.Forms
 
         public FormGamesSapper()
 		{
-
             choiseSong();
             InitializeComponent();
-            Player.Play(SONG);
+            panelInfo.Visible = false;
+            panelInfo.Location = new System.Drawing.Point(720,300);
+            MediaPlayer song = new MediaPlayer();
+            song.Open(new Uri(SONG));
+            song.Volume = 0.25;
+            song.Play();
             pictureBomb1.Visible = false;
-			labelBet.Visible = true;
-			panelWin.Visible = false;
 			buttonTake.Visible = false;
+            buttonTryAgain.Visible = false;
+
+            panelLogInfo.MouseEnter += new EventHandler(panelLogInfo_MouseEnter);
+            panelLogInfo.MouseLeave += new EventHandler(panelLogInfo_MouseLeave);
         }
 
-		private void panel1_Paint(object sender, PaintEventArgs e)
+        void panelLogInfo_MouseLeave(object sender, EventArgs e)
+        {
+            MediaPlayer coin = new MediaPlayer();
+            coin.Open(new Uri(PAPER));
+            coin.Play();
+            panelInfo.Visible = false;
+        }
+
+        private void panelLogInfo_MouseEnter(object sender, EventArgs e)
+        {
+            MediaPlayer coin = new MediaPlayer();
+            coin.Open(new Uri(PAPER));
+            coin.Play();
+            panelInfo.Visible = true;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
 		{
 
 		}
@@ -129,21 +154,19 @@ namespace WindowsFormsApp3.Forms
 		{
             if (textBoxBet.Text != "" && (tempBet > 0 || tempBet < 1000))
             {
+                buttonStart.Visible = false;
                 bet = Int32.Parse(textBoxBet.Text);
-				textBoxBet.Visible = false;
-				labelBet.Visible = true;
-				buttonTake.Visible = true;
-                labelBet.Text = tempBet.ToString();
+                textBoxBet.Enabled = false;
             }
         }
 
 		private void buttonTake_Click(object sender, EventArgs e)
 		{
 			buttonTake.Visible = false;
-			labelBet.Visible = false;
-			labelWin.Text = "You win " + bet.ToString();
-			panelWin.Visible = true;
-		}
+            buttonTryAgain.Visible = true;
+            MessageBox.Show("You win " + bet);
+            playWinSound();
+        }
 
         private void buttonTryAgain_Click(object sender, EventArgs e)
         {
@@ -163,7 +186,7 @@ namespace WindowsFormsApp3.Forms
             btn5_2.Visible = true;
             btn5_3.Visible = true;
             pictureBomb1.Visible = false;
-            //panelBet.Visible = false;
+            textBoxBet.Enabled = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -213,6 +236,31 @@ namespace WindowsFormsApp3.Forms
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            buttonTryAgain.Visible = false;
+            btn1_1.Visible = true;
+            btn1_2.Visible = true;
+            btn1_3.Visible = true;
+            btn2_1.Visible = true;
+            btn2_2.Visible = true;
+            btn2_3.Visible = true;
+            btn3_1.Visible = true;
+            btn3_2.Visible = true;
+            btn3_3.Visible = true;
+            btn4_1.Visible = true;
+            btn4_2.Visible = true;
+            btn4_3.Visible = true;
+            btn5_1.Visible = true;
+            btn5_2.Visible = true;
+            btn5_3.Visible = true;
+            pictureBomb1.Visible = false;
+            isBlownedUp = false;
+            textBoxBet.Visible = true;
+            textBoxBet.Enabled = true;
+            buttonStart.Visible = true;
+        }
+
         bool isLineActive(int numOfLine)
         {
             switch(numOfLine)
@@ -239,8 +287,19 @@ namespace WindowsFormsApp3.Forms
             return false;
         }
 
+        private void playWinSound()
+        {
+            MediaPlayer coin = new MediaPlayer();
+            coin.Open(new Uri(COIN));
+            coin.Volume = 0.7;
+            coin.Play();
+        }
+
         private void activateLine(int numOfButton,int numOfLine, Button btn1, Button btn2, Button btn3)
         {
+            MediaPlayer knock = new MediaPlayer();
+            knock.Open(new Uri(KNOCK));
+            knock.Play();
             if (isLineActive(numOfLine) && bet > 0)
             {
                 int random = rnd.Next(1, 4);
@@ -265,6 +324,7 @@ namespace WindowsFormsApp3.Forms
                 switch (numOfLine)
                 {
                     case 1:
+                        buttonTake.Visible = true;
                         isSecondlineActive = true;
                         break;
                     case 2:
@@ -285,9 +345,10 @@ namespace WindowsFormsApp3.Forms
                         bet /= 4;
                         bet *= 5;
                         buttonTake.Visible = false;
-                        labelBet.Visible = false;
-                        labelWin.Text = "You win " + bet.ToString();
-                        panelWin.Visible = true;
+                        buttonTake.Visible = false;
+                        buttonTryAgain.Visible = true;
+                        MessageBox.Show("You win " + bet);
+                        playWinSound();
                         break;
                 }
                 if (random == numOfButton)
@@ -297,16 +358,12 @@ namespace WindowsFormsApp3.Forms
                     isFourthlineActive = false;
                     isThirdlineActive = false;
                     isSecondlineActive = false;
-                    label1.Text = "You lose!";
-                    label1.Visible = true;
-                    panelWin.Visible = true;
-                    labelWin.Visible = false;
+                    buttonTryAgain.Visible = true;
+                    MessageBox.Show("You lose");
+                    isBlownedUp = true;
+                    bet = 0;
                 }
-                else
-                {
-                    labelBet.Visible = true;
-                    labelBet.Text = bet.ToString();
-                }
+                textBoxBet.Text = bet.ToString();
                 if (random == numOfButton)
                 {
                     MediaPlayer bomb = new MediaPlayer();
@@ -316,12 +373,13 @@ namespace WindowsFormsApp3.Forms
             }
             else
             {
-                if(bet < 1)
+                if (isBlownedUp)
+                    MessageBox.Show("You lose");
+                else if (bet < 1)
                     MessageBox.Show("Place a bet");
                 else
                     MessageBox.Show("Unlock bottom buttons");
             }
-        
         }
 
         private void btn1_2_Click(object sender, EventArgs e)

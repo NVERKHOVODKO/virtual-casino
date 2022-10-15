@@ -112,5 +112,5 @@ C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\Windows
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.Alert.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.ResolveComReference.cache
-C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ForьCasino.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesWildWest.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FormCasino.resources

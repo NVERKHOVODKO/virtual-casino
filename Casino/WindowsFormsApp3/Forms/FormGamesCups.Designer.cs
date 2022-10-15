@@ -101,6 +101,7 @@
             // 
             // panelCup2
             // 
+            this.panelCup2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(23)))));
             this.panelCup2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCup2.BackgroundImage")));
             this.panelCup2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelCup2.Location = new System.Drawing.Point(350, 245);
@@ -110,15 +111,18 @@
             // 
             // panelCup3
             // 
+            this.panelCup3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(23)))));
             this.panelCup3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCup3.BackgroundImage")));
             this.panelCup3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelCup3.Location = new System.Drawing.Point(130, 245);
             this.panelCup3.Name = "panelCup3";
             this.panelCup3.Size = new System.Drawing.Size(150, 150);
             this.panelCup3.TabIndex = 2;
+            this.panelCup3.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCup3_Paint);
             // 
             // panelCup1
             // 
+            this.panelCup1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(23)))));
             this.panelCup1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCup1.BackgroundImage")));
             this.panelCup1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelCup1.Location = new System.Drawing.Point(570, 245);
@@ -130,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Khaki;
+            this.BackColor = System.Drawing.Color.Cyan;
             this.ClientSize = new System.Drawing.Size(898, 577);
             this.Controls.Add(this.panelEnterBet);
             this.Controls.Add(this.labelBalance);
@@ -139,6 +143,7 @@
             this.Controls.Add(this.panelCup1);
             this.Name = "FormGamesCups";
             this.Text = "FormGamesCups";
+            this.Load += new System.EventHandler(this.FormGamesCups_Load);
             this.panelEnterBet.ResumeLayout(false);
             this.panelEnterBet.PerformLayout();
             this.ResumeLayout(false);
