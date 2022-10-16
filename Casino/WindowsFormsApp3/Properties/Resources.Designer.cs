@@ -393,6 +393,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flag {
+            get {
+                object obj = ResourceManager.GetObject("flag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fruits_icon {
             get {
                 object obj = ResourceManager.GetObject("fruits icon", resourceCulture);
@@ -856,6 +866,56 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap saturn1 {
             get {
                 object obj = ResourceManager.GetObject("saturn1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scale_coins_1 {
+            get {
+                object obj = ResourceManager.GetObject("scale_coins_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scale_coins_2 {
+            get {
+                object obj = ResourceManager.GetObject("scale_coins_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scale_coins_3 {
+            get {
+                object obj = ResourceManager.GetObject("scale_coins_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scale_coins_4 {
+            get {
+                object obj = ResourceManager.GetObject("scale_coins_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scale_coins_5 {
+            get {
+                object obj = ResourceManager.GetObject("scale_coins_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

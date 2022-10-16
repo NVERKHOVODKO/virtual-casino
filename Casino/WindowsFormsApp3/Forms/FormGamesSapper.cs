@@ -18,7 +18,6 @@ namespace WindowsFormsApp3.Forms
 	{
 		bool isSecondlineActive = false, isThirdlineActive = false, isFourthlineActive = false, isFifthlineActive = false;
 		Random rnd = new Random();
-		int bet, tempBet;
         static string BOMB = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\bomb.wav";
         static string SONG_1 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_1.wav";
         static string SONG_2 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_2.wav";
@@ -28,6 +27,7 @@ namespace WindowsFormsApp3.Forms
         static string COIN = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\coin.mp3";
         static string SONG;
         bool isBlownedUp = false;
+        int balance = 1000, bet, startBet;
 
 
         private void choiseSong()
@@ -50,12 +50,14 @@ namespace WindowsFormsApp3.Forms
 		{
             choiseSong();
             InitializeComponent();
+            labelBalance.Text = balance.ToString();
             panelInfo.Visible = false;
-            panelInfo.Location = new System.Drawing.Point(720,300);
+            panelInfo.Location = new System.Drawing.Point(930,410);
             MediaPlayer song = new MediaPlayer();
             song.Open(new Uri(SONG));
             song.Volume = 0.25;
             song.Play();
+            panelFlag.Location = new Point(1200, 20);
             pictureBomb1.Visible = false;
 			buttonTake.Visible = false;
             buttonTryAgain.Visible = false;
@@ -150,22 +152,39 @@ namespace WindowsFormsApp3.Forms
             activateLine(1, 5, btn5_1, btn5_2, btn5_3);
         }
 
-		private void buttonStart_Click(object sender, EventArgs e)
+        private void buttonStart_Click(object sender, EventArgs e)
 		{
-            if (textBoxBet.Text != "" && (tempBet > 0 || tempBet < 1000))
+            if (textBoxBet.Text != "" && (bet > 0 || bet < 1000) && bet <= balance)
             {
-                buttonStart.Visible = false;
-                bet = Int32.Parse(textBoxBet.Text);
-                textBoxBet.Enabled = false;
+                if (textBoxBet.Text != "" && textBoxBet.Text != "0")
+                {
+                    startBet = bet;
+                    balance -= bet;
+                    labelBalance.Text = balance.ToString();
+                    buttonStart.Visible = false;
+                    bet = Int32.Parse(textBoxBet.Text);
+                    textBoxBet.Enabled = false;
+                }
             }
+            else if (balance < bet)
+            {
+                MessageBox.Show("Insuffcieint balance");
+                textBoxBet.Text = "";
+                bet = 0;
+                startBet = 0;
+            }
+            else
+                MessageBox.Show("Place your bet");
         }
 
 		private void buttonTake_Click(object sender, EventArgs e)
 		{
+            balance += bet;
 			buttonTake.Visible = false;
             buttonTryAgain.Visible = true;
             MessageBox.Show("You win " + bet);
             playWinSound();
+            labelBalance.Text = balance.ToString();
         }
 
         private void buttonTryAgain_Click(object sender, EventArgs e)
@@ -193,12 +212,14 @@ namespace WindowsFormsApp3.Forms
 		{
             try
             {
-                tempBet = Int32.Parse(textBoxBet.Text);
+                bet = Int32.Parse(textBoxBet.Text);
             }
             catch
             {
                 textBoxBet.Text = "";
             }
+            if (bet == 0)
+                textBoxBet.Text = "";
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -238,6 +259,8 @@ namespace WindowsFormsApp3.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBoxBet.Text = startBet.ToString();
+            pictureBox1.Image = Properties.Resources.scale_coins_1;
             buttonTryAgain.Visible = false;
             btn1_1.Visible = true;
             btn1_2.Visible = true;
@@ -324,24 +347,29 @@ namespace WindowsFormsApp3.Forms
                 switch (numOfLine)
                 {
                     case 1:
+                        pictureBox1.Image = Properties.Resources.scale_coins_1;
                         buttonTake.Visible = true;
                         isSecondlineActive = true;
                         break;
                     case 2:
+                        pictureBox1.Image = Properties.Resources.scale_coins_2;
                         isThirdlineActive = true;
                         bet *= 2;
                         break;
                     case 3:
+                        pictureBox1.Image = Properties.Resources.scale_coins_3;
                         isFourthlineActive = true;
                         bet /= 2;
                         bet *= 3;
                         break;
                     case 4:
+                        pictureBox1.Image = Properties.Resources.scale_coins_4;
                         isFifthlineActive = true;
                         bet /= 3;
                         bet *= 4;
                         break;
                     case 5:
+                        pictureBox1.Image = Properties.Resources.scale_coins_5;
                         bet /= 4;
                         bet *= 5;
                         buttonTake.Visible = false;
@@ -359,9 +387,9 @@ namespace WindowsFormsApp3.Forms
                     isThirdlineActive = false;
                     isSecondlineActive = false;
                     buttonTryAgain.Visible = true;
-                    MessageBox.Show("You lose");
                     isBlownedUp = true;
                     bet = 0;
+                    pictureBox1.Image = Properties.Resources.scale_coins_1;
                 }
                 textBoxBet.Text = bet.ToString();
                 if (random == numOfButton)
@@ -374,7 +402,7 @@ namespace WindowsFormsApp3.Forms
             else
             {
                 if (isBlownedUp)
-                    MessageBox.Show("You lose");
+                    MessageBox.Show("You already lost");
                 else if (bet < 1)
                     MessageBox.Show("Place a bet");
                 else

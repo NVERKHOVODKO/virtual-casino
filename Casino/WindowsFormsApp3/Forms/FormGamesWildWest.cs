@@ -41,7 +41,7 @@ namespace WindowsFormsApp3.Forms
             WindowState = FormWindowState.Maximized;
             TopMost = true;
             textBoxBet.Text = "Place your bet";
-            LblTitle.Text = "--------------------------------------------------";
+            LblTitle.Text = "------------------------------------------------------------------";
 
 
             pictureBox1.Size = new System.Drawing.Size(120, 120);
@@ -211,7 +211,7 @@ namespace WindowsFormsApp3.Forms
             
             if (isBtnStartActive && bet <= balance)
             {
-                LblTitle.Text = "---------------------------------------------------";
+                LblTitle.Text = "----------------------------------------------------------------";
                 MediaPlayer button = new MediaPlayer();
                 button.Open(new Uri(BUTTON));
                 button.Play();
@@ -293,14 +293,14 @@ namespace WindowsFormsApp3.Forms
                     if (a == 7)
                     {
                         bet *= 10;
-                        LblTitle.Text = "--X10- You win " + bet + "! Three matches!--";
+                        LblTitle.Text = "---X10--- You win " + bet + "! Three matches!------";
                         LblTitle.BackColor = System.Drawing.Color.Red;
                         //alert.ShowAlert("You win " + bet * 30 +  "!", Alert.enmType.Success);
                     }
                     else
                     {
                         bet *= 5;
-                        LblTitle.Text = "--X5- You win " + bet + "! Three matches!--";
+                        LblTitle.Text = "---X5--- You win " + bet + "! Three matches!------";
                         LblTitle.BackColor = System.Drawing.Color.Red;
                         //alert.ShowAlert("You win " + bet * 10 + "!", Alert.enmType.Success);
                     }
@@ -311,7 +311,7 @@ namespace WindowsFormsApp3.Forms
                 else if (a == b || a == c)
                 {
                     bet *= 2;
-                    LblTitle.Text = "--X2-- You win " + bet + "! Two matches!--";
+                    LblTitle.Text = "---X2--- You win " + bet + "! Two matches!------";
                     isBtnStartActive = true;
                     coin.Open(new Uri(COIN));
                     coin.Play();
@@ -319,14 +319,14 @@ namespace WindowsFormsApp3.Forms
                 else if (b == c)
                 {
                     bet *= 2;
-                    LblTitle.Text = "--X2-- You win " + bet + "! Two matches!--";
+                    LblTitle.Text = "---X2--- You win " + bet + "! Two matches!------";
                     isBtnStartActive = true;
                     coin.Open(new Uri(COIN));
                     coin.Play();
                 }
                 else if (move == numberOfMoving)
                 {
-                    LblTitle.Text = "-----------------No matches-----------------";
+                    LblTitle.Text = "-------------------No matches----------------------";
                     MediaPlayer mediaPlayer = new MediaPlayer();
                     mediaPlayer.Open(new Uri(LOSE));
                     mediaPlayer.Play();

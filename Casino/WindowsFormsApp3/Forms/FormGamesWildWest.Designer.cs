@@ -222,9 +222,9 @@
             this.LblTitle.Enabled = false;
             this.LblTitle.Font = new System.Drawing.Font("Century", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LblTitle.ForeColor = System.Drawing.Color.White;
-            this.LblTitle.Location = new System.Drawing.Point(115, 20);
+            this.LblTitle.Location = new System.Drawing.Point(73, 20);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(673, 52);
+            this.LblTitle.Size = new System.Drawing.Size(739, 52);
             this.LblTitle.TabIndex = 13;
             this.LblTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.LblTitle.TextChanged += new System.EventHandler(this.textBox1_TextChanged);

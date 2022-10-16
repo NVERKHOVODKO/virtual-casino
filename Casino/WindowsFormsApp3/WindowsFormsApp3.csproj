@@ -562,6 +562,24 @@
   <ItemGroup>
     <None Include="Resources\wooden board.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scale_coins_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scale_coins_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scale_coins_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scale_coins_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scale_coins_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
