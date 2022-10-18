@@ -32,7 +32,7 @@ namespace WindowsFormsApp3.Forms
 
         private void choiseSong()
         {
-            switch (rnd.Next(3, 3))
+            switch (rnd.Next(1, 3))
             {
                 case 1:
                     SONG = SONG_1;
@@ -377,6 +377,8 @@ namespace WindowsFormsApp3.Forms
                         buttonTryAgain.Visible = true;
                         MessageBox.Show("You win " + bet);
                         playWinSound();
+                        balance += bet;
+                        labelBalance.Text = balance.ToString();
                         break;
                 }
                 if (random == numOfButton)

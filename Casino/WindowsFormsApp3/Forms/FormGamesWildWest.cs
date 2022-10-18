@@ -274,9 +274,9 @@ namespace WindowsFormsApp3.Forms
                 spin.Play();
 
                 move++;
-                a = rnd.Next(1, 9);
-                b = rnd.Next(1, 9);
-                c = rnd.Next(1, 9);
+                a = rnd.Next(1, 8);
+                b = rnd.Next(1, 8);
+                c = rnd.Next(1, 8);
 
                 changeImage(pictureBox1, a);
                 changeImage(pictureBox2, b);
