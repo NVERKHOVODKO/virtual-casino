@@ -193,3 +193,5 @@ C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork — копия
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FormUser.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.RJTextBox.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FormAuthorization.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormAccount.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormHome.resources

@@ -27,8 +27,8 @@ namespace WindowsFormsApp3.Forms
         static string COIN = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\coin.mp3";
         static string SONG;
         bool isBlownedUp = false;
+        User user;
         int balance = 1000, bet, startBet;
-
 
         private void choiseSong()
         {
@@ -50,7 +50,9 @@ namespace WindowsFormsApp3.Forms
 		{
             choiseSong();
             InitializeComponent();
-            labelBalance.Text = balance.ToString();
+            FormAuthorization fa = new FormAuthorization();
+            user = fa.GetUser();
+            labelBalance.Text = user.GetBalance().ToString();
             panelInfo.Visible = false;
             panelInfo.Location = new System.Drawing.Point(930,410);
             MediaPlayer song = new MediaPlayer();
@@ -159,8 +161,8 @@ namespace WindowsFormsApp3.Forms
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
                 {
                     startBet = bet;
-                    balance -= bet;
-                    labelBalance.Text = balance.ToString();
+                    user.SetBalance(user.GetBalance() - bet);
+                    labelBalance.Text = user.GetBalance().ToString();
                     buttonStart.Visible = false;
                     bet = Int32.Parse(textBoxBet.Text);
                     textBoxBet.Enabled = false;
@@ -179,12 +181,12 @@ namespace WindowsFormsApp3.Forms
 
 		private void buttonTake_Click(object sender, EventArgs e)
 		{
-            balance += bet;
-			buttonTake.Visible = false;
+            user.SetBalance(user.GetBalance() + bet);
+            buttonTake.Visible = false;
             buttonTryAgain.Visible = true;
             MessageBox.Show("You win " + bet);
             playWinSound();
-            labelBalance.Text = balance.ToString();
+            labelBalance.Text = user.GetBalance().ToString();
         }
 
         private void buttonTryAgain_Click(object sender, EventArgs e)
@@ -375,10 +377,13 @@ namespace WindowsFormsApp3.Forms
                         buttonTake.Visible = false;
                         buttonTake.Visible = false;
                         buttonTryAgain.Visible = true;
-                        MessageBox.Show("You win " + bet);
-                        playWinSound();
-                        balance += bet;
-                        labelBalance.Text = balance.ToString();
+                        if (random != numOfButton)
+                        {
+                            MessageBox.Show("You win " + bet);
+                            playWinSound();
+                            user.SetBalance(user.GetBalance() + bet);
+                            labelBalance.Text = user.GetBalance().ToString();
+                        }
                         break;
                 }
                 if (random == numOfButton)

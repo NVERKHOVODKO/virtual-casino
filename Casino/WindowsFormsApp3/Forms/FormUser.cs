@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Drawing;
 using System.Reflection;
@@ -23,20 +24,14 @@ namespace WindowsFormsApp3
             InitializeComponent();
             random = new Random(); 
             buttonBack.Visible = false;
+            FormAuthorization fa = new FormAuthorization();
 
-
-            /*user = FormAuthoriz.GetUser();
-            balance = FormAuthoriz.GetBalance();
-            MessageBox.Show(balance.ToString());*/
+            user = fa.GetUser();
+            lblLogin.Text = user.GetLogin();
+            lblBalanceValue.Text = user.GetBalance().ToString();
+            balance = user.GetBalance();
         }
-
-
-        public void setUser(User user)
-        {
-            this.user = user;
-        }
-
-
+        
         private void OpenForm(Form childForm)
         {
             if (activeForm != null)
@@ -131,7 +126,7 @@ namespace WindowsFormsApp3
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormHome(), sender, "Home");
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -211,13 +206,18 @@ namespace WindowsFormsApp3
 
         private void btnAccount_Click_1(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormAccount(), sender, "ACCOUNT");
+            OpenChildForm(new Forms.FormAccount(), sender, "ACCOUNT");
         }
 
         private void labelMain_Click(object sender, EventArgs e)
         {
 
         }
+
+        /*private void button1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText("text");
+        }*/
 
         private void lblBalence_Click(object sender, EventArgs e)
         {
@@ -227,6 +227,24 @@ namespace WindowsFormsApp3
         private void lblBalanceValue_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText("https://1xbet.by/");
+            MessageBox.Show("Link copied");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText("https://www.instagram.com/1xbet.official/?hl=en");
+            MessageBox.Show("Link copied");
+        }
+
+        private void btnTelegram_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText("https://telegram.me/xBetChannel");
+            MessageBox.Show("Link copied");
         }
     }
 }

@@ -10,11 +10,11 @@ namespace WindowsFormsApp3.Forms
 {
     public class User
     {
-        public int Id { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public int Access { get; set; }
-        public int Balance { get; set; }
+        private int Id;
+        private string Login;
+        private string Password;
+        private int Access;
+        private int Balance;
 
         public User(int Id, string Login, string Password, int Access, int Balance)
         {
@@ -23,6 +23,55 @@ namespace WindowsFormsApp3.Forms
             this.Password = Password;
             this.Access = Access;
             this.Balance = Balance;
+        }
+
+        public int GetId()
+        {
+            return Id;
+        }
+
+        public void SetId(int Id)
+        {
+            this.Id = Id;
+        }
+
+        public string GetLogin()
+        {
+            return Login;
+        }
+
+        public void SetLogin(string Login)
+        {
+            this.Login = Login;
+        }
+        public string GetPassword()
+        {
+            return Password;
+        }
+
+        public void SetPassword(string Password)
+        {
+            this.Password = Password;
+        }
+
+        public int GetBalance()
+        {
+            return Balance;
+        }
+
+        public void SetBalance(int Balance)
+        {
+            this.Balance = Balance;
+        }
+
+        public int GetAccess()
+        {
+            return Access;
+        }
+
+        public void SetAccess(int Access)
+        {
+            this.Access = Access;
         }
     }
 }

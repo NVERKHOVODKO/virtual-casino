@@ -43,56 +43,34 @@ namespace WindowsFormsApp3
 			string color = ThemeColor.ColorList[index];
 			return ColorTranslator.FromHtml(color);
 		}
-
         
-
-
-
-		
 
 		private void btnSignIn_Click(object sender, EventArgs e)
 		{
-            
-
-
             SQLiteDataAdapter adapter = new SQLiteDataAdapter();
-
-
             Database databaseObject = new Database();
             DataTable datatable = new DataTable();
-
             SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM users WHERE login = @usrLogin AND password = @usrPassword", databaseObject.myConnection);
             databaseObject.OpenConnection();
-            cmd.Parameters.AddWithValue("@usrLogin","n");
-            cmd.Parameters.AddWithValue("@usrPassword", "n");
-
+            cmd.Parameters.AddWithValue("@usrLogin", textBoxLogin.Text);
+            cmd.Parameters.AddWithValue("@usrPassword", textBoxPassword.Text);
             adapter.SelectCommand = cmd;
             adapter.Fill(datatable);
+
             if (datatable.Rows.Count > 0)
             {
-                SQLiteCommand getBalance = new SQLiteCommand("SELECT balance FROM users WHERE login = @usrLogin AND password = @usrPassword", databaseObject.myConnection);
-                cmd.Parameters.AddWithValue("@usrLogin", "n");
-                cmd.Parameters.AddWithValue("@usrPassword", "n");
-                adapter.SelectCommand = cmd;
+                user = new User(Convert.ToInt32(datatable.Rows[0][0].ToString()), datatable.Rows[0][1].ToString(), datatable.Rows[0][2].ToString(), Convert.ToInt32(datatable.Rows[0][3]), Convert.ToInt32(datatable.Rows[0][4]));
                 OpenChildForm(new FormUser());
-
-				user = new User(Convert.ToInt32(datatable.Rows[0][0].ToString()), datatable.Rows[0][1].ToString(), datatable.Rows[0][2].ToString(), Convert.ToInt32(datatable.Rows[0][3]), Convert.ToInt32(datatable.Rows[0][4]));
-                MessageBox.Show(user.Balance.ToString());
-                balance = Convert.ToInt32(datatable.Rows[0][0]);
             }
             else
-                MessageBox.Show("-");
+                MessageBox.Show("Incorrect login or password");
         }
 
-		public static User GetUser()
-		{
-			return user;
-		}
-
-        public static int GetBalance()
+        public User GetUser()
         {
-            return balance;
+            return user;
         }
+
 
         private void OpenChildForm(Form childForm)
         {
@@ -205,51 +183,56 @@ namespace WindowsFormsApp3
         private void button1_Click_2(object sender, EventArgs e)
         {
             string password, login;
-            if(textBoxPasswordCreate.Text == textBoxPasswordConfirmCreate.Text)
+            if(textBoxLoginCreate.Text != "" && textBoxPasswordConfirmCreate.Text != "" && textBoxPasswordCreate.Text != "")
             {
-                if(textBoxPasswordCreate.Text.Length > 4)
+                if (textBoxPasswordCreate.Text == textBoxPasswordConfirmCreate.Text)
                 {
-                    password = textBoxPasswordCreate.Text;
-                    if (textBoxLoginCreate.Text.Length > 4)
+                    if (textBoxPasswordCreate.Text.Length > 4)
                     {
-                        login = textBoxLoginCreate.Text;
-                        Database databaseObject = new Database();
-                        SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
-                        databaseObject.OpenConnection();
-                        cmd.Parameters.AddWithValue("@balance", 0);
-                        cmd.Parameters.AddWithValue("@login", login);
-        
-                        cmd.Parameters.AddWithValue("@password", password);
-                        cmd.Parameters.AddWithValue("@role", 1);
-
-                        var result = cmd.ExecuteNonQuery();
-
-                        databaseObject.CloseConnection();
-
-                        MessageBox.Show("Your account has been successfully created");
-                        Thread.Sleep(100);
-                        panelCreateAccount.Visible = false;
-                        textBoxLoginCreate.Text = "";
-                        textBoxPasswordCreate.Text = "";
+                        password = textBoxPasswordCreate.Text;
+                        if (textBoxLoginCreate.Text.Length > 4)
+                        {
+                            login = textBoxLoginCreate.Text;
+                            Database databaseObject = new Database();
+                            SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
+                            databaseObject.OpenConnection();
+                            cmd.Parameters.AddWithValue("@balance", 0);
+                            cmd.Parameters.AddWithValue("@login", login);
+                            cmd.Parameters.AddWithValue("@password", password);
+                            cmd.Parameters.AddWithValue("@role", 1);
+                            var result = cmd.ExecuteNonQuery();
+                            databaseObject.CloseConnection();
+                            MessageBox.Show("Your account has been successfully created");
+                            Thread.Sleep(100);
+                            panelCreateAccount.Visible = false;
+                            textBoxLoginCreate.Text = "";
+                            textBoxPasswordCreate.Text = "";
+                            textBoxPasswordConfirmCreate.Text = "";
+                        }
+                        else
+                            MessageBox.Show("Login must be more than 4 characters");
                         textBoxPasswordConfirmCreate.Text = "";
                     }
                     else
-                        MessageBox.Show("Login must be more than 4 characters");
+                    {
+                        MessageBox.Show("Password must be more than 4 characters");
+                        textBoxPasswordConfirmCreate.Text = "";
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Password must be more than 4 characters");
-
+                    MessageBox.Show("Passwords do not match");
+                    textBoxPasswordConfirmCreate.Text = "";
                 }
-
-                
-
             }
             else
             {
-                MessageBox.Show("Passwords do not match");
+                MessageBox.Show("Fill in the fields");
             }
+        }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }

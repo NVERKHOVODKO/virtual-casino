@@ -103,9 +103,39 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("account icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap account_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("account icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_back {
             get {
                 object obj = ResourceManager.GetObject("arrow back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_back1 {
+            get {
+                object obj = ResourceManager.GetObject("arrow back1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +276,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap cactoos {
             get {
                 object obj = ResourceManager.GetObject("cactoos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap card {
+            get {
+                object obj = ResourceManager.GetObject("card", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -876,6 +916,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap scale_coins_1 {
             get {
                 object obj = ResourceManager.GetObject("scale_coins_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scale_coins_11 {
+            get {
+                object obj = ResourceManager.GetObject("scale_coins_11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

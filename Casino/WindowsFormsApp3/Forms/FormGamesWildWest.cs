@@ -24,19 +24,24 @@ namespace WindowsFormsApp3.Forms
         bool isBtnStartActive = true;
         MediaPlayer song = new MediaPlayer();
         bool isSpining = false;
+        User user;
+        FormUser fu = new FormUser();
 
 
         public FormGamesWildWest()
         {
             InitializeComponent();
+            FormAuthorization fa = new FormAuthorization();
+            user = fa.GetUser();
+
             panelInfo.Location = new System.Drawing.Point(1030, 400);
             panelInfo.Visible = false;
-            balance = 1000;
             panelLogInfo.Location = label2.Location = new System.Drawing.Point(1300, 650);
             label2.BackColor = Color.FromArgb(0, 23, 23, 23);
             label2.ForeColor = Color.Black;
             label2.Location = new System.Drawing.Point(1160, 55);
-            label2.Text = balance.ToString();
+
+            label2.Text = user.GetBalance().ToString();
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             TopMost = true;
@@ -125,7 +130,7 @@ namespace WindowsFormsApp3.Forms
         private void addBet(int bet1)
         {
             playCoinSound();
-            if(bet + bet1 <= balance)
+            if(bet + bet1 <= user.GetBalance())
                 bet += bet1;
             else
                 MessageBox.Show("Insuffcieint balance");
@@ -178,7 +183,7 @@ namespace WindowsFormsApp3.Forms
         private void button1_Click_3(object sender, EventArgs e)
         {
             playCoinSound();
-            bet = balance;
+            bet = user.GetBalance();
             textBoxBet.Text = bet.ToString();
         }
 
@@ -209,7 +214,7 @@ namespace WindowsFormsApp3.Forms
                 textBoxBet.Text = "Place your bet";
             }
             
-            if (isBtnStartActive && bet <= balance)
+            if (isBtnStartActive && bet <= user.GetBalance())
             {
                 LblTitle.Text = "----------------------------------------------------------------";
                 MediaPlayer button = new MediaPlayer();
@@ -217,12 +222,12 @@ namespace WindowsFormsApp3.Forms
                 button.Play();
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
                 {
-                    balance -= bet;
-                    label2.Text = balance.ToString();
+                    user.SetBalance(user.GetBalance() - bet);
+                    label2.Text = user.GetBalance().ToString();
                     timer1.Enabled = true;
                     isBtnStartActive = false;
                 }
-            } else if(balance < bet){
+            } else if(user.GetBalance() < bet){
                 MessageBox.Show("Insuffcieint balance");
             }
             else
@@ -334,8 +339,9 @@ namespace WindowsFormsApp3.Forms
                     isBtnStartActive = true;
                     bet = 0;
                 }
-                balance += bet;
-                label2.Text = balance.ToString();
+                user.SetBalance(user.GetBalance() + bet);
+
+                label2.Text = user.GetBalance().ToString();
                 move = 0;
                 isSpining = false;
             }

@@ -34,14 +34,17 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.btnLiders = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.lblBalanceValue = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.lblBalence = new System.Windows.Forms.Label();
             this.labelMain = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
-            this.lblBalence = new System.Windows.Forms.Label();
-            this.lblLogin = new System.Windows.Forms.Label();
-            this.lblBalanceValue = new System.Windows.Forms.Label();
+            this.btnInstagram = new System.Windows.Forms.Button();
+            this.btnWebsite = new System.Windows.Forms.Button();
+            this.btnTelegram = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -51,6 +54,9 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnTelegram);
+            this.panelMenu.Controls.Add(this.btnWebsite);
+            this.panelMenu.Controls.Add(this.btnInstagram);
             this.panelMenu.Controls.Add(this.btnAccount);
             this.panelMenu.Controls.Add(this.btnGames);
             this.panelMenu.Controls.Add(this.btnHome);
@@ -132,10 +138,45 @@
             this.panelLogo.Controls.Add(this.lblBalanceValue);
             this.panelLogo.Controls.Add(this.lblLogin);
             this.panelLogo.Controls.Add(this.lblBalence);
-            this.panelLogo.Location = new System.Drawing.Point(3, 0);
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 172);
+            this.panelLogo.Size = new System.Drawing.Size(203, 172);
             this.panelLogo.TabIndex = 4;
+            // 
+            // lblBalanceValue
+            // 
+            this.lblBalanceValue.AutoSize = true;
+            this.lblBalanceValue.Font = new System.Drawing.Font("Malgun Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalanceValue.ForeColor = System.Drawing.Color.White;
+            this.lblBalanceValue.Location = new System.Drawing.Point(9, 102);
+            this.lblBalanceValue.Name = "lblBalanceValue";
+            this.lblBalanceValue.Size = new System.Drawing.Size(107, 38);
+            this.lblBalanceValue.TabIndex = 10;
+            this.lblBalanceValue.Text = "984734";
+            this.lblBalanceValue.Click += new System.EventHandler(this.lblBalanceValue_Click);
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.White;
+            this.lblLogin.Location = new System.Drawing.Point(3, 9);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(162, 31);
+            this.lblLogin.TabIndex = 9;
+            this.lblLogin.Text = "nverkhovodko";
+            // 
+            // lblBalence
+            // 
+            this.lblBalence.AutoSize = true;
+            this.lblBalence.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalence.ForeColor = System.Drawing.Color.White;
+            this.lblBalence.Location = new System.Drawing.Point(3, 61);
+            this.lblBalence.Name = "lblBalence";
+            this.lblBalence.Size = new System.Drawing.Size(129, 41);
+            this.lblBalence.TabIndex = 8;
+            this.lblBalence.Text = "Balance:";
+            this.lblBalence.Click += new System.EventHandler(this.lblBalence_Click);
             // 
             // labelMain
             // 
@@ -162,23 +203,6 @@
             this.panelTitle.Size = new System.Drawing.Size(1199, 80);
             this.panelTitle.TabIndex = 3;
             // 
-            // buttonBack
-            // 
-            this.buttonBack.AutoSize = true;
-            this.buttonBack.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.Без_имени_51;
-            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonBack.FlatAppearance.BorderSize = 0;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonBack.Location = new System.Drawing.Point(0, 0);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(80, 80);
-            this.buttonBack.TabIndex = 1;
-            this.buttonBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonBack.UseVisualStyleBackColor = true;
-            // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -201,40 +225,55 @@
             this.panelDesktopPanel.Size = new System.Drawing.Size(1199, 558);
             this.panelDesktopPanel.TabIndex = 4;
             // 
-            // lblBalence
+            // btnInstagram
             // 
-            this.lblBalence.AutoSize = true;
-            this.lblBalence.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalence.ForeColor = System.Drawing.Color.White;
-            this.lblBalence.Location = new System.Drawing.Point(3, 61);
-            this.lblBalence.Name = "lblBalence";
-            this.lblBalence.Size = new System.Drawing.Size(129, 41);
-            this.lblBalence.TabIndex = 8;
-            this.lblBalence.Text = "Balance:";
-            this.lblBalence.Click += new System.EventHandler(this.lblBalence_Click);
+            this.btnInstagram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnInstagram.Location = new System.Drawing.Point(74, 581);
+            this.btnInstagram.Name = "btnInstagram";
+            this.btnInstagram.Size = new System.Drawing.Size(45, 45);
+            this.btnInstagram.TabIndex = 8;
+            this.btnInstagram.Text = "I";
+            this.btnInstagram.UseVisualStyleBackColor = true;
+            this.btnInstagram.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblLogin
+            // btnWebsite
             // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(3, 9);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(162, 31);
-            this.lblLogin.TabIndex = 9;
-            this.lblLogin.Text = "nverkhovodko";
+            this.btnWebsite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnWebsite.Location = new System.Drawing.Point(125, 581);
+            this.btnWebsite.Name = "btnWebsite";
+            this.btnWebsite.Size = new System.Drawing.Size(45, 45);
+            this.btnWebsite.TabIndex = 9;
+            this.btnWebsite.Text = "W";
+            this.btnWebsite.UseVisualStyleBackColor = true;
+            this.btnWebsite.Click += new System.EventHandler(this.button2_Click);
             // 
-            // lblBalanceValue
+            // btnTelegram
             // 
-            this.lblBalanceValue.AutoSize = true;
-            this.lblBalanceValue.Font = new System.Drawing.Font("Malgun Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalanceValue.ForeColor = System.Drawing.Color.White;
-            this.lblBalanceValue.Location = new System.Drawing.Point(9, 102);
-            this.lblBalanceValue.Name = "lblBalanceValue";
-            this.lblBalanceValue.Size = new System.Drawing.Size(107, 38);
-            this.lblBalanceValue.TabIndex = 10;
-            this.lblBalanceValue.Text = "984734";
-            this.lblBalanceValue.Click += new System.EventHandler(this.lblBalanceValue_Click);
+            this.btnTelegram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnTelegram.Location = new System.Drawing.Point(23, 581);
+            this.btnTelegram.Name = "btnTelegram";
+            this.btnTelegram.Size = new System.Drawing.Size(45, 45);
+            this.btnTelegram.TabIndex = 10;
+            this.btnTelegram.Text = "T";
+            this.btnTelegram.UseVisualStyleBackColor = true;
+            this.btnTelegram.Click += new System.EventHandler(this.btnTelegram_Click);
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.AutoSize = true;
+            this.buttonBack.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.Без_имени_51;
+            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonBack.Location = new System.Drawing.Point(0, 0);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(80, 80);
+            this.buttonBack.TabIndex = 1;
+            this.buttonBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonBack.UseVisualStyleBackColor = true;
             // 
             // FormUser
             // 
@@ -270,5 +309,8 @@
         private System.Windows.Forms.Label lblBalence;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblBalanceValue;
+        private System.Windows.Forms.Button btnInstagram;
+        private System.Windows.Forms.Button btnTelegram;
+        private System.Windows.Forms.Button btnWebsite;
     }
 }
