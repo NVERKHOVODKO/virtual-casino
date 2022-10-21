@@ -28,7 +28,7 @@ namespace WindowsFormsApp3.Forms
         static string SONG;
         bool isBlownedUp = false;
         User user;
-        int balance = 1000, bet, startBet;
+        int bet, startBet;
 
         private void choiseSong()
         {
@@ -63,7 +63,6 @@ namespace WindowsFormsApp3.Forms
             pictureBomb1.Visible = false;
 			buttonTake.Visible = false;
             buttonTryAgain.Visible = false;
-
             panelLogInfo.MouseEnter += new EventHandler(panelLogInfo_MouseEnter);
             panelLogInfo.MouseLeave += new EventHandler(panelLogInfo_MouseLeave);
         }
@@ -156,7 +155,7 @@ namespace WindowsFormsApp3.Forms
 
         private void buttonStart_Click(object sender, EventArgs e)
 		{
-            if (textBoxBet.Text != "" && (bet > 0 || bet < 1000) && bet <= balance)
+            if (textBoxBet.Text != "" && (bet > 0 || bet < 1000) && bet <= user.GetBalance())
             {
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
                 {
@@ -168,7 +167,7 @@ namespace WindowsFormsApp3.Forms
                     textBoxBet.Enabled = false;
                 }
             }
-            else if (balance < bet)
+            else if (user.GetBalance() < bet)
             {
                 MessageBox.Show("Insuffcieint balance");
                 textBoxBet.Text = "";
@@ -215,13 +214,13 @@ namespace WindowsFormsApp3.Forms
             try
             {
                 bet = Int32.Parse(textBoxBet.Text);
+                if (bet == 0)
+                    textBoxBet.Text = "";
             }
             catch
             {
                 textBoxBet.Text = "";
             }
-            if (bet == 0)
-                textBoxBet.Text = "";
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -123,7 +123,6 @@ namespace WindowsFormsApp3
         }
 
 
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormHome(), sender, "Home");
@@ -245,6 +244,11 @@ namespace WindowsFormsApp3
         {
             Clipboard.SetText("https://telegram.me/xBetChannel");
             MessageBox.Show("Link copied");
+        }
+
+        private void panelMenu_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

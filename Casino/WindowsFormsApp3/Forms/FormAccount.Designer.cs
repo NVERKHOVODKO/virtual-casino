@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panelAccount = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelCard = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelAccount.SuspendLayout();
             this.panelCard.SuspendLayout();
             this.SuspendLayout();
@@ -43,17 +43,8 @@
             this.panelAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAccount.Location = new System.Drawing.Point(0, 0);
             this.panelAccount.Name = "panelAccount";
-            this.panelAccount.Size = new System.Drawing.Size(800, 450);
+            this.panelAccount.Size = new System.Drawing.Size(1109, 594);
             this.panelAccount.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(627, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(173, 450);
-            this.panel1.TabIndex = 0;
             // 
             // panelCard
             // 
@@ -61,7 +52,7 @@
             this.panelCard.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.card;
             this.panelCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelCard.Controls.Add(this.textBox1);
-            this.panelCard.Location = new System.Drawing.Point(100, 194);
+            this.panelCard.Location = new System.Drawing.Point(297, 320);
             this.panelCard.Name = "panelCard";
             this.panelCard.Size = new System.Drawing.Size(419, 244);
             this.panelCard.TabIndex = 1;
@@ -77,12 +68,22 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(391, 29);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(936, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(173, 594);
+            this.panel1.TabIndex = 0;
             // 
             // FormAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1109, 594);
             this.Controls.Add(this.panelAccount);
             this.Name = "FormAccount";
             this.Text = "FormAccount";

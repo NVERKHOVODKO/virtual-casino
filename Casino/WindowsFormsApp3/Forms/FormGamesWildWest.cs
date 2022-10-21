@@ -213,7 +213,6 @@ namespace WindowsFormsApp3.Forms
             {
                 textBoxBet.Text = "Place your bet";
             }
-            
             if (isBtnStartActive && bet <= user.GetBalance())
             {
                 LblTitle.Text = "----------------------------------------------------------------";

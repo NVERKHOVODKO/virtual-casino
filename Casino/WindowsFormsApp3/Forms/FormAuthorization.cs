@@ -16,9 +16,7 @@ namespace WindowsFormsApp3
 		private Random random;
 		private int tempIndex;
 		private Form activeForm;
-        private static int balance;
-
-
+        bool isPasswordVisible, isPasswordVisible1;
         private static User user;
 
 
@@ -28,8 +26,38 @@ namespace WindowsFormsApp3
 			InitializeComponent();
 			random = new Random();
             panelCreateAccount.Visible = false;
+            isPasswordVisible = true;
+            isPasswordVisible1 = true;
 
+            hidePassword();
+            
 
+        }
+
+        private void hidePassword()
+        {
+            btnIsPasswordVisible.BackgroundImage = Properties.Resources.closed_eye;
+            btnIsPasswordVisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            isPasswordVisible = true;
+            textBoxPassword.UseSystemPasswordChar = true;
+            btnIsPasswordVisible1.BackgroundImage = Properties.Resources.closed_eye;
+            btnIsPasswordVisible1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch; 
+            isPasswordVisible1 = true;
+            textBoxPasswordCreate.UseSystemPasswordChar = true;
+            textBoxPasswordConfirmCreate.UseSystemPasswordChar = true;
+        }
+
+        private void showPassword()
+        {
+            btnIsPasswordVisible.BackgroundImage = Properties.Resources.opened_eye;
+            btnIsPasswordVisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            textBoxPassword.UseSystemPasswordChar = false;
+            isPasswordVisible = false;
+            btnIsPasswordVisible1.BackgroundImage = Properties.Resources.opened_eye;
+            btnIsPasswordVisible1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch; textBoxPasswordCreate.UseSystemPasswordChar = true;
+            textBoxPasswordCreate.UseSystemPasswordChar = false;
+            textBoxPasswordConfirmCreate.UseSystemPasswordChar = false;
+            isPasswordVisible1 = false;
         }
 
         private System.Drawing.Color SelectThemeColor()
@@ -47,23 +75,32 @@ namespace WindowsFormsApp3
 
 		private void btnSignIn_Click(object sender, EventArgs e)
 		{
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter();
-            Database databaseObject = new Database();
-            DataTable datatable = new DataTable();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM users WHERE login = @usrLogin AND password = @usrPassword", databaseObject.myConnection);
-            databaseObject.OpenConnection();
-            cmd.Parameters.AddWithValue("@usrLogin", textBoxLogin.Text);
-            cmd.Parameters.AddWithValue("@usrPassword", textBoxPassword.Text);
-            adapter.SelectCommand = cmd;
-            adapter.Fill(datatable);
-
-            if (datatable.Rows.Count > 0)
+            if (textBoxLogin.Text.Length < 3 || textBoxPassword.Text.Length < 3)
             {
-                user = new User(Convert.ToInt32(datatable.Rows[0][0].ToString()), datatable.Rows[0][1].ToString(), datatable.Rows[0][2].ToString(), Convert.ToInt32(datatable.Rows[0][3]), Convert.ToInt32(datatable.Rows[0][4]));
+                MessageBox.Show("Fill in the fields");
+                user = new User(1, "login", "password", 1, 10000000);
                 OpenChildForm(new FormUser());
             }
             else
-                MessageBox.Show("Incorrect login or password");
+            {
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter();
+                Database databaseObject = new Database();
+                DataTable datatable = new DataTable();
+                SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM users WHERE login = @usrLogin AND password = @usrPassword", databaseObject.myConnection);
+                databaseObject.OpenConnection();
+                cmd.Parameters.AddWithValue("@usrLogin", textBoxLogin.Text);
+                cmd.Parameters.AddWithValue("@usrPassword", textBoxPassword.Text);
+                adapter.SelectCommand = cmd;
+                adapter.Fill(datatable);
+
+                if (datatable.Rows.Count > 0)
+                {
+                    user = new User(Convert.ToInt32(datatable.Rows[0][0].ToString()), datatable.Rows[0][1].ToString(), datatable.Rows[0][2].ToString(), Convert.ToInt32(datatable.Rows[0][3]), Convert.ToInt32(datatable.Rows[0][4]));
+                    OpenChildForm(new FormUser());
+                }
+                else
+                    MessageBox.Show("Incorrect login or password");
+            }
         }
 
         public User GetUser()
@@ -94,6 +131,7 @@ namespace WindowsFormsApp3
 		private void btnCreateAccount_Click(object sender, EventArgs e)
 		{
             panelCreateAccount.Visible = true;
+            btnIsPasswordVisible.Visible = false;
         }
 
         private void buttonSettings_Click(object sender, EventArgs e)
@@ -178,6 +216,7 @@ namespace WindowsFormsApp3
             textBoxLoginCreate.Text = "";
             textBoxPasswordCreate.Text = "";
             textBoxPasswordConfirmCreate.Text = "";
+            btnIsPasswordVisible.Visible = true;
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -203,7 +242,6 @@ namespace WindowsFormsApp3
                             var result = cmd.ExecuteNonQuery();
                             databaseObject.CloseConnection();
                             MessageBox.Show("Your account has been successfully created");
-                            Thread.Sleep(100);
                             panelCreateAccount.Visible = false;
                             textBoxLoginCreate.Text = "";
                             textBoxPasswordCreate.Text = "";
@@ -234,6 +272,30 @@ namespace WindowsFormsApp3
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(isPasswordVisible == true)
+            {
+                showPassword();
+            }
+            else
+            {
+                hidePassword();
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (isPasswordVisible1 == true)
+            {
+                showPassword();
+            }
+            else
+            {
+                hidePassword();
+            }
         }
     }
 }
