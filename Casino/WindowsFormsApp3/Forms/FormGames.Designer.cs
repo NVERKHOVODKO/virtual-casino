@@ -37,7 +37,7 @@
             // 
             // panelGames
             // 
-            this.panelGames.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelGames.BackColor = System.Drawing.SystemColors.Control;
             this.panelGames.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelGames.Controls.Add(this.button1);
             this.panelGames.Controls.Add(this.buttonGames_2);

@@ -250,5 +250,15 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void FormUser_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

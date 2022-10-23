@@ -13,9 +13,13 @@ namespace WindowsFormsApp3.Forms
 {
     public partial class FormAccount : Form
     {
+        private int num = 4;
+        private User user;
+
         public FormAccount()
         {
             InitializeComponent();
+
         }
 
         private void panelCard_Paint(object sender, PaintEventArgs e)
@@ -25,15 +29,19 @@ namespace WindowsFormsApp3.Forms
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string str = textBox1.Text, final = "";
-
-            for(int i = 0; i < str.Length; i++)
+            if (textBox1.Text.Length == 4 || textBox1.Text.Length == 9 || textBox1.Text.Length == 14)
             {
-                final += str[i];
-                if (i % 4 == 0)
-                    final += "-";
+                textBox1.Text += "-";
             }
-            textBox1.Text = final;
+            textBox1.SelectionStart = textBox1.Text.Length;
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            FormAuthorization fa = new FormAuthorization();
+            user = fa.GetUser();
+            int addBalance = (textBox1.Text[16] + textBox1.Text[17] + textBox1.Text[18]+ textBox1.Text[19]);
+            user.SetBalance(user.GetBalance() + addBalance);
         }
     }
 }

@@ -19,8 +19,6 @@ namespace WindowsFormsApp3
         bool isPasswordVisible, isPasswordVisible1;
         private static User user;
 
-
-
         public FormAuthorization()
 		{
 			InitializeComponent();
@@ -30,8 +28,6 @@ namespace WindowsFormsApp3
             isPasswordVisible1 = true;
 
             hidePassword();
-            
-
         }
 
         private void hidePassword()
@@ -96,11 +92,20 @@ namespace WindowsFormsApp3
                 if (datatable.Rows.Count > 0)
                 {
                     user = new User(Convert.ToInt32(datatable.Rows[0][0].ToString()), datatable.Rows[0][1].ToString(), datatable.Rows[0][2].ToString(), Convert.ToInt32(datatable.Rows[0][3]), Convert.ToInt32(datatable.Rows[0][4]));
-                    OpenChildForm(new FormUser());
+                    if(user.GetAccess() == 1)
+                    {
+                        OpenChildForm(new FormAdmin());
+                    }
+                    else
+                    {
+                        OpenChildForm(new FormUser());
+                    }
                 }
                 else
                     MessageBox.Show("Incorrect login or password");
-            }
+            }/*
+            user = new User(13, "Login", "password", 1, 483953);
+            OpenChildForm(new FormUser());*/
         }
 
         public User GetUser()
@@ -219,53 +224,83 @@ namespace WindowsFormsApp3
             btnIsPasswordVisible.Visible = true;
         }
 
+        private bool isLoginUnic()
+        {
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter();
+            Database databaseObject = new Database();
+            DataTable datatable = new DataTable();
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM users WHERE login = @usrLogin", databaseObject.myConnection);
+            databaseObject.OpenConnection();
+            cmd.Parameters.AddWithValue("@usrLogin", textBoxLoginCreate.Text);
+            adapter.SelectCommand = cmd;
+            adapter.Fill(datatable);
+
+            if (datatable.Rows.Count > 0)
+            {
+                return false;
+            }
+            else
+                return true;
+
+        }
+
+        private void clearTextboxes(string message)
+        {
+            MessageBox.Show(message);
+            textBoxPasswordConfirmCreate.Text = "";
+            textBoxPasswordCreate.Text = "";
+            textBoxLoginCreate.Text = "";
+        }
         private void button1_Click_2(object sender, EventArgs e)
         {
             string password, login;
             if(textBoxLoginCreate.Text != "" && textBoxPasswordConfirmCreate.Text != "" && textBoxPasswordCreate.Text != "")
             {
-                if (textBoxPasswordCreate.Text == textBoxPasswordConfirmCreate.Text)
+                if (isLoginUnic())
                 {
-                    if (textBoxPasswordCreate.Text.Length > 4)
+                    if (textBoxPasswordCreate.Text == textBoxPasswordConfirmCreate.Text)
                     {
-                        password = textBoxPasswordCreate.Text;
-                        if (textBoxLoginCreate.Text.Length > 4)
+                        if (textBoxPasswordCreate.Text.Length > 4)
                         {
-                            login = textBoxLoginCreate.Text;
-                            Database databaseObject = new Database();
-                            SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
-                            databaseObject.OpenConnection();
-                            cmd.Parameters.AddWithValue("@balance", 0);
-                            cmd.Parameters.AddWithValue("@login", login);
-                            cmd.Parameters.AddWithValue("@password", password);
-                            cmd.Parameters.AddWithValue("@role", 1);
-                            var result = cmd.ExecuteNonQuery();
-                            databaseObject.CloseConnection();
-                            MessageBox.Show("Your account has been successfully created");
-                            panelCreateAccount.Visible = false;
-                            textBoxLoginCreate.Text = "";
-                            textBoxPasswordCreate.Text = "";
-                            textBoxPasswordConfirmCreate.Text = "";
+                            password = textBoxPasswordCreate.Text;
+                            if (textBoxLoginCreate.Text.Length > 4)
+                            {
+                                login = textBoxLoginCreate.Text;
+                                Database databaseObject = new Database();
+                                SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
+                                databaseObject.OpenConnection();
+                                cmd.Parameters.AddWithValue("@balance", 0);
+                                cmd.Parameters.AddWithValue("@login", login);
+                                cmd.Parameters.AddWithValue("@password", password);
+                                cmd.Parameters.AddWithValue("@role", 1);
+                                var result = cmd.ExecuteNonQuery();
+                                databaseObject.CloseConnection();
+                                panelCreateAccount.Visible = false;
+                                clearTextboxes("Your account has been successfully created");
+                            }
+                            else
+                            {
+                                clearTextboxes("Login must be more than 4 characters");
+                            }
                         }
                         else
-                            MessageBox.Show("Login must be more than 4 characters");
-                        textBoxPasswordConfirmCreate.Text = "";
+                        {
+                            clearTextboxes("Password must be more than 4 characters");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Password must be more than 4 characters");
-                        textBoxPasswordConfirmCreate.Text = "";
+                        clearTextboxes("Passwords do not match");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Passwords do not match");
-                    textBoxPasswordConfirmCreate.Text = "";
+                    clearTextboxes("This login is already taken");
                 }
             }
             else
             {
-                MessageBox.Show("Fill in the fields");
+                clearTextboxes("Fill in the fields");
             }
         }
 

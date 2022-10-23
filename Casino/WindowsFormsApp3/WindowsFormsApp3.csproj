@@ -142,6 +142,12 @@
     <Compile Include="Forms\FormAccount.Designer.cs">
       <DependentUpon>FormAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAuthorization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,17 +161,23 @@
       <DependentUpon>Alert.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Database.cs" />
+    <Compile Include="Forms\FormCrash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCrash.Designer.cs">
+      <DependentUpon>FormCrash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCreateNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCreateNew.Designer.cs">
+      <DependentUpon>FormCreateNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormGames.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormGames.Designer.cs">
       <DependentUpon>FormGames.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormGamesCups.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormGamesCups.Designer.cs">
-      <DependentUpon>FormGamesCups.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormGamesWildWest.cs">
       <SubType>Form</SubType>
@@ -205,17 +217,20 @@
     <EmbeddedResource Include="Forms\FormAccount.resx">
       <DependentUpon>FormAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAuthorization.resx">
       <DependentUpon>FormAuthorization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCreateNew.resx">
+      <DependentUpon>FormCreateNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGames.resx">
       <DependentUpon>FormGames.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormGamesCups.resx">
-      <DependentUpon>FormGamesCups.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGamesWildWest.resx">
       <DependentUpon>FormGamesWildWest.cs</DependentUpon>
@@ -665,6 +680,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\telegram_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opened_eye1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

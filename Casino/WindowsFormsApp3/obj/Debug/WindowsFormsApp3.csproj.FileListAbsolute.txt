@@ -77,7 +77,6 @@ C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\Windows
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.SuggestedBindingRedirects.cache
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGames.resources
-C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesCups.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesSapper.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
@@ -195,3 +194,5 @@ C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\Windows
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FormAuthorization.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormAccount.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormHome.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormAdmin.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormCreateNew.resources

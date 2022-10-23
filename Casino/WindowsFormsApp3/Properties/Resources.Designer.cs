@@ -123,6 +123,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_icon3 {
+            get {
+                object obj = ResourceManager.GetObject("account icon3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_back {
             get {
                 object obj = ResourceManager.GetObject("arrow back", resourceCulture);
@@ -286,6 +296,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap card {
             get {
                 object obj = ResourceManager.GetObject("card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap card1 {
+            get {
+                object obj = ResourceManager.GetObject("card1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -836,6 +856,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap opened_eye {
             get {
                 object obj = ResourceManager.GetObject("opened_eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opened_eye1 {
+            get {
+                object obj = ResourceManager.GetObject("opened_eye1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
