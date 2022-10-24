@@ -179,6 +179,12 @@
     <Compile Include="Forms\FormGames.Designer.cs">
       <DependentUpon>FormGames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormGamesCrush.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGamesCrush.Designer.cs">
+      <DependentUpon>FormGamesCrush.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormGamesWildWest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,12 @@
     </Compile>
     <Compile Include="Forms\FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUpdateUser.Designer.cs">
+      <DependentUpon>FormUpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RJTextBox.cs">
       <SubType>UserControl</SubType>
@@ -232,6 +244,9 @@
     <EmbeddedResource Include="Forms\FormGames.resx">
       <DependentUpon>FormGames.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGamesCrush.resx">
+      <DependentUpon>FormGamesCrush.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGamesWildWest.resx">
       <DependentUpon>FormGamesWildWest.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUpdateUser.resx">
+      <DependentUpon>FormUpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>

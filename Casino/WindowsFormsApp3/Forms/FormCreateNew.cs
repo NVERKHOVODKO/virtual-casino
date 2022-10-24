@@ -42,16 +42,24 @@ namespace WindowsFormsApp3.Forms
                 }
                 else
                 {
-                    Database databaseObject = new Database();
-                    SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
-                    databaseObject.OpenConnection();
-                    cmd.Parameters.AddWithValue("@balance", Int64.Parse(textBoxBalance.Text));
-                    cmd.Parameters.AddWithValue("@login", textBoxBalance.Text);
-                    cmd.Parameters.AddWithValue("@password", textBoxBalance.Text);
-                    cmd.Parameters.AddWithValue("@role", Int64.Parse(textBoxAccess.Text));
-                    var result = cmd.ExecuteNonQuery();
-                    databaseObject.CloseConnection();
-                    MessageBox.Show("Your account has been successfully created");
+                    try
+                    {
+                        Database databaseObject = new Database();
+                        SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
+                        databaseObject.OpenConnection();
+                        cmd.Parameters.AddWithValue("@balance", Int64.Parse(textBoxBalance.Text));
+                        cmd.Parameters.AddWithValue("@login", textBoxLogin.Text);
+                        cmd.Parameters.AddWithValue("@password", textBoxPassword.Text);
+                        cmd.Parameters.AddWithValue("@role", Int64.Parse(textBoxAccess.Text));
+                        var result = cmd.ExecuteNonQuery();
+                        databaseObject.CloseConnection();
+                        MessageBox.Show("Your account has been successfully created");
+                        this.Close();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Incorrect data type");
+                    }
                 }
             }
         }

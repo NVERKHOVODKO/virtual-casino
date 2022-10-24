@@ -55,6 +55,7 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
+            this.btnSupport = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelDesktopPanel.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             this.panelDesktopPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panelDesktopPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktopPanel.Controls.Add(this.btnSupport);
             this.panelDesktopPanel.Controls.Add(this.panel1);
             this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPanel.Location = new System.Drawing.Point(0, 0);
@@ -381,6 +383,21 @@
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
+            // btnSupport
+            // 
+            this.btnSupport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSupport.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSupport.FlatAppearance.BorderSize = 0;
+            this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupport.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSupport.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnSupport.Location = new System.Drawing.Point(1029, 510);
+            this.btnSupport.Name = "btnSupport";
+            this.btnSupport.Size = new System.Drawing.Size(196, 50);
+            this.btnSupport.TabIndex = 6;
+            this.btnSupport.Text = "contact support";
+            this.btnSupport.UseVisualStyleBackColor = false;
+            // 
             // FormAuthorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -432,6 +449,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnIsPasswordVisible;
         private System.Windows.Forms.Button btnIsPasswordVisible1;
+        private System.Windows.Forms.Button btnSupport;
     }
 }
 

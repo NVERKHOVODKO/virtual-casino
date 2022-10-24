@@ -26,6 +26,7 @@ namespace WindowsFormsApp3.Forms
         bool isSpining = false;
         User user;
         FormUser fu = new FormUser();
+        MediaPlayer spin = new MediaPlayer();
 
 
         public FormGamesWildWest()
@@ -268,7 +269,6 @@ namespace WindowsFormsApp3.Forms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            MediaPlayer spin = new MediaPlayer();
             spin.Open(new Uri(SPIN));
             int numberOfMoving = 20;
             int isSpined = 5;

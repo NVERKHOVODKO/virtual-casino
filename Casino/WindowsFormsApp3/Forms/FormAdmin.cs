@@ -16,28 +16,14 @@ namespace WindowsFormsApp3.Forms
     public partial class FormAdmin : Form
     {
         private Form activeForm;
+        private DataSet ds;
+        Database db = new Database();
 
 
-        DataSet ds;
         public FormAdmin()
         {
             InitializeComponent();
-
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter();
-            Database databaseObject = new Database();
-            DataTable datatable = new DataTable();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM users", databaseObject.myConnection);
-            databaseObject.OpenConnection();
-            adapter.SelectCommand = cmd;
-            adapter.Fill(datatable);
-
-            ds = new DataSet();
-            adapter.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-
-            dataGridView1.Columns["Id"].ReadOnly = true;
-            databaseObject.CloseConnection();
-
+            db.UpdateTable(dataGridView1);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -47,8 +33,12 @@ namespace WindowsFormsApp3.Forms
 
         private void btnCreateNew_Click(object sender, EventArgs e)
         {
-            DataRow row = ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
+            DataRow row = ds.Tables[0].NewRow();
             ds.Tables[0].Rows.Add(row);
+            FormCreateNew fcn = new FormCreateNew();
+            fcn.ShowDialog();
+            fcn.Dispose();
+            db.UpdateTable(dataGridView1);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -90,6 +80,37 @@ namespace WindowsFormsApp3.Forms
         {
             OpenChildForm(new FormAuthorization());
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            db.UpdateTable(dataGridView1);
+        }
+
+        private void textBorSearch_TextChanged(object sender, EventArgs e)
+        {
+            db.sendQueryToDatabase("SELECT * FROM users WHERE login LIKE '%" + textBorSearch.Text + "%'", dataGridView1);
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                if(MessageBox.Show("Are you want to delete user record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    db.DeleteUser(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    db.UpdateTable(dataGridView1);
+                }
+                return;
+            }
+            if(e.ColumnIndex == 1)
+            {
+                if(MessageBox.Show("Are you want to delete user record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    db.DeleteUser(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    db.UpdateTable(dataGridView1);
+                }
+                return;
+            }
+        }
     }
-    
 }

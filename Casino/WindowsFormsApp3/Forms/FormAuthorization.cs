@@ -75,7 +75,7 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("Fill in the fields");
                 user = new User(1, "login", "password", 1, 10000000);
-                OpenChildForm(new FormUser());
+                OpenChildForm(new FormAdmin());
             }
             else
             {
@@ -254,54 +254,45 @@ namespace WindowsFormsApp3
         private void button1_Click_2(object sender, EventArgs e)
         {
             string password, login;
-            if(textBoxLoginCreate.Text != "" && textBoxPasswordConfirmCreate.Text != "" && textBoxPasswordCreate.Text != "")
-            {
-                if (isLoginUnic())
-                {
-                    if (textBoxPasswordCreate.Text == textBoxPasswordConfirmCreate.Text)
-                    {
-                        if (textBoxPasswordCreate.Text.Length > 4)
-                        {
-                            password = textBoxPasswordCreate.Text;
-                            if (textBoxLoginCreate.Text.Length > 4)
-                            {
-                                login = textBoxLoginCreate.Text;
-                                Database databaseObject = new Database();
-                                SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
-                                databaseObject.OpenConnection();
-                                cmd.Parameters.AddWithValue("@balance", 0);
-                                cmd.Parameters.AddWithValue("@login", login);
-                                cmd.Parameters.AddWithValue("@password", password);
-                                cmd.Parameters.AddWithValue("@role", 1);
-                                var result = cmd.ExecuteNonQuery();
-                                databaseObject.CloseConnection();
-                                panelCreateAccount.Visible = false;
-                                clearTextboxes("Your account has been successfully created");
-                            }
-                            else
-                            {
-                                clearTextboxes("Login must be more than 4 characters");
-                            }
-                        }
-                        else
-                        {
-                            clearTextboxes("Password must be more than 4 characters");
-                        }
-                    }
-                    else
-                    {
-                        clearTextboxes("Passwords do not match");
-                    }
-                }
-                else
-                {
-                    clearTextboxes("This login is already taken");
-                }
-            }
-            else
+            if(textBoxLoginCreate.Text == "" && textBoxPasswordConfirmCreate.Text == "" && textBoxPasswordCreate.Text == "")
             {
                 clearTextboxes("Fill in the fields");
+                return;
             }
+            if (!isLoginUnic())
+            {
+                clearTextboxes("This login is already taken");
+                return;
+            }
+            if (textBoxPasswordCreate.Text != textBoxPasswordConfirmCreate.Text)
+            {
+                clearTextboxes("Passwords do not match");
+                return;
+            }
+            if (textBoxPasswordCreate.Text.Length < 4)
+            {
+                clearTextboxes("Password must be more than 4 characters");
+                return;
+            }
+            if (textBoxLoginCreate.Text.Length > 4)
+            {
+                clearTextboxes("Login must be more than 4 characters");
+                return;
+            }
+
+            password = textBoxPasswordCreate.Text;
+            login = textBoxLoginCreate.Text;
+            Database databaseObject = new Database();
+            SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
+            databaseObject.OpenConnection();
+            cmd.Parameters.AddWithValue("@balance", 100);
+            cmd.Parameters.AddWithValue("@login", login);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@role", 0);
+            var result = cmd.ExecuteNonQuery();
+            databaseObject.CloseConnection();
+            panelCreateAccount.Visible = false;
+            clearTextboxes("Your account has been successfully created");
         }
 
         private void label4_Click(object sender, EventArgs e)

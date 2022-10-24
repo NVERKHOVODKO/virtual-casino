@@ -59,7 +59,7 @@ namespace WindowsFormsApp3.Forms
 
         private void buttonGames_2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormAdmin(), sender);
+            OpenChildForm(new Forms.FormGamesCrush(), sender);
         }
     }
 }
