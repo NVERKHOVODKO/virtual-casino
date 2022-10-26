@@ -311,6 +311,20 @@ namespace WindowsFormsApp3.Forms
             return false;
         }
 
+        private void textBoxBet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxBet_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
         private void playWinSound()
         {
             MediaPlayer coin = new MediaPlayer();

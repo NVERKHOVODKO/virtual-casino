@@ -16,17 +16,15 @@ namespace WindowsFormsApp3
         private Random random;
         private int tempIndex;
         private Form activeForm;
-        private User user;
         private int balance;
+        private User user;
 
-        public FormUser()
+        public FormUser(User user)
         {
+            this.user = user;   
             InitializeComponent();
             random = new Random(); 
             buttonBack.Visible = false;
-            FormAuthorization fa = new FormAuthorization();
-
-            user = fa.GetUser();
             lblLogin.Text = user.GetLogin();
             lblBalanceValue.Text = user.GetBalance().ToString();
             balance = user.GetBalance();
@@ -205,7 +203,7 @@ namespace WindowsFormsApp3
 
         private void btnAccount_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormAccount(), sender, "ACCOUNT");
+            OpenChildForm(new Forms.FormAccount(user), sender, "ACCOUNT");
         }
 
         private void labelMain_Click(object sender, EventArgs e)

@@ -62,6 +62,7 @@
             this.panelCreateAccount.Name = "panelCreateAccount";
             this.panelCreateAccount.Size = new System.Drawing.Size(510, 506);
             this.panelCreateAccount.TabIndex = 7;
+            this.panelCreateAccount.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCreateAccount_Paint);
             // 
             // textBoxAccess
             // 
@@ -71,6 +72,7 @@
             this.textBoxAccess.Name = "textBoxAccess";
             this.textBoxAccess.Size = new System.Drawing.Size(332, 37);
             this.textBoxAccess.TabIndex = 25;
+            this.textBoxAccess.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAccess_KeyPress);
             // 
             // textBoxBalance
             // 
@@ -80,6 +82,8 @@
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(332, 37);
             this.textBoxBalance.TabIndex = 24;
+            this.textBoxBalance.TextChanged += new System.EventHandler(this.textBoxBalance_TextChanged);
+            this.textBoxBalance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBalance_KeyPress);
             // 
             // lblAccess
             // 

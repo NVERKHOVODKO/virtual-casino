@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp3.Forms
@@ -16,9 +7,8 @@ namespace WindowsFormsApp3.Forms
     public partial class FormAdmin : Form
     {
         private Form activeForm;
-        private DataSet ds;
-        Database db = new Database();
-
+        private string id, balance, login, password, access;
+        private Database db = new Database();
 
         public FormAdmin()
         {
@@ -33,8 +23,6 @@ namespace WindowsFormsApp3.Forms
 
         private void btnCreateNew_Click(object sender, EventArgs e)
         {
-            DataRow row = ds.Tables[0].NewRow();
-            ds.Tables[0].Rows.Add(row);
             FormCreateNew fcn = new FormCreateNew();
             fcn.ShowDialog();
             fcn.Dispose();
@@ -43,18 +31,7 @@ namespace WindowsFormsApp3.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            /*connection.Open();
-            adapter = new SqlDataAdapter(sql, connection);
-            commandBuilder = new SqlCommandBuilder(adapter);
-            adapter.InsertCommand = new SqlCommand("sp_CreateUser", connection);
-            adapter.InsertCommand.CommandType = CommandType.StoredProcedure;
-            adapter.InsertCommand.Parameters.Add(new SqlParameter("@name", SqlDbType.NVarChar, 50, "Name"));
-            adapter.InsertCommand.Parameters.Add(new SqlParameter("@age", SqlDbType.Int, 0, "Age"));
 
-            SqlParameter parameter = adapter.InsertCommand.Parameters.Add("@Id", SqlDbType.Int, 0, "Id");
-            parameter.Direction = ParameterDirection.Output;
-
-            adapter.Update(ds);*/
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -88,29 +65,66 @@ namespace WindowsFormsApp3.Forms
 
         private void textBorSearch_TextChanged(object sender, EventArgs e)
         {
-            db.sendQueryToDatabase("SELECT * FROM users WHERE login LIKE '%" + textBorSearch.Text + "%'", dataGridView1);
+            db.Search("SELECT * FROM users WHERE login LIKE '%" + textBorSearch.Text + "%'", dataGridView1);
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 0)
+            id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            login = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            password = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            access = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            balance = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            User user = new User(Int32.Parse(id), login, password, Int32.Parse(access), Int32.Parse(balance));
+            if (e.ColumnIndex == 0)
             {
-                if(MessageBox.Show("Are you want to delete user record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-                    db.DeleteUser(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
-                    db.UpdateTable(dataGridView1);
-                }
+                FormEditUser feu = new FormEditUser(user);
+                feu.ShowDialog();
+                feu.Dispose();
+                db.UpdateTable(dataGridView1);
                 return;
             }
             if(e.ColumnIndex == 1)
             {
-                if(MessageBox.Show("Are you want to delete user record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (user.GetAccess() == 5)
+                {
+                    MessageBox.Show("You can't delete the main admin");
+                    return;
+                }else if (MessageBox.Show("Are you want to delete user record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     db.DeleteUser(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                     db.UpdateTable(dataGridView1);
                 }
                 return;
             }
+        }
+
+        public string GetId()
+        {
+            return id;
+        }
+        public string GetPassword()
+        {
+            return password;
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDropDatabase_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you want to drop database?", "Drop database", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                db.DropDataBase();
+                db.UpdateTable(dataGridView1);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

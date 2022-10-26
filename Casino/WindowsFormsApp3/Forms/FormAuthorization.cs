@@ -17,7 +17,7 @@ namespace WindowsFormsApp3
 		private int tempIndex;
 		private Form activeForm;
         bool isPasswordVisible, isPasswordVisible1;
-        private static User user;
+        private User user;
 
         public FormAuthorization()
 		{
@@ -75,7 +75,7 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("Fill in the fields");
                 user = new User(1, "login", "password", 1, 10000000);
-                OpenChildForm(new FormAdmin());
+                OpenChildForm(new FormUser(user));
             }
             else
             {
@@ -98,7 +98,7 @@ namespace WindowsFormsApp3
                     }
                     else
                     {
-                        OpenChildForm(new FormUser());
+                        OpenChildForm(new FormUser(user));
                     }
                 }
                 else

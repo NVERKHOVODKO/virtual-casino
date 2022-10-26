@@ -32,33 +32,6 @@ namespace WindowsFormsApp3.Forms
             }
         }
 
-        public void UpdateUser(User user, string id, string login, string password, int access, int balance)
-        {
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter();
-            Database databaseObject = new Database();
-            DataTable datatable = new DataTable();
-            string sql = "UPDATE users SET login = @userLogin, password = @userPassword, role = @userRole, balance = @userBalance WHERE id = @userId";
-            databaseObject.OpenConnection();
-            SQLiteCommand cmd = new SQLiteCommand(sql, databaseObject.myConnection);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@userLogin", login);
-            cmd.Parameters.AddWithValue("@userPassword", password);
-            cmd.Parameters.AddWithValue("@userRole", access);
-            cmd.Parameters.AddWithValue("@userBalance", balance);
-            cmd.Parameters.AddWithValue("@userId", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Edited succesfully");
-            }
-            catch
-            {
-                MessageBox.Show("Error. Can't update user");
-            }
-            databaseObject.CloseConnection();
-        }
-
         public void UpdateTable(DataGridView dataGridView1)
         {
             SQLiteDataAdapter adapter = new SQLiteDataAdapter();
@@ -77,6 +50,24 @@ namespace WindowsFormsApp3.Forms
             databaseObject.CloseConnection();
         }
 
+        public void DropDataBase()
+        {
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter();
+            Database databaseObject = new Database();
+            SQLiteCommand cmd = new SQLiteCommand("DELETE FROM users", databaseObject.myConnection);
+            databaseObject.OpenConnection();
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show("Can't drop database " + ex.Message);
+            }
+            databaseObject.CloseConnection();
+        }
+
         public void DeleteUser(string id)
         {
             SQLiteDataAdapter adapter = new SQLiteDataAdapter();
@@ -88,7 +79,6 @@ namespace WindowsFormsApp3.Forms
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Deleted successfuly");
             }
             catch(SQLiteException ex)
             {
@@ -97,7 +87,7 @@ namespace WindowsFormsApp3.Forms
             databaseObject.CloseConnection();
         }
 
-        public void sendQueryToDatabase(string query, DataGridView dgv)
+        public void Search(string query, DataGridView dgv)
         {
             SQLiteDataAdapter adapter = new SQLiteDataAdapter();
             Database databaseObject = new Database();

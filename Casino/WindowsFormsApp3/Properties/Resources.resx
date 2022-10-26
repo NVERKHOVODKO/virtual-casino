@@ -133,8 +133,8 @@
   <data name="casino" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\casino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Jew icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Jew icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gold_medal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gold_medal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="scale_coins_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scale_coins_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +147,9 @@
   </data>
   <data name="infIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\infIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inst_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inst_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Coin icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Coin icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +199,9 @@
   <data name="grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="google_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\google_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Без имени-51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Без имени-51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,6 +229,9 @@
   <data name="Cup icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cup icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Jew icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jew icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow back1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -247,6 +256,9 @@
   <data name="Jew icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jew icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="silver_medal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silver_medal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bell icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bell icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -261,6 +273,9 @@
   </data>
   <data name="sea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sea.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="telegram_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telegram_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="google_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\google_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -285,6 +300,9 @@
   </data>
   <data name="Rocket background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rocket background2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silver_medal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silver_medal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -388,6 +406,9 @@
   <data name="bhardvaj-lukhi-1-edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bhardvaj-lukhi-1-edit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="wild west" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wild west.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -487,7 +508,7 @@
   <data name="telegram_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\telegram_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bronze_medal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bronze_medal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

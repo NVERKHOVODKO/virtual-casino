@@ -14,10 +14,15 @@ namespace WindowsFormsApp3.Forms
     {
         Random rnd = new Random();
         double curMultiplier, finalMultiplier, takeMult;
-        int bet;
+        int bet, countOfIterations = 0, balance;
+        FormAuthorization fa = new FormAuthorization();
+        User user;
         public FormGamesCrush()
         {
             InitializeComponent();
+            user = fa.GetUser();
+            balance = user.GetBalance();
+            label1.Text = user.GetBalance().ToString();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -53,11 +58,19 @@ namespace WindowsFormsApp3.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBoxBet.Enabled = false;
+            user.SetBalance(user.GetBalance() - bet);
+            label1.Text = user.GetBalance().ToString();
             textBoxMult.BackColor = Color.Green;
             finalMultiplier = GetMultiplier();
             timer1.Enabled = true;
             btnTake.Enabled = true;
             curMultiplier = 1;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void textBoxBet_TextChanged(object sender, EventArgs e)
@@ -74,10 +87,29 @@ namespace WindowsFormsApp3.Forms
             }
         }
 
+        private void textBoxBet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8)// цифры и клавиша BackSpace
+            {
+                e.Handled = true;
+            }
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            curMultiplier += 0.005;
-            if(curMultiplier >= finalMultiplier)
+            if(countOfIterations > 300)
+                curMultiplier += 0.1;
+            else if (countOfIterations > 200)
+                curMultiplier += 0.05;
+            else if (countOfIterations > 120)
+                curMultiplier += 0.02;
+            else if (countOfIterations > 70)
+                curMultiplier += 0.01;
+            else
+                curMultiplier += 0.005;
+            countOfIterations++;
+            if (curMultiplier >= 100)
             {
                 timer1.Stop();
                 curMultiplier = 0;

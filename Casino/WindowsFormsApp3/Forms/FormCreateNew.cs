@@ -53,14 +53,41 @@ namespace WindowsFormsApp3.Forms
                         cmd.Parameters.AddWithValue("@role", Int64.Parse(textBoxAccess.Text));
                         var result = cmd.ExecuteNonQuery();
                         databaseObject.CloseConnection();
-                        MessageBox.Show("Your account has been successfully created");
                         this.Close();
                     }
                     catch
                     {
-                        MessageBox.Show("Incorrect data type");
+                        MessageBox.Show("Can't create new account");
                     }
                 }
+            }
+        }
+
+        private void panelCreateAccount_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBoxBalance_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxBalance_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxAccess_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8)
+            {
+                e.Handled = true;
             }
         }
     }

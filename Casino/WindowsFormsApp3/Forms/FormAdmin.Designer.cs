@@ -35,24 +35,26 @@
             this.btnCreateNew = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.textBorSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnDropDatabase = new System.Windows.Forms.Button();
             this.panelDesktopPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(692, 12);
+            this.btnUpdate.Location = new System.Drawing.Point(444, 12);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(102, 47);
             this.btnUpdate.TabIndex = 5;
@@ -64,8 +66,9 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(584, 12);
+            this.btnSave.Location = new System.Drawing.Point(336, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(102, 47);
             this.btnSave.TabIndex = 4;
@@ -77,8 +80,9 @@
             // 
             this.btnCreateNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnCreateNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCreateNew.ForeColor = System.Drawing.Color.White;
-            this.btnCreateNew.Location = new System.Drawing.Point(476, 12);
+            this.btnCreateNew.Location = new System.Drawing.Point(228, 12);
             this.btnCreateNew.Name = "btnCreateNew";
             this.btnCreateNew.Size = new System.Drawing.Size(102, 47);
             this.btnCreateNew.TabIndex = 0;
@@ -88,8 +92,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnBack.BackColor = System.Drawing.Color.Red;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(12, 12);
             this.btnBack.Name = "btnBack";
@@ -101,6 +106,7 @@
             // 
             // panelDesktopPanel
             // 
+            this.panelDesktopPanel.Controls.Add(this.btnDropDatabase);
             this.panelDesktopPanel.Controls.Add(this.panel1);
             this.panelDesktopPanel.Controls.Add(this.dataGridView1);
             this.panelDesktopPanel.Controls.Add(this.btnUpdate);
@@ -112,6 +118,17 @@
             this.panelDesktopPanel.Name = "panelDesktopPanel";
             this.panelDesktopPanel.Size = new System.Drawing.Size(1695, 999);
             this.panelDesktopPanel.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.textBorSearch);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(1427, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(242, 34);
+            this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // textBorSearch
             // 
@@ -151,16 +168,6 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.textBorSearch);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(1427, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 34);
-            this.panel1.TabIndex = 7;
-            // 
             // delete
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -190,6 +197,20 @@
             this.edit.MinimumWidth = 6;
             this.edit.Name = "edit";
             // 
+            // btnDropDatabase
+            // 
+            this.btnDropDatabase.BackColor = System.Drawing.Color.Red;
+            this.btnDropDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDropDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDropDatabase.ForeColor = System.Drawing.Color.White;
+            this.btnDropDatabase.Location = new System.Drawing.Point(120, 12);
+            this.btnDropDatabase.Name = "btnDropDatabase";
+            this.btnDropDatabase.Size = new System.Drawing.Size(102, 47);
+            this.btnDropDatabase.TabIndex = 8;
+            this.btnDropDatabase.Text = "Drop";
+            this.btnDropDatabase.UseVisualStyleBackColor = false;
+            this.btnDropDatabase.Click += new System.EventHandler(this.btnDropDatabase_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -199,10 +220,10 @@
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
             this.panelDesktopPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,5 +240,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
         private System.Windows.Forms.DataGridViewButtonColumn edit;
+        private System.Windows.Forms.Button btnDropDatabase;
     }
 }

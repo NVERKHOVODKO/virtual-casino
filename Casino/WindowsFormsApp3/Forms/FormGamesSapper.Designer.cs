@@ -421,6 +421,8 @@
             this.textBoxBet.TabIndex = 0;
             this.textBoxBet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxBet.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxBet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBet_KeyPress);
+            this.textBoxBet.MouseEnter += new System.EventHandler(this.textBoxBet_MouseEnter);
             // 
             // panelLogInfo
             // 

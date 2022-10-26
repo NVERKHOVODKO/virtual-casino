@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxMult = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,7 +39,7 @@
             this.textBoxBet = new System.Windows.Forms.TextBox();
             this.btnTake = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBoxMult = new System.Windows.Forms.TextBox();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.panelDesktop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,6 +73,18 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // textBoxMult
+            // 
+            this.textBoxMult.BackColor = System.Drawing.Color.White;
+            this.textBoxMult.Enabled = false;
+            this.textBoxMult.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMult.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxMult.Location = new System.Drawing.Point(70, 272);
+            this.textBoxMult.MaxLength = 4;
+            this.textBoxMult.Name = "textBoxMult";
+            this.textBoxMult.Size = new System.Drawing.Size(308, 75);
+            this.textBoxMult.TabIndex = 6;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -90,6 +103,7 @@
             this.label1.Size = new System.Drawing.Size(213, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Balance: 48484";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -118,6 +132,7 @@
             this.textBoxBet.Size = new System.Drawing.Size(308, 75);
             this.textBoxBet.TabIndex = 1;
             this.textBoxBet.TextChanged += new System.EventHandler(this.textBoxBet_TextChanged);
+            this.textBoxBet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBet_KeyPress);
             // 
             // btnTake
             // 
@@ -134,17 +149,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // textBoxMult
+            // entityCommand1
             // 
-            this.textBoxMult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBoxMult.Enabled = false;
-            this.textBoxMult.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxMult.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxMult.Location = new System.Drawing.Point(70, 261);
-            this.textBoxMult.MaxLength = 4;
-            this.textBoxMult.Name = "textBoxMult";
-            this.textBoxMult.Size = new System.Drawing.Size(308, 75);
-            this.textBoxMult.TabIndex = 6;
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
             // 
             // FormGamesCrush
             // 
@@ -175,5 +186,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox textBoxMult;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
     }
 }

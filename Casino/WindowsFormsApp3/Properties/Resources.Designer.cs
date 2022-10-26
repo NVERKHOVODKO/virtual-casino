@@ -283,6 +283,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bronze_medal {
+            get {
+                object obj = ResourceManager.GetObject("bronze_medal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cactoos {
             get {
                 object obj = ResourceManager.GetObject("cactoos", resourceCulture);
@@ -523,6 +533,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gold_medal {
+            get {
+                object obj = ResourceManager.GetObject("gold_medal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap google_icon {
             get {
                 object obj = ResourceManager.GetObject("google_icon", resourceCulture);
@@ -536,6 +556,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap google_icon1 {
             get {
                 object obj = ResourceManager.GetObject("google_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap google_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("google_icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -606,6 +636,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap inst_icon1 {
             get {
                 object obj = ResourceManager.GetObject("inst_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inst_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("inst_icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1103,6 +1143,26 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap silver_medal {
+            get {
+                object obj = ResourceManager.GetObject("silver_medal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silver_medal1 {
+            get {
+                object obj = ResourceManager.GetObject("silver_medal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sun {
             get {
                 object obj = ResourceManager.GetObject("sun", resourceCulture);
@@ -1126,6 +1186,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap telegram_icon1 {
             get {
                 object obj = ResourceManager.GetObject("telegram_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telegram_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("telegram_icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

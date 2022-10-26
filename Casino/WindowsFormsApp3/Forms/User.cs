@@ -16,6 +16,8 @@ namespace WindowsFormsApp3.Forms
         private int Access;
         private int Balance;
 
+        public User() { }
+
         public User(int Id, string Login, string Password, int Access, int Balance)
         {
             this.Id = Id;

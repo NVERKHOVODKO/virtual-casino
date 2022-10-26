@@ -29,58 +29,186 @@
         private void InitializeComponent()
         {
             this.panelAccount = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panelDeposit = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelBalance = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelLogin = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
+            this.buttonSignOut = new System.Windows.Forms.Button();
             this.panelCard = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.labelID = new System.Windows.Forms.Label();
-            this.labelLogin = new System.Windows.Forms.Label();
-            this.labelBalance = new System.Windows.Forms.Label();
-            this.buttonSignOut = new System.Windows.Forms.Button();
+            this.pictureBoxMedal = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panelAccount.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panelCard.SuspendLayout();
+            this.panelDeposit.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panelCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedal)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAccount
             // 
             this.panelAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(167)))), ((int)(((byte)(53)))));
-            this.panelAccount.Controls.Add(this.panel1);
+            this.panelAccount.Controls.Add(this.button2);
             this.panelAccount.Controls.Add(this.panel2);
+            this.panelAccount.Controls.Add(this.button1);
+            this.panelAccount.Controls.Add(this.buttonSignOut);
             this.panelAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAccount.Location = new System.Drawing.Point(0, 0);
             this.panelAccount.Name = "panelAccount";
             this.panelAccount.Size = new System.Drawing.Size(1289, 716);
             this.panelAccount.TabIndex = 0;
             // 
-            // panel1
+            // button2
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panelCard);
-            this.panel1.Location = new System.Drawing.Point(63, 85);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(631, 492);
-            this.panel1.TabIndex = 8;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(1135, 34);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 53);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Change\r\nlogin";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // panelDeposit
+            // 
+            this.panelDeposit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
+            this.panelDeposit.Controls.Add(this.button3);
+            this.panelDeposit.Controls.Add(this.label1);
+            this.panelDeposit.Controls.Add(this.panelCard);
+            this.panelDeposit.Location = new System.Drawing.Point(0, 0);
+            this.panelDeposit.Name = "panelDeposit";
+            this.panelDeposit.Size = new System.Drawing.Size(704, 437);
+            this.panelDeposit.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
-            this.label1.Location = new System.Drawing.Point(116, 37);
+            this.label1.Location = new System.Drawing.Point(112, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 46);
+            this.label1.Size = new System.Drawing.Size(484, 54);
             this.label1.TabIndex = 2;
             this.label1.Text = "Replenish the balance";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(1135, 102);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 53);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Deposit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
+            this.panel2.Controls.Add(this.panelDeposit);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.labelLogin);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.labelID);
+            this.panel2.Controls.Add(this.pictureBoxMedal);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel2.Location = new System.Drawing.Point(286, 141);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(704, 437);
+            this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // labelBalance
+            // 
+            this.labelBalance.AutoSize = true;
+            this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBalance.ForeColor = System.Drawing.Color.White;
+            this.labelBalance.Location = new System.Drawing.Point(3, 11);
+            this.labelBalance.Name = "labelBalance";
+            this.labelBalance.Size = new System.Drawing.Size(187, 42);
+            this.labelBalance.TabIndex = 11;
+            this.labelBalance.Text = "94895 NC";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label3.Location = new System.Drawing.Point(264, 245);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 40);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "User login";
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogin.ForeColor = System.Drawing.Color.White;
+            this.labelLogin.Location = new System.Drawing.Point(226, 274);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(451, 74);
+            this.labelLogin.TabIndex = 3;
+            this.labelLogin.Text = "nverkhovodko";
+            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.Location = new System.Drawing.Point(283, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 40);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "User id ";
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelID.ForeColor = System.Drawing.Color.White;
+            this.labelID.Location = new System.Drawing.Point(294, 171);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(164, 74);
+            this.labelID.TabIndex = 5;
+            this.labelID.Text = "3456";
+            this.labelID.Click += new System.EventHandler(this.labelID_Click);
+            // 
+            // buttonSignOut
+            // 
+            this.buttonSignOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
+            this.buttonSignOut.FlatAppearance.BorderSize = 0;
+            this.buttonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSignOut.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSignOut.Location = new System.Drawing.Point(1135, 172);
+            this.buttonSignOut.Name = "buttonSignOut";
+            this.buttonSignOut.Size = new System.Drawing.Size(118, 53);
+            this.buttonSignOut.TabIndex = 2;
+            this.buttonSignOut.Text = "sign out";
+            this.buttonSignOut.UseVisualStyleBackColor = false;
             // 
             // panelCard
             // 
@@ -88,9 +216,11 @@
             this.panelCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.panelCard.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.card1;
             this.panelCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelCard.Controls.Add(this.textBox3);
+            this.panelCard.Controls.Add(this.textBox2);
             this.panelCard.Controls.Add(this.btnPay);
             this.panelCard.Controls.Add(this.textBox1);
-            this.panelCard.Location = new System.Drawing.Point(112, 205);
+            this.panelCard.Location = new System.Drawing.Point(140, 157);
             this.panelCard.Name = "panelCard";
             this.panelCard.Size = new System.Drawing.Size(419, 244);
             this.panelCard.TabIndex = 1;
@@ -121,96 +251,70 @@
             this.textBox1.Size = new System.Drawing.Size(391, 29);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // panel2
+            // pictureBoxMedal
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.buttonSignOut);
-            this.panel2.Location = new System.Drawing.Point(840, 85);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(378, 492);
-            this.panel2.TabIndex = 3;
+            this.pictureBoxMedal.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.bronze_medal;
+            this.pictureBoxMedal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxMedal.Location = new System.Drawing.Point(46, 9);
+            this.pictureBoxMedal.Name = "pictureBoxMedal";
+            this.pictureBoxMedal.Size = new System.Drawing.Size(170, 170);
+            this.pictureBoxMedal.TabIndex = 7;
+            this.pictureBoxMedal.TabStop = false;
             // 
-            // button1
+            // button3
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(224, 419);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 53);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Change\r\nlogin";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
+            this.button3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.arrow_back1;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(12, 9);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(64, 61);
+            this.button3.TabIndex = 20;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.account_icon3;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(112, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 150);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(167)))), ((int)(((byte)(53)))));
+            this.panel1.Controls.Add(this.labelBalance);
+            this.panel1.Location = new System.Drawing.Point(443, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(237, 65);
+            this.panel1.TabIndex = 12;
             // 
-            // panel3
+            // textBox2
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
-            this.panel3.Controls.Add(this.labelID);
-            this.panel3.Controls.Add(this.labelLogin);
-            this.panel3.Controls.Add(this.labelBalance);
-            this.panel3.Location = new System.Drawing.Point(43, 205);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(299, 144);
-            this.panel3.TabIndex = 6;
+            this.textBox2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox2.Location = new System.Drawing.Point(28, 114);
+            this.textBox2.MaxLength = 8;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(165, 29);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // labelID
+            // textBox3
             // 
-            this.labelID.AutoSize = true;
-            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelID.Location = new System.Drawing.Point(3, 8);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(56, 32);
-            this.labelID.TabIndex = 5;
-            this.labelID.Text = "ID: ";
-            // 
-            // labelLogin
-            // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogin.Location = new System.Drawing.Point(3, 56);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(100, 32);
-            this.labelLogin.TabIndex = 3;
-            this.labelLogin.Text = "Login: ";
-            // 
-            // labelBalance
-            // 
-            this.labelBalance.AutoSize = true;
-            this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBalance.Location = new System.Drawing.Point(3, 104);
-            this.labelBalance.Name = "labelBalance";
-            this.labelBalance.Size = new System.Drawing.Size(133, 32);
-            this.labelBalance.TabIndex = 4;
-            this.labelBalance.Text = "Balance: ";
-            // 
-            // buttonSignOut
-            // 
-            this.buttonSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
-            this.buttonSignOut.FlatAppearance.BorderSize = 0;
-            this.buttonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSignOut.Location = new System.Drawing.Point(43, 419);
-            this.buttonSignOut.Name = "buttonSignOut";
-            this.buttonSignOut.Size = new System.Drawing.Size(118, 53);
-            this.buttonSignOut.TabIndex = 2;
-            this.buttonSignOut.Text = "sign out";
-            this.buttonSignOut.UseVisualStyleBackColor = false;
+            this.textBox3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox3.Location = new System.Drawing.Point(28, 158);
+            this.textBox3.MaxLength = 3;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(118, 29);
+            this.textBox3.TabIndex = 3;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // FormAccount
             // 
@@ -221,14 +325,15 @@
             this.Name = "FormAccount";
             this.Text = "FormAccount";
             this.panelAccount.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelDeposit.ResumeLayout(false);
+            this.panelDeposit.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panelCard.ResumeLayout(false);
             this.panelCard.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedal)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -240,14 +345,20 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBoxMedal;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.Label labelLogin;
-        private System.Windows.Forms.Label labelBalance;
         private System.Windows.Forms.Button buttonSignOut;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelDeposit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelBalance;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

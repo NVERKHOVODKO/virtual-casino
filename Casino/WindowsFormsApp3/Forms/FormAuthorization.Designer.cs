@@ -33,6 +33,7 @@
             this.labelLogo = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.btnSupport = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIsPasswordVisible = new System.Windows.Forms.Button();
             this.panelCreateAccount = new System.Windows.Forms.Panel();
@@ -55,7 +56,6 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
-            this.btnSupport = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelDesktopPanel.SuspendLayout();
@@ -112,6 +112,21 @@
             this.panelDesktopPanel.Size = new System.Drawing.Size(1228, 563);
             this.panelDesktopPanel.TabIndex = 4;
             this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
+            // 
+            // btnSupport
+            // 
+            this.btnSupport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSupport.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSupport.FlatAppearance.BorderSize = 0;
+            this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupport.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSupport.ForeColor = System.Drawing.Color.White;
+            this.btnSupport.Location = new System.Drawing.Point(1020, 501);
+            this.btnSupport.Name = "btnSupport";
+            this.btnSupport.Size = new System.Drawing.Size(196, 50);
+            this.btnSupport.TabIndex = 6;
+            this.btnSupport.Text = "contact support";
+            this.btnSupport.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -382,21 +397,6 @@
             this.btnSignIn.Text = "Go";
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
-            // 
-            // btnSupport
-            // 
-            this.btnSupport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSupport.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnSupport.FlatAppearance.BorderSize = 0;
-            this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupport.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSupport.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnSupport.Location = new System.Drawing.Point(1029, 510);
-            this.btnSupport.Name = "btnSupport";
-            this.btnSupport.Size = new System.Drawing.Size(196, 50);
-            this.btnSupport.TabIndex = 6;
-            this.btnSupport.Text = "contact support";
-            this.btnSupport.UseVisualStyleBackColor = false;
             // 
             // FormAuthorization
             // 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -18,15 +19,13 @@ namespace WindowsFormsApp3.Forms
         static string PAPER = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\filing_paper.mp3";
 
 
-        Alert alert = new Alert();
         Random rnd = new Random();
-        int a, b, c, move, bet, balance;
+        int a, b, c, move, bet;
         bool isBtnStartActive = true;
         MediaPlayer song = new MediaPlayer();
         bool isSpining = false;
-        User user;
-        FormUser fu = new FormUser();
         MediaPlayer spin = new MediaPlayer();
+        User user;
 
 
         public FormGamesWildWest()
@@ -37,12 +36,9 @@ namespace WindowsFormsApp3.Forms
 
             panelInfo.Location = new System.Drawing.Point(1030, 400);
             panelInfo.Visible = false;
-            panelLogInfo.Location = label2.Location = new System.Drawing.Point(1300, 650);
-            label2.BackColor = Color.FromArgb(0, 23, 23, 23);
-            label2.ForeColor = Color.Black;
-            label2.Location = new System.Drawing.Point(1160, 55);
+            panelLogInfo.Location = new System.Drawing.Point(1300, 650);
+            textBoxBalance.Text = user.GetBalance().ToString();
 
-            label2.Text = user.GetBalance().ToString();
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             TopMost = true;
@@ -82,7 +78,7 @@ namespace WindowsFormsApp3.Forms
 
         private void FormCasino_Shown(object sender, EventArgs e)
         {
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void textBoxBet_TextChanged(object sender, EventArgs e)
@@ -115,17 +111,20 @@ namespace WindowsFormsApp3.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            addBet(100);
+            if(!isSpining)
+                addBet(100);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            addBet(5);
+            if (!isSpining)
+                addBet(5);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            addBet(20);
+            if (!isSpining)
+                addBet(20);
         }
 
         private void addBet(int bet1)
@@ -140,7 +139,8 @@ namespace WindowsFormsApp3.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            addBet(1);
+            if (!isSpining)
+                addBet(1);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -223,12 +223,14 @@ namespace WindowsFormsApp3.Forms
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
                 {
                     user.SetBalance(user.GetBalance() - bet);
-                    label2.Text = user.GetBalance().ToString();
+                    textBoxBalance.Text = user.GetBalance().ToString();
                     timer1.Enabled = true;
                     isBtnStartActive = false;
                 }
             } else if(user.GetBalance() < bet){
                 MessageBox.Show("Insuffcieint balance");
+            }else if(isSpining){
+                MessageBox.Show("Please wait");
             }
             else
                 MessageBox.Show("Place your bet");
@@ -271,7 +273,6 @@ namespace WindowsFormsApp3.Forms
         {
             spin.Open(new Uri(SPIN));
             int numberOfMoving = 20;
-            int isSpined = 5;
             if(move < numberOfMoving){
 
                 spin.Volume = 0.07;
@@ -340,7 +341,7 @@ namespace WindowsFormsApp3.Forms
                 }
                 user.SetBalance(user.GetBalance() + bet);
 
-                label2.Text = user.GetBalance().ToString();
+                textBoxBalance.Text = user.GetBalance().ToString();
                 move = 0;
                 isSpining = false;
             }

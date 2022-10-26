@@ -34,7 +34,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.panelLogInfo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAllIn = new System.Windows.Forms.Button();
@@ -50,7 +49,9 @@
             this.bntBet100 = new System.Windows.Forms.Button();
             this.textBoxBet = new System.Windows.Forms.TextBox();
             this.btnStart = new System.Windows.Forms.Button();
+            this.textBoxBalance = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -67,13 +68,12 @@
             this.panel3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wild_west;
             this.panel3.Controls.Add(this.panelInfo);
             this.panel3.Controls.Add(this.panelLogInfo);
-            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1356, 740);
+            this.panel3.Size = new System.Drawing.Size(1804, 740);
             this.panel3.TabIndex = 9;
             // 
             // panelInfo
@@ -97,24 +97,13 @@
             this.panelLogInfo.Size = new System.Drawing.Size(98, 90);
             this.panelLogInfo.TabIndex = 11;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1260, 151);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 42);
-            this.label2.TabIndex = 10;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))), ((int)(((byte)(34)))));
             this.panel4.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wooden_tag;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(1400, 0);
+            this.panel4.Controls.Add(this.textBoxBalance);
+            this.panel4.Location = new System.Drawing.Point(1471, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(400, 150);
             this.panel4.TabIndex = 9;
@@ -135,7 +124,7 @@
             this.panel1.Controls.Add(this.bntBet100);
             this.panel1.Controls.Add(this.textBoxBet);
             this.panel1.Controls.Add(this.btnStart);
-            this.panel1.Location = new System.Drawing.Point(233, 12);
+            this.panel1.Location = new System.Drawing.Point(457, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(876, 685);
             this.panel1.TabIndex = 8;
@@ -315,19 +304,35 @@
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textBoxBalance
+            // 
+            this.textBoxBalance.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.textBoxBalance.BackColor = System.Drawing.Color.LightSalmon;
+            this.textBoxBalance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBalance.Enabled = false;
+            this.textBoxBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxBalance.Location = new System.Drawing.Point(92, 65);
+            this.textBoxBalance.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxBalance.Name = "textBoxBalance";
+            this.textBoxBalance.Size = new System.Drawing.Size(220, 49);
+            this.textBoxBalance.TabIndex = 0;
+            this.textBoxBalance.Text = "2345";
+            this.textBoxBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FormGamesWildWest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1356, 740);
+            this.ClientSize = new System.Drawing.Size(1804, 740);
             this.Controls.Add(this.panel3);
             this.HelpButton = true;
             this.Name = "FormGamesWildWest";
             this.Text = "FormGamesJew";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -355,9 +360,9 @@
         private System.Windows.Forms.TextBox LblTitle;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAllIn;
         private System.Windows.Forms.Panel panelLogInfo;
         private System.Windows.Forms.Panel panelInfo;
+        private System.Windows.Forms.TextBox textBoxBalance;
     }
 }

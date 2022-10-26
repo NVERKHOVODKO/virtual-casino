@@ -197,3 +197,4 @@ C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\Windows
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormAdmin.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormCreateNew.resources
 C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormGamesCrush.resources
+C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Casino\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forms.FormEditUser.resources
