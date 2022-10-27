@@ -15,12 +15,11 @@ namespace WindowsFormsApp3.Forms
         Random rnd = new Random();
         double curMultiplier, finalMultiplier, takeMult;
         int bet, countOfIterations = 0, balance;
-        FormAuthorization fa = new FormAuthorization();
         User user;
-        public FormGamesCrush()
+        public FormGamesCrush(User user)
         {
+            this.user = user;
             InitializeComponent();
-            user = fa.GetUser();
             balance = user.GetBalance();
             label1.Text = user.GetBalance().ToString();
         }
@@ -53,6 +52,8 @@ namespace WindowsFormsApp3.Forms
                 return 1.2;
             if (num < 900)
                 return 1.09;
+            if (num < 950)
+                return 1.01;
             return 1.05;
         }
 
@@ -75,16 +76,7 @@ namespace WindowsFormsApp3.Forms
 
         private void textBoxBet_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                bet = Int32.Parse(textBoxBet.Text);
-                if (bet == 0)
-                    textBoxBet.Text = "";
-            }
-            catch
-            {
-                textBoxBet.Text = "";
-            }
+            bet = Int32.Parse(textBoxBet.Text);
         }
 
         private void textBoxBet_KeyPress(object sender, KeyPressEventArgs e)
@@ -98,14 +90,16 @@ namespace WindowsFormsApp3.Forms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(countOfIterations > 300)
+            if(countOfIterations > 100)
                 curMultiplier += 0.1;
-            else if (countOfIterations > 200)
-                curMultiplier += 0.05;
-            else if (countOfIterations > 120)
-                curMultiplier += 0.02;
             else if (countOfIterations > 70)
+                curMultiplier += 0.05;
+            else if (countOfIterations > 40)
+                curMultiplier += 0.02;
+            else if (countOfIterations > 20)
                 curMultiplier += 0.01;
+            else if (countOfIterations > 10)
+                curMultiplier += 0.0075;
             else
                 curMultiplier += 0.005;
             countOfIterations++;
@@ -124,6 +118,8 @@ namespace WindowsFormsApp3.Forms
             textBoxMult.BackColor = Color.Gray;
             takeMult = curMultiplier;
             btnTake.Enabled = false;
+            user.SetBalance(user.GetBalance() + Convert.ToInt32(bet * curMultiplier));
+            label1.Text = user.GetBalance().ToString();
         }
     }
 }

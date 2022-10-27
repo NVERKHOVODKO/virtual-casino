@@ -29,7 +29,7 @@ namespace WindowsFormsApp3.Forms
         bool isBlownedUp = false;
         User user;
         int bet, startBet;
-
+        private FormUser FormUser;
         private void choiseSong()
         {
             switch (rnd.Next(1, 3))
@@ -46,12 +46,12 @@ namespace WindowsFormsApp3.Forms
             }
         }
 
-        public FormGamesSapper()
+        public FormGamesSapper(FormUser FormUser, User user)
 		{
             choiseSong();
             InitializeComponent();
-            FormAuthorization fa = new FormAuthorization();
-            user = fa.GetUser();
+            this.user = user;
+            this.FormUser = FormUser;
             labelBalance.Text = user.GetBalance().ToString();
             panelInfo.Visible = false;
             panelInfo.Location = new System.Drawing.Point(930,410);
@@ -162,6 +162,7 @@ namespace WindowsFormsApp3.Forms
                     startBet = bet;
                     user.SetBalance(user.GetBalance() - bet);
                     labelBalance.Text = user.GetBalance().ToString();
+                    FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                     buttonStart.Visible = false;
                     bet = Int32.Parse(textBoxBet.Text);
                     textBoxBet.Enabled = false;
@@ -186,6 +187,7 @@ namespace WindowsFormsApp3.Forms
             MessageBox.Show("You win " + bet);
             playWinSound();
             labelBalance.Text = user.GetBalance().ToString();
+            FormUser.ChangeBalanceValue(user.GetBalance().ToString());
         }
 
         private void buttonTryAgain_Click(object sender, EventArgs e)
@@ -412,6 +414,7 @@ namespace WindowsFormsApp3.Forms
                     pictureBox1.Image = Properties.Resources.scale_coins_1;
                 }
                 textBoxBet.Text = bet.ToString();
+                FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                 if (random == numOfButton)
                 {
                     MediaPlayer bomb = new MediaPlayer();

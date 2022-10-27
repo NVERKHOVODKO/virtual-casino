@@ -16,7 +16,6 @@ namespace WindowsFormsApp3
         private Random random;
         private int tempIndex;
         private Form activeForm;
-        private int balance;
         private User user;
 
         public FormUser(User user)
@@ -27,7 +26,6 @@ namespace WindowsFormsApp3
             buttonBack.Visible = false;
             lblLogin.Text = user.GetLogin();
             lblBalanceValue.Text = user.GetBalance().ToString();
-            balance = user.GetBalance();
         }
         
         private void OpenForm(Form childForm)
@@ -123,7 +121,7 @@ namespace WindowsFormsApp3
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormHome(), sender, "Home");
+            OpenChildForm(new Forms.FormHome(), sender, "HOME");
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -132,7 +130,7 @@ namespace WindowsFormsApp3
 
         private void btnGames_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormGames(), sender, "GAMES");
+            OpenChildForm(new Forms.FormGames(this, user), sender, "GAMES");
         }
 
         private void buttonLiders_Click(object sender, EventArgs e)
@@ -201,9 +199,14 @@ namespace WindowsFormsApp3
 
         }
 
+        public void ChangeBalanceValue(string value)
+        {
+            lblBalanceValue.Text = value;
+        }
+
         private void btnAccount_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormAccount(user), sender, "ACCOUNT");
+            OpenChildForm(new Forms.FormAccount(this, user), sender, "ACCOUNT");
         }
 
         private void labelMain_Click(object sender, EventArgs e)

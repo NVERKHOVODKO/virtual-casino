@@ -7,10 +7,14 @@ namespace WindowsFormsApp3.Forms
     public partial class FormGames : Form
     {
         private Form activeForm;
+        private User user;
+        private FormUser FormUser;
 
-        public FormGames()
+        public FormGames(FormUser FormUser, User user)
         {
             InitializeComponent();
+            this.user = user;
+            this.FormUser = FormUser;
         }
 
         private void FormGames_Load(object sender, EventArgs e)
@@ -49,17 +53,17 @@ namespace WindowsFormsApp3.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormGamesSapper(), sender);
+            OpenChildForm(new Forms.FormGamesSapper(FormUser, user), sender);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormGamesWildWest(), sender);
+            OpenChildForm(new Forms.FormGamesWildWest(FormUser, user), sender);
         }
 
         private void buttonGames_2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormGamesCrush(), sender);
+            OpenChildForm(new Forms.FormGamesCrush(user), sender);
         }
     }
 }

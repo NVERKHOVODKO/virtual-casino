@@ -26,13 +26,14 @@ namespace WindowsFormsApp3.Forms
         bool isSpining = false;
         MediaPlayer spin = new MediaPlayer();
         User user;
+        private FormUser FormUser;
 
 
-        public FormGamesWildWest()
+        public FormGamesWildWest(FormUser FormUser, User user)
         {
+            this.FormUser = FormUser;
+            this.user = user;
             InitializeComponent();
-            FormAuthorization fa = new FormAuthorization();
-            user = fa.GetUser();
 
             panelInfo.Location = new System.Drawing.Point(1030, 400);
             panelInfo.Visible = false;
@@ -224,6 +225,7 @@ namespace WindowsFormsApp3.Forms
                 {
                     user.SetBalance(user.GetBalance() - bet);
                     textBoxBalance.Text = user.GetBalance().ToString();
+                    FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                     timer1.Enabled = true;
                     isBtnStartActive = false;
                 }
@@ -342,6 +344,7 @@ namespace WindowsFormsApp3.Forms
                 user.SetBalance(user.GetBalance() + bet);
 
                 textBoxBalance.Text = user.GetBalance().ToString();
+                FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                 move = 0;
                 isSpining = false;
             }

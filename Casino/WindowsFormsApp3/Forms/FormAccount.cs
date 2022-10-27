@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp3.Forms
@@ -14,28 +7,31 @@ namespace WindowsFormsApp3.Forms
     public partial class FormAccount : Form
     {
         private User user;
+        private FormUser FormUser;
+        private Form activeForm;
 
-        public FormAccount(User user)
+
+        public FormAccount(FormUser FormUser, User user)
         {
+            this.FormUser = FormUser;
             this.user = user; 
             InitializeComponent();
             panelDeposit.Visible = false;
-            choiseMedal(user);
+            choiseMedal();
             labelLogin.Text = user.GetLogin();
             labelID.Text = user.GetId().ToString();
             labelBalance.Text = user.GetBalance().ToString() + " NC";
         }
 
 
-        private void choiseMedal(User user)
+        private void choiseMedal()
         {
-            int balance = user.GetBalance();
-            if (balance > 1000)
-                pictureBoxMedal.BackgroundImage = Properties.Resources.bronze_medal;
-            else if (balance > 5000)
-                pictureBoxMedal.BackgroundImage = Properties.Resources.silver_medal;
-            else if (balance > 10000)
+            if (user.GetBalance() > 10000)
                 pictureBoxMedal.BackgroundImage = Properties.Resources.gold_medal;
+            else if (user.GetBalance() > 5000)
+                pictureBoxMedal.BackgroundImage = Properties.Resources.silver_medal;
+            else if (user.GetBalance() > 1000)
+                pictureBoxMedal.BackgroundImage = Properties.Resources.bronze_medal;
             pictureBoxMedal.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
@@ -61,6 +57,7 @@ namespace WindowsFormsApp3.Forms
                 user.SetBalance(user.GetBalance() + addBalance);
                 MessageBox.Show("Payment was successful");
                 labelBalance.Text = user.GetBalance().ToString();
+                FormUser.ChangeBalanceValue(user.GetBalance().ToString());
             }
             catch
             {
@@ -131,6 +128,28 @@ namespace WindowsFormsApp3.Forms
                 textBox2.Text += "/";
             }
             textBox2.SelectionStart = textBox2.Text.Length;
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            FormUser.Controls.Add(childForm);
+            FormUser.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void buttonSignOut_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you want to log out?", "Log out", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                OpenChildForm(new FormAuthorization());
+            }
         }
     }
 }

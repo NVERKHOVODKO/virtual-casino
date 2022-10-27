@@ -55,20 +55,7 @@ namespace WindowsFormsApp3
             textBoxPasswordConfirmCreate.UseSystemPasswordChar = false;
             isPasswordVisible1 = false;
         }
-
-        private System.Drawing.Color SelectThemeColor()
-		{
-			int index = random.Next(ThemeColor.ColorList.Count);
-			while (tempIndex == index)
-			{
-				index = random.Next(ThemeColor.ColorList.Count);
-			}
-			tempIndex = index;
-			string color = ThemeColor.ColorList[index];
-			return ColorTranslator.FromHtml(color);
-		}
         
-
 		private void btnSignIn_Click(object sender, EventArgs e)
 		{
             if (textBoxLogin.Text.Length < 3 || textBoxPassword.Text.Length < 3)
@@ -76,6 +63,7 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Fill in the fields");
                 user = new User(1, "login", "password", 1, 10000000);
                 OpenChildForm(new FormUser(user));
+                //OpenChildForm(new FormAdmin());
             }
             else
             {
@@ -103,9 +91,7 @@ namespace WindowsFormsApp3
                 }
                 else
                     MessageBox.Show("Incorrect login or password");
-            }/*
-            user = new User(13, "Login", "password", 1, 483953);
-            OpenChildForm(new FormUser());*/
+            }
         }
 
         public User GetUser()
