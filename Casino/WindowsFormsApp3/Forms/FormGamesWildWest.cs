@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Drawing;
-using System.Threading;
-using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Media;
 using Color = System.Drawing.Color;
@@ -27,6 +24,7 @@ namespace WindowsFormsApp3.Forms
         MediaPlayer spin = new MediaPlayer();
         User user;
         private FormUser FormUser;
+        private Database db = new Database();
 
 
         public FormGamesWildWest(FormUser FormUser, User user)
@@ -51,9 +49,9 @@ namespace WindowsFormsApp3.Forms
             pictureBox2.Size = new System.Drawing.Size(120, 120);
             pictureBox3.Size = new System.Drawing.Size(120, 120);
             isBtnStartActive = false;
-            song.Open(new Uri(SONG));
+            /*song.Open(new Uri(SONG));
             song.Volume = 0.35;
-            song.Play();
+            song.Play();*/
 
             panelLogInfo.MouseEnter += new EventHandler(panelLogInfo_MouseEnter);
             panelLogInfo.MouseLeave += new EventHandler(panelLogInfo_MouseLeave);
@@ -199,6 +197,14 @@ namespace WindowsFormsApp3.Forms
 
         }
 
+        private void FormGamesWildWest_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyValue == (char)Keys.Enter)
+            {
+                button1_Click(btnStart, null);
+            }
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -226,6 +232,7 @@ namespace WindowsFormsApp3.Forms
                     user.SetBalance(user.GetBalance() - bet);
                     textBoxBalance.Text = user.GetBalance().ToString();
                     FormUser.ChangeBalanceValue(user.GetBalance().ToString());
+                    db.updateBalance(user.GetId().ToString(), user.GetBalance());
                     timer1.Enabled = true;
                     isBtnStartActive = false;
                 }
@@ -345,6 +352,7 @@ namespace WindowsFormsApp3.Forms
 
                 textBoxBalance.Text = user.GetBalance().ToString();
                 FormUser.ChangeBalanceValue(user.GetBalance().ToString());
+                db.updateBalance(user.GetId().ToString(), user.GetBalance());
                 move = 0;
                 isSpining = false;
             }

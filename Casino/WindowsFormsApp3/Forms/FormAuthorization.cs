@@ -14,7 +14,6 @@ namespace WindowsFormsApp3
 	public partial class FormAuthorization : Form
 	{
 		private Random random;
-		private int tempIndex;
 		private Form activeForm;
         bool isPasswordVisible, isPasswordVisible1;
         private User user;
@@ -260,9 +259,19 @@ namespace WindowsFormsApp3
                 clearTextboxes("Password must be more than 4 characters");
                 return;
             }
-            if (textBoxLoginCreate.Text.Length > 4)
+            if (textBoxLoginCreate.Text.Length < 4)
             {
                 clearTextboxes("Login must be more than 4 characters");
+                return;
+            }
+            if (textBoxPasswordCreate.Text.Length > 16)
+            {
+                clearTextboxes("Password must be less than 16 characters");
+                return;
+            }
+            if (textBoxLoginCreate.Text.Length < 16)
+            {
+                clearTextboxes("Login must be less than 16 characters");
                 return;
             }
 
@@ -271,7 +280,7 @@ namespace WindowsFormsApp3
             Database databaseObject = new Database();
             SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
             databaseObject.OpenConnection();
-            cmd.Parameters.AddWithValue("@balance", 100);
+            cmd.Parameters.AddWithValue("@balance", 0);
             cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.AddWithValue("@role", 0);
@@ -296,6 +305,17 @@ namespace WindowsFormsApp3
             {
                 hidePassword();
             }
+        }
+
+        private void FormAuthorization_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == (char)Keys.Escape)
+                button2_Click(button2, null);
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void button3_Click_1(object sender, EventArgs e)

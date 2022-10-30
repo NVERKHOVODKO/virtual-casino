@@ -488,7 +488,6 @@
         private System.Windows.Forms.Button btn5_2;
         private System.Windows.Forms.PictureBox pictureBomb1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelBet;
         private System.Windows.Forms.TextBox textBoxBet;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonTake;

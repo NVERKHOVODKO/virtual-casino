@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnTelegram = new System.Windows.Forms.Button();
+            this.btnWebsite = new System.Windows.Forms.Button();
+            this.btnInstagram = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
             this.btnGames = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -39,12 +42,9 @@
             this.lblBalence = new System.Windows.Forms.Label();
             this.labelMain = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
-            this.buttonBack = new System.Windows.Forms.Button();
-            this.btnTelegram = new System.Windows.Forms.Button();
-            this.btnWebsite = new System.Windows.Forms.Button();
-            this.btnInstagram = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -67,6 +67,52 @@
             this.panelMenu.Size = new System.Drawing.Size(200, 638);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint_1);
+            // 
+            // btnTelegram
+            // 
+            this.btnTelegram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnTelegram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.btnTelegram.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.telegram_icon2;
+            this.btnTelegram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTelegram.FlatAppearance.BorderSize = 0;
+            this.btnTelegram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTelegram.Location = new System.Drawing.Point(23, 581);
+            this.btnTelegram.Name = "btnTelegram";
+            this.btnTelegram.Size = new System.Drawing.Size(45, 45);
+            this.btnTelegram.TabIndex = 10;
+            this.btnTelegram.UseVisualStyleBackColor = false;
+            this.btnTelegram.Click += new System.EventHandler(this.btnTelegram_Click);
+            // 
+            // btnWebsite
+            // 
+            this.btnWebsite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnWebsite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.btnWebsite.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.google_icon2;
+            this.btnWebsite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWebsite.FlatAppearance.BorderSize = 0;
+            this.btnWebsite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWebsite.Location = new System.Drawing.Point(125, 581);
+            this.btnWebsite.Name = "btnWebsite";
+            this.btnWebsite.Size = new System.Drawing.Size(45, 45);
+            this.btnWebsite.TabIndex = 9;
+            this.btnWebsite.UseVisualStyleBackColor = false;
+            this.btnWebsite.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnInstagram
+            // 
+            this.btnInstagram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.btnInstagram.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.inst_icon2;
+            this.btnInstagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInstagram.FlatAppearance.BorderSize = 0;
+            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstagram.Location = new System.Drawing.Point(74, 581);
+            this.btnInstagram.Name = "btnInstagram";
+            this.btnInstagram.Size = new System.Drawing.Size(45, 45);
+            this.btnInstagram.TabIndex = 8;
+            this.btnInstagram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInstagram.UseVisualStyleBackColor = false;
+            this.btnInstagram.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAccount
             // 
@@ -146,33 +192,33 @@
             // 
             // lblBalanceValue
             // 
-            this.lblBalanceValue.AutoSize = true;
             this.lblBalanceValue.Font = new System.Drawing.Font("Malgun Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBalanceValue.ForeColor = System.Drawing.Color.White;
-            this.lblBalanceValue.Location = new System.Drawing.Point(9, 102);
+            this.lblBalanceValue.Location = new System.Drawing.Point(9, 119);
             this.lblBalanceValue.Name = "lblBalanceValue";
-            this.lblBalanceValue.Size = new System.Drawing.Size(107, 38);
+            this.lblBalanceValue.Size = new System.Drawing.Size(185, 38);
             this.lblBalanceValue.TabIndex = 10;
             this.lblBalanceValue.Text = "984734";
+            this.lblBalanceValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblBalanceValue.Click += new System.EventHandler(this.lblBalanceValue_Click);
             // 
             // lblLogin
             // 
-            this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(3, 9);
+            this.lblLogin.Location = new System.Drawing.Point(3, 17);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(162, 31);
+            this.lblLogin.Size = new System.Drawing.Size(191, 43);
             this.lblLogin.TabIndex = 9;
             this.lblLogin.Text = "nverkhovodko";
+            this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBalence
             // 
             this.lblBalence.AutoSize = true;
             this.lblBalence.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBalence.ForeColor = System.Drawing.Color.White;
-            this.lblBalence.Location = new System.Drawing.Point(3, 61);
+            this.lblBalence.Location = new System.Drawing.Point(37, 78);
             this.lblBalence.Name = "lblBalence";
             this.lblBalence.Size = new System.Drawing.Size(129, 41);
             this.lblBalence.TabIndex = 8;
@@ -204,6 +250,24 @@
             this.panelTitle.Size = new System.Drawing.Size(1199, 80);
             this.panelTitle.TabIndex = 3;
             // 
+            // buttonBack
+            // 
+            this.buttonBack.AutoSize = true;
+            this.buttonBack.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.Без_имени_51;
+            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonBack.Location = new System.Drawing.Point(0, 0);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(80, 80);
+            this.buttonBack.TabIndex = 1;
+            this.buttonBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -225,70 +289,6 @@
             this.panelDesktopPanel.Name = "panelDesktopPanel";
             this.panelDesktopPanel.Size = new System.Drawing.Size(1199, 558);
             this.panelDesktopPanel.TabIndex = 4;
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.AutoSize = true;
-            this.buttonBack.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.Без_имени_51;
-            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonBack.FlatAppearance.BorderSize = 0;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonBack.Location = new System.Drawing.Point(0, 0);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(80, 80);
-            this.buttonBack.TabIndex = 1;
-            this.buttonBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
-            // btnTelegram
-            // 
-            this.btnTelegram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnTelegram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.btnTelegram.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.telegram_icon2;
-            this.btnTelegram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTelegram.FlatAppearance.BorderSize = 0;
-            this.btnTelegram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTelegram.Location = new System.Drawing.Point(23, 581);
-            this.btnTelegram.Name = "btnTelegram";
-            this.btnTelegram.Size = new System.Drawing.Size(45, 45);
-            this.btnTelegram.TabIndex = 10;
-            this.btnTelegram.UseVisualStyleBackColor = false;
-            this.btnTelegram.Click += new System.EventHandler(this.btnTelegram_Click);
-            // 
-            // btnWebsite
-            // 
-            this.btnWebsite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnWebsite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.btnWebsite.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.google_icon2;
-            this.btnWebsite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnWebsite.FlatAppearance.BorderSize = 0;
-            this.btnWebsite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWebsite.Location = new System.Drawing.Point(125, 581);
-            this.btnWebsite.Name = "btnWebsite";
-            this.btnWebsite.Size = new System.Drawing.Size(45, 45);
-            this.btnWebsite.TabIndex = 9;
-            this.btnWebsite.UseVisualStyleBackColor = false;
-            this.btnWebsite.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnInstagram
-            // 
-            this.btnInstagram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.btnInstagram.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.inst_icon2;
-            this.btnInstagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInstagram.FlatAppearance.BorderSize = 0;
-            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstagram.Location = new System.Drawing.Point(74, 581);
-            this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(45, 45);
-            this.btnInstagram.TabIndex = 8;
-            this.btnInstagram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInstagram.UseVisualStyleBackColor = false;
-            this.btnInstagram.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormUser
             // 

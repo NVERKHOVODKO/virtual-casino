@@ -17,11 +17,14 @@ namespace WindowsFormsApp3
         private int tempIndex;
         private Form activeForm;
         private User user;
+        static string SONG = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\phonk_house.mp3";
+        private SongPlayer mediaPlayer = new SongPlayer();
 
         public FormUser(User user)
         {
-            this.user = user;   
+            this.user = user;
             InitializeComponent();
+            mediaPlayer.playSong(SONG);
             random = new Random(); 
             buttonBack.Visible = false;
             lblLogin.Text = user.GetLogin();
@@ -93,6 +96,10 @@ namespace WindowsFormsApp3
         }
         private void OpenChildForm(Form childForm, object btnSender, string titleText)
         {
+            if(!mediaPlayer.isSongMain())
+            {
+                mediaPlayer.playSong(SONG);
+            }
             if (activeForm != null)
                 activeForm.Close();
             ActivateButton(btnSender);
@@ -105,7 +112,6 @@ namespace WindowsFormsApp3
             childForm.BringToFront();
             childForm.Show();
             labelMain.Text = titleText;
-
         }
 
         private void Reset()
@@ -130,7 +136,7 @@ namespace WindowsFormsApp3
 
         private void btnGames_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormGames(this, user), sender, "GAMES");
+            OpenChildForm(new Forms.FormGames(this, user, mediaPlayer), sender, "GAMES");
         }
 
         private void buttonLiders_Click(object sender, EventArgs e)
@@ -213,11 +219,6 @@ namespace WindowsFormsApp3
         {
 
         }
-
-        /*private void button1_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText("text");
-        }*/
 
         private void lblBalence_Click(object sender, EventArgs e)
         {

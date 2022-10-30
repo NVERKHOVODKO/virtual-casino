@@ -35,6 +35,7 @@
             this.panelInfo = new System.Windows.Forms.Panel();
             this.panelLogInfo = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxBalance = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAllIn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,7 +50,6 @@
             this.bntBet100 = new System.Windows.Forms.Button();
             this.textBoxBet = new System.Windows.Forms.TextBox();
             this.btnStart = new System.Windows.Forms.Button();
-            this.textBoxBalance = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -107,6 +107,21 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(400, 150);
             this.panel4.TabIndex = 9;
+            // 
+            // textBoxBalance
+            // 
+            this.textBoxBalance.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.textBoxBalance.BackColor = System.Drawing.Color.LightSalmon;
+            this.textBoxBalance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBalance.Enabled = false;
+            this.textBoxBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxBalance.Location = new System.Drawing.Point(92, 65);
+            this.textBoxBalance.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxBalance.Name = "textBoxBalance";
+            this.textBoxBalance.Size = new System.Drawing.Size(220, 49);
+            this.textBoxBalance.TabIndex = 0;
+            this.textBoxBalance.Text = "2345";
+            this.textBoxBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -304,21 +319,6 @@
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBoxBalance
-            // 
-            this.textBoxBalance.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.textBoxBalance.BackColor = System.Drawing.Color.LightSalmon;
-            this.textBoxBalance.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBalance.Enabled = false;
-            this.textBoxBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxBalance.Location = new System.Drawing.Point(92, 65);
-            this.textBoxBalance.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxBalance.Name = "textBoxBalance";
-            this.textBoxBalance.Size = new System.Drawing.Size(220, 49);
-            this.textBoxBalance.TabIndex = 0;
-            this.textBoxBalance.Text = "2345";
-            this.textBoxBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // FormGamesWildWest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,9 +327,11 @@
             this.ClientSize = new System.Drawing.Size(1804, 740);
             this.Controls.Add(this.panel3);
             this.HelpButton = true;
+            this.KeyPreview = true;
             this.Name = "FormGamesWildWest";
             this.Text = "FormGamesJew";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormGamesWildWest_KeyDown);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

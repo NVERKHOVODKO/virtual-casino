@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -16,49 +17,28 @@ namespace WindowsFormsApp3.Forms
 {
 	public partial class FormGamesSapper : Form
 	{
-		bool isSecondlineActive = false, isThirdlineActive = false, isFourthlineActive = false, isFifthlineActive = false;
+		bool isSecondlineActive = false, isThirdlineActive = false, isFourthlineActive = false, isFifthlineActive = false, isFirstineActive = false;
 		Random rnd = new Random();
         static string BOMB = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\bomb.wav";
-        static string SONG_1 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_1.wav";
-        static string SONG_2 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_2.wav";
-        static string SONG_3 = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_3.wav";
         static string KNOCK = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\wooden_knock";
         static string PAPER = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\filing_paper.mp3";
         static string COIN = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\coin.mp3";
         static string SONG;
         bool isBlownedUp = false;
+        public MediaPlayer song = new MediaPlayer();
         User user;
-        int bet, startBet;
+        int bet;
         private FormUser FormUser;
-        private void choiseSong()
-        {
-            switch (rnd.Next(1, 3))
-            {
-                case 1:
-                    SONG = SONG_1;
-                    break;
-                case 2:
-                    SONG = SONG_2;
-                    break;
-                case 3:
-                    SONG = SONG_3;
-                    break;
-            }
-        }
+        public Form Creator;
 
         public FormGamesSapper(FormUser FormUser, User user)
 		{
-            choiseSong();
             InitializeComponent();
             this.user = user;
             this.FormUser = FormUser;
             labelBalance.Text = user.GetBalance().ToString();
             panelInfo.Visible = false;
             panelInfo.Location = new System.Drawing.Point(930,410);
-            MediaPlayer song = new MediaPlayer();
-            song.Open(new Uri(SONG));
-            song.Volume = 0.25;
-            song.Play();
             panelFlag.Location = new Point(1200, 20);
             pictureBomb1.Visible = false;
 			buttonTake.Visible = false;
@@ -159,13 +139,13 @@ namespace WindowsFormsApp3.Forms
             {
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
                 {
-                    startBet = bet;
                     user.SetBalance(user.GetBalance() - bet);
                     labelBalance.Text = user.GetBalance().ToString();
                     FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                     buttonStart.Visible = false;
                     bet = Int32.Parse(textBoxBet.Text);
                     textBoxBet.Enabled = false;
+                    isFirstineActive = true;
                 }
             }
             else if (user.GetBalance() < bet)
@@ -173,7 +153,6 @@ namespace WindowsFormsApp3.Forms
                 MessageBox.Show("Insuffcieint balance");
                 textBoxBet.Text = "";
                 bet = 0;
-                startBet = 0;
             }
             else
                 MessageBox.Show("Place your bet");
@@ -181,6 +160,7 @@ namespace WindowsFormsApp3.Forms
 
 		private void buttonTake_Click(object sender, EventArgs e)
 		{
+            textBoxBet.Enabled = true;
             user.SetBalance(user.GetBalance() + bet);
             buttonTake.Visible = false;
             buttonTryAgain.Visible = true;
@@ -188,27 +168,50 @@ namespace WindowsFormsApp3.Forms
             playWinSound();
             labelBalance.Text = user.GetBalance().ToString();
             FormUser.ChangeBalanceValue(user.GetBalance().ToString());
+            isFirstineActive = false;
         }
 
         private void buttonTryAgain_Click(object sender, EventArgs e)
         {
-            btn1_1.Visible = true;
-            btn1_2.Visible = true;
-            btn1_3.Visible = true;
-            btn2_1.Visible = true;
-            btn2_2.Visible = true;
-            btn2_3.Visible = true;
-            btn3_1.Visible = true;
-            btn3_2.Visible = true;
-            btn3_3.Visible = true;
-            btn4_1.Visible = true;
-            btn4_2.Visible = true;
-            btn4_3.Visible = true;
-            btn5_1.Visible = true;
-            btn5_2.Visible = true;
-            btn5_3.Visible = true;
-            pictureBomb1.Visible = false;
-            textBoxBet.Enabled = true;
+            if (textBoxBet.Text != "" && bet > 0 && bet <= user.GetBalance())
+            {
+                if (textBoxBet.Text != "" && textBoxBet.Text != "0")
+                {
+                    user.SetBalance(user.GetBalance() - bet);
+                    labelBalance.Text = user.GetBalance().ToString();
+                    FormUser.ChangeBalanceValue(user.GetBalance().ToString());
+                    buttonStart.Visible = false;
+                    bet = Int32.Parse(textBoxBet.Text);
+                    isFirstineActive = true;
+                    btn1_1.Visible = true;
+                    btn1_2.Visible = true;
+                    btn1_3.Visible = true;
+                    btn2_1.Visible = true;
+                    btn2_2.Visible = true;
+                    btn2_3.Visible = true;
+                    btn3_1.Visible = true;
+                    btn3_2.Visible = true;
+                    btn3_3.Visible = true;
+                    btn4_1.Visible = true;
+                    btn4_2.Visible = true;
+                    btn4_3.Visible = true;
+                    btn5_1.Visible = true;
+                    btn5_2.Visible = true;
+                    btn5_3.Visible = true;
+                    pictureBomb1.Visible = false;
+                    textBoxBet.Enabled = true;
+                    isFirstineActive = true;
+                }
+            }
+            else if (user.GetBalance() < bet)
+            {
+                MessageBox.Show("Insuffcieint balance");
+                textBoxBet.Text = "";
+                bet = 0;
+            }
+            else
+                MessageBox.Show("Place your bet");
+            MessageBox.Show(bet.ToString());
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -262,7 +265,10 @@ namespace WindowsFormsApp3.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBoxBet.Text = startBet.ToString();
+            bet = Int16.Parse(textBoxBet.Text);
+            user.SetBalance(user.GetBalance() + bet);
+            labelBalance.Text = user.GetBalance().ToString();
+            FormUser.ChangeBalanceValue(user.GetBalance().ToString());
             pictureBox1.Image = Properties.Resources.scale_coins_1;
             buttonTryAgain.Visible = false;
             btn1_1.Visible = true;
@@ -282,9 +288,9 @@ namespace WindowsFormsApp3.Forms
             btn5_3.Visible = true;
             pictureBomb1.Visible = false;
             isBlownedUp = false;
-            textBoxBet.Visible = true;
-            textBoxBet.Enabled = true;
-            buttonStart.Visible = true;
+            isFirstineActive = true;
+            textBoxBet.Enabled = false;
+
         }
 
         bool isLineActive(int numOfLine)
@@ -292,7 +298,9 @@ namespace WindowsFormsApp3.Forms
             switch(numOfLine)
             {
                 case 1:
-                    return true;
+                    if (isFirstineActive)
+                        return true;
+                    break;
                 case 2:
                     if(isSecondlineActive)
                         return true;
@@ -403,6 +411,9 @@ namespace WindowsFormsApp3.Forms
                 }
                 if (random == numOfButton)
                 {
+                    MediaPlayer bomb = new MediaPlayer();
+                    bomb.Open(new Uri(BOMB));
+                    bomb.Play();
                     buttonTake.Visible = false;
                     isFifthlineActive = false;
                     isFourthlineActive = false;
@@ -411,16 +422,10 @@ namespace WindowsFormsApp3.Forms
                     buttonTryAgain.Visible = true;
                     isBlownedUp = true;
                     bet = 0;
+                    textBoxBet.Enabled = true;
                     pictureBox1.Image = Properties.Resources.scale_coins_1;
                 }
-                textBoxBet.Text = bet.ToString();
                 FormUser.ChangeBalanceValue(user.GetBalance().ToString());
-                if (random == numOfButton)
-                {
-                    MediaPlayer bomb = new MediaPlayer();
-                    bomb.Open(new Uri(BOMB));
-                    bomb.Play();
-                }
             }
             else
             {

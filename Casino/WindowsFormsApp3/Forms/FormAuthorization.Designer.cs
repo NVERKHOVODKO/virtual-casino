@@ -56,6 +56,7 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelDesktopPanel.SuspendLayout();
@@ -104,6 +105,7 @@
             // 
             this.panelDesktopPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panelDesktopPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktopPanel.Controls.Add(this.button3);
             this.panelDesktopPanel.Controls.Add(this.btnSupport);
             this.panelDesktopPanel.Controls.Add(this.panel1);
             this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -115,17 +117,16 @@
             // 
             // btnSupport
             // 
-            this.btnSupport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSupport.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSupport.BackColor = System.Drawing.Color.Gray;
             this.btnSupport.FlatAppearance.BorderSize = 0;
             this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupport.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSupport.ForeColor = System.Drawing.Color.White;
-            this.btnSupport.Location = new System.Drawing.Point(1020, 501);
+            this.btnSupport.Location = new System.Drawing.Point(12, 73);
             this.btnSupport.Name = "btnSupport";
             this.btnSupport.Size = new System.Drawing.Size(196, 50);
             this.btnSupport.TabIndex = 6;
-            this.btnSupport.Text = "contact support";
+            this.btnSupport.Text = "Contact support";
             this.btnSupport.UseVisualStyleBackColor = false;
             // 
             // panel1
@@ -177,7 +178,7 @@
             this.panelCreateAccount.Controls.Add(this.textBoxLoginCreate);
             this.panelCreateAccount.Controls.Add(this.label1);
             this.panelCreateAccount.Controls.Add(this.label2);
-            this.panelCreateAccount.Location = new System.Drawing.Point(0, 0);
+            this.panelCreateAccount.Location = new System.Drawing.Point(3, 3);
             this.panelCreateAccount.Name = "panelCreateAccount";
             this.panelCreateAccount.Size = new System.Drawing.Size(488, 489);
             this.panelCreateAccount.TabIndex = 6;
@@ -254,6 +255,7 @@
             this.textBoxPasswordConfirmCreate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPasswordConfirmCreate.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPasswordConfirmCreate.Location = new System.Drawing.Point(83, 362);
+            this.textBoxPasswordConfirmCreate.MaxLength = 16;
             this.textBoxPasswordConfirmCreate.Name = "textBoxPasswordConfirmCreate";
             this.textBoxPasswordConfirmCreate.Size = new System.Drawing.Size(332, 37);
             this.textBoxPasswordConfirmCreate.TabIndex = 17;
@@ -273,6 +275,7 @@
             this.textBoxPasswordCreate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPasswordCreate.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPasswordCreate.Location = new System.Drawing.Point(83, 296);
+            this.textBoxPasswordCreate.MaxLength = 16;
             this.textBoxPasswordCreate.Name = "textBoxPasswordCreate";
             this.textBoxPasswordCreate.Size = new System.Drawing.Size(332, 37);
             this.textBoxPasswordCreate.TabIndex = 15;
@@ -282,6 +285,7 @@
             this.textBoxLoginCreate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLoginCreate.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLoginCreate.Location = new System.Drawing.Point(83, 230);
+            this.textBoxLoginCreate.MaxLength = 16;
             this.textBoxLoginCreate.Name = "textBoxLoginCreate";
             this.textBoxLoginCreate.Size = new System.Drawing.Size(332, 37);
             this.textBoxLoginCreate.TabIndex = 14;
@@ -333,6 +337,7 @@
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.Location = new System.Drawing.Point(83, 316);
+            this.textBoxPassword.MaxLength = 16;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(332, 37);
             this.textBoxPassword.TabIndex = 11;
@@ -342,6 +347,7 @@
             this.textBoxLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLogin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLogin.Location = new System.Drawing.Point(83, 236);
+            this.textBoxLogin.MaxLength = 16;
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(332, 37);
             this.textBoxLogin.TabIndex = 10;
@@ -398,6 +404,22 @@
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(12, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(196, 50);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Go to desktop";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            // 
             // FormAuthorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,9 +427,11 @@
             this.ClientSize = new System.Drawing.Size(1228, 563);
             this.Controls.Add(this.panelMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "FormAuthorization";
             this.Text = "More Gold";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAuthorization_KeyDown);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panelMain.ResumeLayout(false);
@@ -450,6 +474,7 @@
         private System.Windows.Forms.Button btnIsPasswordVisible;
         private System.Windows.Forms.Button btnIsPasswordVisible1;
         private System.Windows.Forms.Button btnSupport;
+        private System.Windows.Forms.Button button3;
     }
 }
 

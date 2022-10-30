@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace WindowsFormsApp3.Forms
 {
@@ -9,10 +10,16 @@ namespace WindowsFormsApp3.Forms
         private Form activeForm;
         private User user;
         private FormUser FormUser;
+        private Form currentChildForm;
+        SongPlayer mediaPlayer;
+        static string SONG_WILD_WEST = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\wild_west_3.mp3";
+        static string SONG_PIRATES = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_1.wav";
 
-        public FormGames(FormUser FormUser, User user)
+
+        public FormGames(FormUser FormUser, User user, SongPlayer mediaPlayer)
         {
             InitializeComponent();
+            this.mediaPlayer = mediaPlayer;
             this.user = user;
             this.FormUser = FormUser;
         }
@@ -30,7 +37,7 @@ namespace WindowsFormsApp3.Forms
                 {
                     Button btn = (Button)btns;
                     btns.BackColor = ThemeColor.PrimaryColor;
-                    btns.ForeColor = Color.White;
+                    btns.ForeColor = System.Drawing.Color.White;
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
@@ -40,8 +47,15 @@ namespace WindowsFormsApp3.Forms
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
+            {
                 activeForm.Close();
-            activeForm = childForm;
+            }
+            if(currentChildForm != null)
+            {
+                currentChildForm.Close();
+
+            }
+            currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -54,16 +68,19 @@ namespace WindowsFormsApp3.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormGamesSapper(FormUser, user), sender);
+            mediaPlayer.playSong(SONG_PIRATES);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormGamesWildWest(FormUser, user), sender);
+            mediaPlayer.playSong(SONG_WILD_WEST);
         }
 
         private void buttonGames_2_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormGamesCrush(user), sender);
+            //mediaPlayer.playSong(SONG);
         }
     }
 }

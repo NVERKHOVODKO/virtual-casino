@@ -206,12 +206,7 @@
     <Compile Include="Forms\FormEditUser.Designer.cs">
       <DependentUpon>FormEditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RJTextBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\RJTextBox.Designer.cs">
-      <DependentUpon>RJTextBox.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Forms\SongPlayer.cs" />
     <Compile Include="Forms\User.cs" />
     <Compile Include="Forms\FormUser.cs">
       <SubType>Form</SubType>
@@ -258,9 +253,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RJTextBox.resx">
-      <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

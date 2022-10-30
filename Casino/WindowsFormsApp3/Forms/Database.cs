@@ -87,6 +87,28 @@ namespace WindowsFormsApp3.Forms
             databaseObject.CloseConnection();
         }
 
+        public void updateBalance(string id, int balance)
+        {
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter();
+            Database databaseObject = new Database();
+            DataTable datatable = new DataTable();
+            string sql = "UPDATE users SET balance = @userBalance WHERE id = @userId";
+            databaseObject.OpenConnection();
+            SQLiteCommand cmd = new SQLiteCommand(sql, databaseObject.myConnection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@userBalance", balance.ToString());
+            cmd.Parameters.AddWithValue("@userId", id);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Error. Can't update balance in data base");
+            }
+            databaseObject.CloseConnection();
+        }
+
         public void Search(string query, DataGridView dgv)
         {
             SQLiteDataAdapter adapter = new SQLiteDataAdapter();

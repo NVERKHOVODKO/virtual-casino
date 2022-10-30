@@ -224,14 +224,14 @@
             // 
             // labelLogin
             // 
-            this.labelLogin.AutoSize = true;
             this.labelLogin.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLogin.ForeColor = System.Drawing.Color.White;
-            this.labelLogin.Location = new System.Drawing.Point(226, 274);
+            this.labelLogin.Location = new System.Drawing.Point(135, 284);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(451, 74);
             this.labelLogin.TabIndex = 3;
             this.labelLogin.Text = "nverkhovodko";
+            this.labelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
             // 
             // label2
@@ -247,14 +247,14 @@
             // 
             // labelID
             // 
-            this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelID.ForeColor = System.Drawing.Color.White;
-            this.labelID.Location = new System.Drawing.Point(294, 171);
+            this.labelID.Location = new System.Drawing.Point(267, 171);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(164, 74);
             this.labelID.TabIndex = 5;
             this.labelID.Text = "3456";
+            this.labelID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelID.Click += new System.EventHandler(this.labelID_Click);
             // 
             // pictureBoxMedal
@@ -278,14 +278,14 @@
             // 
             // labelBalance
             // 
-            this.labelBalance.AutoSize = true;
             this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelBalance.ForeColor = System.Drawing.Color.White;
             this.labelBalance.Location = new System.Drawing.Point(3, 11);
             this.labelBalance.Name = "labelBalance";
-            this.labelBalance.Size = new System.Drawing.Size(187, 42);
+            this.labelBalance.Size = new System.Drawing.Size(230, 42);
             this.labelBalance.TabIndex = 11;
             this.labelBalance.Text = "94895 NC";
+            this.labelBalance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -334,7 +334,6 @@
             this.panelCard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedal)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

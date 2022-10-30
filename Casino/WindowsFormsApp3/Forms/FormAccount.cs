@@ -9,6 +9,7 @@ namespace WindowsFormsApp3.Forms
         private User user;
         private FormUser FormUser;
         private Form activeForm;
+        private Database db = new Database();
 
 
         public FormAccount(FormUser FormUser, User user)
@@ -53,11 +54,17 @@ namespace WindowsFormsApp3.Forms
         {
             try
             {
+                if(user.GetBalance() > 999999)
+                {
+                    MessageBox.Show("Too much balance");
+                    return;
+                }
                 int addBalance = Int32.Parse(Char.ToString(textBox1.Text[15]) + Char.ToString(textBox1.Text[16]) + Char.ToString(textBox1.Text[17]) + Char.ToString(textBox1.Text[18]));
                 user.SetBalance(user.GetBalance() + addBalance);
                 MessageBox.Show("Payment was successful");
                 labelBalance.Text = user.GetBalance().ToString();
                 FormUser.ChangeBalanceValue(user.GetBalance().ToString());
+                db.updateBalance(user.GetId().ToString(), user.GetBalance());
             }
             catch
             {
