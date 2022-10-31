@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace WindowsFormsApp3.Forms
 {
@@ -16,12 +17,16 @@ namespace WindowsFormsApp3.Forms
         double curMultiplier, finalMultiplier, takeMult;
         int bet, countOfIterations = 0, balance;
         User user;
+        int numOfIterations = 0;
+        private string EXPLOSION = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\bomb.wav";
+        private bool isYourLblChanging = false;
         public FormGamesCrush(User user)
         {
             this.user = user;
             InitializeComponent();
             balance = user.GetBalance();
             label1.Text = user.GetBalance().ToString();
+            lblYourBet.Text = string.Empty;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -33,23 +38,25 @@ namespace WindowsFormsApp3.Forms
         {
             int num = rnd.Next(1, 1000);
             if (num < 3)
-                return 24 + rnd.Next(-3, 2);
+                return 40 + rnd.Next(-3, 2);
             if (num < 10)
-                return 15 + rnd.Next(-3, 2);
+                return 20 + rnd.Next(-3, 2);
             if (num < 40)
-                return 10 + rnd.Next(-3, 2);
+                return 15 + rnd.Next(-3, 2);
             if (num < 60)
-                return 5 + rnd.Next(-3, 2);
+                return 8 + rnd.Next(-2, 2);
             if (num < 90)
-                return 4 + rnd.Next(-3, 2);
+                return 6 + rnd.Next(-2, 2);
             if (num < 100)
-                return 2 + rnd.Next(-1, 2);
+                return 3 + rnd.Next(-1, 2);
+            if (num < 300)
+                return 3 + rnd.Next(-1, 2);
             if (num < 500)
-                return 1.37;
+                return 1.75;
             if (num < 600)
-                return 1.29;
+                return 1.5;
             if (num < 800)
-                return 1.2;
+                return 1.3;
             if (num < 900)
                 return 1.09;
             if (num < 950)
@@ -59,14 +66,17 @@ namespace WindowsFormsApp3.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            panel2.BackgroundImage = Properties.Resources.dude_jpg;
             textBoxBet.Enabled = false;
             user.SetBalance(user.GetBalance() - bet);
             label1.Text = user.GetBalance().ToString();
-            textBoxMult.BackColor = Color.Green;
+            labelMult.ForeColor = System.Drawing.Color.Green;
             finalMultiplier = GetMultiplier();
             timer1.Enabled = true;
             btnTake.Enabled = true;
+            btnGo.Enabled = false;
             curMultiplier = 1;
+            isYourLblChanging = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -76,7 +86,14 @@ namespace WindowsFormsApp3.Forms
 
         private void textBoxBet_TextChanged(object sender, EventArgs e)
         {
-            bet = Int32.Parse(textBoxBet.Text);
+            try
+            {
+                bet = Int32.Parse(textBoxBet.Text);
+            }
+            catch
+            {
+                bet = 0;
+            }
         }
 
         private void textBoxBet_KeyPress(object sender, KeyPressEventArgs e)
@@ -88,9 +105,39 @@ namespace WindowsFormsApp3.Forms
             }
         }
 
+        private void changePicture(int numOfIter)
+        {
+            switch (numOfIter)
+            {
+                case 1:
+                    panel2.BackgroundImage = Properties.Resources.fire_1;
+                    break;
+                case 2:
+                    panel2.BackgroundImage = Properties.Resources.fire_2;
+                    break;
+                case 3:
+                    panel2.BackgroundImage = Properties.Resources.fire_3;
+                    break;
+                case 4:
+                    panel2.BackgroundImage = Properties.Resources.fire_4;
+                    break;
+                default:
+                    timer1.Stop();
+                    //MessageBox.Show("You lose");
+                    curMultiplier = 0;
+                    countOfIterations = 0;
+                    numOfIterations = 0;
+                    btnGo.Enabled = true;
+                    MediaPlayer mediaPlayer = new MediaPlayer();
+                    mediaPlayer.Open(new Uri(EXPLOSION));
+                    mediaPlayer.Play();
+                    break;
+            }
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(countOfIterations > 100)
+            if (countOfIterations > 100)
                 curMultiplier += 0.1;
             else if (countOfIterations > 70)
                 curMultiplier += 0.05;
@@ -103,23 +150,44 @@ namespace WindowsFormsApp3.Forms
             else
                 curMultiplier += 0.005;
             countOfIterations++;
-            if (curMultiplier >= 100)
+            if (curMultiplier >= finalMultiplier)
             {
-                timer1.Stop();
-                curMultiplier = 0;
-                textBoxMult.BackColor = Color.Red;
-                MessageBox.Show("You lose");
+                btnTake.Enabled = false;
+                numOfIterations++;
+                changePicture(numOfIterations);
+                labelMult.ForeColor = System.Drawing.Color.Red;
+                textBoxBet.Enabled = true;
+                if (isYourLblChanging)
+                    lblYourBet.Text = "0";
             }
-            textBoxMult.Text = curMultiplier.ToString();
+            if(isYourLblChanging)
+                lblYourBet.Text = getMult(curMultiplier.ToString());
+            labelMult.Text = getMult(curMultiplier.ToString());
+        }
+
+        private string getMult(string str)
+        {
+            int length = str.Length, i = 0;
+            string final = string.Empty;
+            while (length > 0 && i < 4)
+            {
+                final += str[i].ToString();
+                i++;
+                length--;
+            }
+            return "X " + final;
         }
 
         private void btnTake_Click(object sender, EventArgs e)
         {
-            textBoxMult.BackColor = Color.Gray;
+            labelMult.ForeColor = System.Drawing.Color.Gray;
+            countOfIterations += 50;
+            btnGo.Enabled = false;
             takeMult = curMultiplier;
             btnTake.Enabled = false;
             user.SetBalance(user.GetBalance() + Convert.ToInt32(bet * curMultiplier));
             label1.Text = user.GetBalance().ToString();
+            isYourLblChanging = false;
         }
     }
 }

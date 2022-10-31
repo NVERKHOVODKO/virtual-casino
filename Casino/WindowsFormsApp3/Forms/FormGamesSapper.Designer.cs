@@ -76,34 +76,34 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1493, 813);
+            this.panel2.Size = new System.Drawing.Size(1704, 838);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panelFlag
             // 
             this.panelFlag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.panelFlag.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.flag;
+            this.panelFlag.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wooden_tag;
             this.panelFlag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelFlag.Controls.Add(this.labelBalance);
-            this.panelFlag.Location = new System.Drawing.Point(1340, 3);
+            this.panelFlag.Location = new System.Drawing.Point(1281, 3);
             this.panelFlag.Name = "panelFlag";
-            this.panelFlag.Size = new System.Drawing.Size(223, 155);
+            this.panelFlag.Size = new System.Drawing.Size(411, 187);
             this.panelFlag.TabIndex = 17;
             // 
             // labelBalance
             // 
             this.labelBalance.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelBalance.AutoSize = true;
-            this.labelBalance.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.labelBalance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(234)))));
             this.labelBalance.Enabled = false;
-            this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBalance.ForeColor = System.Drawing.Color.White;
-            this.labelBalance.Location = new System.Drawing.Point(71, 55);
+            this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBalance.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.labelBalance.Location = new System.Drawing.Point(56, 84);
             this.labelBalance.Name = "labelBalance";
-            this.labelBalance.Size = new System.Drawing.Size(138, 51);
+            this.labelBalance.Size = new System.Drawing.Size(289, 51);
             this.labelBalance.TabIndex = 0;
-            this.labelBalance.Text = "label1";
+            this.labelBalance.Text = "2345";
+            this.labelBalance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -116,7 +116,7 @@
             this.panel3.Controls.Add(this.buttonTake);
             this.panel3.Controls.Add(this.buttonStart);
             this.panel3.Controls.Add(this.textBoxBet);
-            this.panel3.Location = new System.Drawing.Point(356, 58);
+            this.panel3.Location = new System.Drawing.Point(462, 58);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(869, 569);
             this.panel3.TabIndex = 15;
@@ -430,7 +430,7 @@
             this.panelLogInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.panelLogInfo.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.infIcon;
             this.panelLogInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelLogInfo.Location = new System.Drawing.Point(1393, 713);
+            this.panelLogInfo.Location = new System.Drawing.Point(1604, 738);
             this.panelLogInfo.Name = "panelLogInfo";
             this.panelLogInfo.Size = new System.Drawing.Size(100, 100);
             this.panelLogInfo.TabIndex = 14;
@@ -441,7 +441,7 @@
             this.panelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.panelInfo.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.sapperInfo1;
             this.panelInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelInfo.Location = new System.Drawing.Point(1305, 549);
+            this.panelInfo.Location = new System.Drawing.Point(1411, 562);
             this.panelInfo.Name = "panelInfo";
             this.panelInfo.Size = new System.Drawing.Size(422, 239);
             this.panelInfo.TabIndex = 13;
@@ -451,14 +451,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1493, 813);
+            this.ClientSize = new System.Drawing.Size(1704, 838);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "FormGamesSapper";
             this.Text = "FormGamesSapper";
             this.panel2.ResumeLayout(false);
             this.panelFlag.ResumeLayout(false);
-            this.panelFlag.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

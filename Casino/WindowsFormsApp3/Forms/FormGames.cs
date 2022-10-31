@@ -14,10 +14,14 @@ namespace WindowsFormsApp3.Forms
         SongPlayer mediaPlayer;
         static string SONG_WILD_WEST = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\wild_west_3.mp3";
         static string SONG_PIRATES = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_1.wav";
+        static string POSTAL_SONG = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\postal_song.mp3";
+
+        
 
 
         public FormGames(FormUser FormUser, User user, SongPlayer mediaPlayer)
         {
+            this.mediaPlayer = mediaPlayer;
             InitializeComponent();
             this.mediaPlayer = mediaPlayer;
             this.user = user;
@@ -80,7 +84,7 @@ namespace WindowsFormsApp3.Forms
         private void buttonGames_2_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormGamesCrush(user), sender);
-            //mediaPlayer.playSong(SONG);
+            mediaPlayer.playSong(POSTAL_SONG);
         }
     }
 }

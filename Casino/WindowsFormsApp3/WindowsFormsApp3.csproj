@@ -718,6 +718,33 @@
   <ItemGroup>
     <None Include="Resources\bronze_medal.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dude.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_postal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\postal_table.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dude.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\steel.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Media;
 using System.Threading.Tasks;
+using System.Security.Policy;
 
 namespace WindowsFormsApp3.Forms
 {
@@ -26,6 +27,11 @@ namespace WindowsFormsApp3.Forms
             if (way == SONG)
                 return true;
             return false;
+        }
+
+        public void Dispose()
+        {
+            this.Dispose();
         }
     }
 }

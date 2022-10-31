@@ -1,8 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Tls.Crypto;
 using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Drawing;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -19,6 +21,11 @@ namespace WindowsFormsApp3
         private User user;
         static string SONG = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\phonk_house.mp3";
         private SongPlayer mediaPlayer = new SongPlayer();
+        private FormAccount fa;
+        private FormGames fg;
+        private FormHome fh;
+
+
 
         public FormUser(User user)
         {
@@ -100,8 +107,9 @@ namespace WindowsFormsApp3
             {
                 mediaPlayer.playSong(SONG);
             }
+            
             if (activeForm != null)
-                activeForm.Close();
+                activeForm.Dispose();
             ActivateButton(btnSender);
             activeForm = childForm;
             childForm.TopLevel = false;
@@ -111,6 +119,23 @@ namespace WindowsFormsApp3
             this.panelDesktopPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+            /*if (fa != null)
+            {
+                fa.Close();
+                MessageBox.Show("Close");
+
+            }
+            if (fh != null)
+            {
+                fh.Close();
+                MessageBox.Show("Close");
+
+            }
+            if (fg != null)
+            {
+                fg.Close();
+                MessageBox.Show("Close");
+            }*/
             labelMain.Text = titleText;
         }
 
@@ -127,7 +152,7 @@ namespace WindowsFormsApp3
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormHome(), sender, "HOME");
+            OpenChildForm(fh = new Forms.FormHome(), sender, "HOME");
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -136,7 +161,7 @@ namespace WindowsFormsApp3
 
         private void btnGames_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormGames(this, user, mediaPlayer), sender, "GAMES");
+            OpenChildForm(fg = new Forms.FormGames(this, user, mediaPlayer), sender, "GAMES");
         }
 
         private void buttonLiders_Click(object sender, EventArgs e)
@@ -212,7 +237,10 @@ namespace WindowsFormsApp3
 
         private void btnAccount_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormAccount(this, user), sender, "ACCOUNT");
+            OpenChildForm(fa = new FormAccount(mediaPlayer, this, user), sender, "ACCOUNT");
+            MediaPlayer mediaPlayer1 = new MediaPlayer();
+            mediaPlayer1.Open(new Uri(@"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\postal_song.mp3"));
+            mediaPlayer1.Play();
         }
 
         private void labelMain_Click(object sender, EventArgs e)

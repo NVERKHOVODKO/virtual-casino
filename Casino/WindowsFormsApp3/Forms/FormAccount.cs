@@ -1,6 +1,7 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace WindowsFormsApp3.Forms
 {
@@ -10,10 +11,12 @@ namespace WindowsFormsApp3.Forms
         private FormUser FormUser;
         private Form activeForm;
         private Database db = new Database();
+        private SongPlayer mediaPlayer;
 
 
-        public FormAccount(FormUser FormUser, User user)
+        public FormAccount(SongPlayer mediaPlayer, FormUser FormUser, User user)
         {
+            this.mediaPlayer = mediaPlayer;
             this.FormUser = FormUser;
             this.user = user; 
             InitializeComponent();
@@ -155,6 +158,9 @@ namespace WindowsFormsApp3.Forms
         {
             if (MessageBox.Show("Are you want to log out?", "Log out", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
             {
+                mediaPlayer.Dispose();
+                FormUser.Dispose();
+                this.Dispose();
                 OpenChildForm(new FormAuthorization());
             }
         }

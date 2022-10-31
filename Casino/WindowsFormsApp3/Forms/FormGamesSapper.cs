@@ -23,7 +23,6 @@ namespace WindowsFormsApp3.Forms
         static string KNOCK = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\wooden_knock";
         static string PAPER = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\filing_paper.mp3";
         static string COIN = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\coin.mp3";
-        static string SONG;
         bool isBlownedUp = false;
         public MediaPlayer song = new MediaPlayer();
         User user;
@@ -39,7 +38,7 @@ namespace WindowsFormsApp3.Forms
             labelBalance.Text = user.GetBalance().ToString();
             panelInfo.Visible = false;
             panelInfo.Location = new System.Drawing.Point(930,410);
-            panelFlag.Location = new Point(1200, 20);
+            panelFlag.Location = new Point(1070, 0);
             pictureBomb1.Visible = false;
 			buttonTake.Visible = false;
             buttonTryAgain.Visible = false;

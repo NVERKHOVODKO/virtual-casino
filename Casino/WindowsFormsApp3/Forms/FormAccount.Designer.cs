@@ -75,10 +75,11 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(1135, 34);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
+            this.button2.Location = new System.Drawing.Point(1098, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 53);
+            this.button2.Size = new System.Drawing.Size(179, 87);
             this.button2.TabIndex = 12;
             this.button2.Text = "Change\r\nlogin";
             this.button2.UseVisualStyleBackColor = false;
@@ -108,6 +109,7 @@
             this.panelDeposit.Controls.Add(this.button3);
             this.panelDeposit.Controls.Add(this.label1);
             this.panelDeposit.Controls.Add(this.panelCard);
+            this.panelDeposit.ForeColor = System.Drawing.Color.Coral;
             this.panelDeposit.Location = new System.Drawing.Point(0, 0);
             this.panelDeposit.Name = "panelDeposit";
             this.panelDeposit.Size = new System.Drawing.Size(704, 437);
@@ -293,10 +295,11 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(1135, 102);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
+            this.button1.Location = new System.Drawing.Point(1098, 105);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 53);
+            this.button1.Size = new System.Drawing.Size(179, 87);
             this.button1.TabIndex = 8;
             this.button1.Text = "Deposit";
             this.button1.UseVisualStyleBackColor = false;
@@ -308,12 +311,13 @@
             this.buttonSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
             this.buttonSignOut.FlatAppearance.BorderSize = 0;
             this.buttonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSignOut.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSignOut.Location = new System.Drawing.Point(1135, 172);
+            this.buttonSignOut.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSignOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
+            this.buttonSignOut.Location = new System.Drawing.Point(1098, 198);
             this.buttonSignOut.Name = "buttonSignOut";
-            this.buttonSignOut.Size = new System.Drawing.Size(118, 53);
+            this.buttonSignOut.Size = new System.Drawing.Size(179, 87);
             this.buttonSignOut.TabIndex = 2;
-            this.buttonSignOut.Text = "sign out";
+            this.buttonSignOut.Text = "Sign out";
             this.buttonSignOut.UseVisualStyleBackColor = false;
             this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
             // 

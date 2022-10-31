@@ -69,13 +69,13 @@
             // 
             this.buttonGames_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonGames_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonGames_2.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.Cup_icon;
+            this.buttonGames_2.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.dude;
             this.buttonGames_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonGames_2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.buttonGames_2.FlatAppearance.BorderSize = 0;
             this.buttonGames_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGames_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonGames_2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonGames_2.ForeColor = System.Drawing.Color.Brown;
             this.buttonGames_2.Location = new System.Drawing.Point(527, 29);
             this.buttonGames_2.Name = "buttonGames_2";
             this.buttonGames_2.Size = new System.Drawing.Size(250, 250);
