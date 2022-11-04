@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WindowsFormsApp3.Forms.Database">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAgAEAAAAABQAAYAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Forms\Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.FormAccount">
+    <Position X="9.25" Y="6.75" Width="1.5" />
+    <Members>
+      <Field Name="btnPay" Hidden="true" />
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="button3" Hidden="true" />
+      <Field Name="buttonSignOut" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="labelBalance" Hidden="true" />
+      <Field Name="labelID" Hidden="true" />
+      <Field Name="labelLogin" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panelAccount" Hidden="true" />
+      <Field Name="panelCard" Hidden="true" />
+      <Field Name="panelDeposit" Hidden="true" />
+      <Field Name="pictureBoxMedal" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+      <Field Name="textBox2" Hidden="true" />
+      <Field Name="textBox3" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gDEBAAABACBQABAAAICCSABTQAA6AACKkFAAAQAYiUA=</HashCode>
+      <FileName>Forms\FormAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.FormAdmin">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="btnBack" Hidden="true" />
+      <Field Name="btnCreateNew" Hidden="true" />
+      <Field Name="btnDropDatabase" Hidden="true" />
+      <Field Name="btnSave" Hidden="true" />
+      <Field Name="btnUpdate" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dataGridView1" Hidden="true" />
+      <Field Name="delete" Hidden="true" />
+      <Field Name="edit" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panelDesktopPanel" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="textBorSearch" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gBAAAAAARCAQAAgQAKCAEYAKAgggohDAAEAAAwJAkgg=</HashCode>
+      <FileName>Forms\FormAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.FormCreateNew">
+    <Position X="0.5" Y="9.25" Width="1.5" />
+    <Members>
+      <Field Name="btnSave" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="lblAccess" Hidden="true" />
+      <Field Name="lblBalance" Hidden="true" />
+      <Field Name="panelCreateAccount" Hidden="true" />
+      <Field Name="textBoxAccess" Hidden="true" />
+      <Field Name="textBoxBalance" Hidden="true" />
+      <Field Name="textBoxLogin" Hidden="true" />
+      <Field Name="textBoxPassword" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CAgAAAgAACAAAJAABACAAkECAAAQABAEAQAAAAIAQEA=</HashCode>
+      <FileName>Forms\FormCreateNew.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.FormEditUser">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="btnEdit" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="lblAccess" Hidden="true" />
+      <Field Name="lblBalance" Hidden="true" />
+      <Field Name="lblEdit" Hidden="true" />
+      <Field Name="panelCreateAccount" Hidden="true" />
+      <Field Name="textBoxAccess" Hidden="true" />
+      <Field Name="textBoxBalance" Hidden="true" />
+      <Field Name="textBoxLogin" Hidden="true" />
+      <Field Name="textBoxPassword" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CAiAgAAAACAAAJAAAACAAkECAQAQAAAGAQAAAAAAAkA=</HashCode>
+      <FileName>Forms\FormEditUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.FormGames">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="buttonGames_2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="panelGames" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CAAACAAIACAABCAAAICAAAAKABAYAACAgGAAAAAUAUA=</HashCode>
+      <FileName>Forms\FormGames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.FormGamesCrush">
+    <Position X="11" Y="5" Width="1.5" />
+    <Members>
+      <Field Name="btnGo" Hidden="true" />
+      <Field Name="btnTake" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="entityCommand1" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="labelMult" Hidden="true" />
+      <Field Name="lblYourBet" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panelDesktop" Hidden="true" />
+      <Field Name="textBoxBet" Hidden="true" />
+      <Field Name="timer1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QBYEEAQSwCAAIBgAAACABgAKAAAAYAAAkNAAAQAFAQg=</HashCode>
+      <FileName>Forms\FormGamesCrush.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.FormGamesSapper">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="btn1_1" Hidden="true" />
+      <Field Name="btn1_2" Hidden="true" />
+      <Field Name="btn1_3" Hidden="true" />
+      <Field Name="btn2_1" Hidden="true" />
+      <Field Name="btn2_2" Hidden="true" />
+      <Field Name="btn2_3" Hidden="true" />
+      <Field Name="btn3_1" Hidden="true" />
+      <Field Name="btn3_2" Hidden="true" />
+      <Field Name="btn3_3" Hidden="true" />
+      <Field Name="btn4_1" Hidden="true" />
+      <Field Name="btn4_2" Hidden="true" />
+      <Field Name="btn4_3" Hidden="true" />
+      <Field Name="btn5_1" Hidden="true" />
+      <Field Name="btn5_2" Hidden="true" />
+      <Field Name="btn5_3" Hidden="true" />
+      <Field Name="buttonStart" Hidden="true" />
+      <Field Name="buttonTake" Hidden="true" />
+      <Field Name="buttonTryAgain" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="labelBalance" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panelBoxes" Hidden="true" />
+      <Field Name="panelFlag" Hidden="true" />
+      <Field Name="panelInfo" Hidden="true" />
+      <Field Name="panelLogInfo" Hidden="true" />
+      <Field Name="pictureBomb1" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="textBoxBet" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>DBJEUAQAED9AAgwEAAOANkASgAAMAQAQEECAEUR8BUA=</HashCode>
+      <FileName>Forms\FormGamesSapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.FormGamesWildWest">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="a" Hidden="true" />
+      <Field Name="bntBet1" Hidden="true" />
+      <Field Name="bntBet100" Hidden="true" />
+      <Field Name="bntBet20" Hidden="true" />
+      <Field Name="bntBet5" Hidden="true" />
+      <Field Name="btnAllIn" Hidden="true" />
+      <Field Name="btnClear" Hidden="true" />
+      <Field Name="btnStart" Hidden="true" />
+      <Field Name="c" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="LblTitle" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel4" Hidden="true" />
+      <Field Name="panelInfo" Hidden="true" />
+      <Field Name="panelLogInfo" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="pictureBox2" Hidden="true" />
+      <Field Name="pictureBox3" Hidden="true" />
+      <Field Name="textBoxBalance" Hidden="true" />
+      <Field Name="textBoxBet" Hidden="true" />
+      <Field Name="timer1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>JhYEJRQkECQQBQ3AAEDABgQSAEAKZAi0AXAJERRQAQA=</HashCode>
+      <FileName>Forms\FormGamesWildWest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.FormHome">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="panelHome" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAQAAAACAAAACAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Forms\FormHome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.SongPlayer">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAIAAAAAAAAAAAAAAAAAAAAKAAIAAAAAEA=</HashCode>
+      <FileName>Forms\SongPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Forms.User">
+    <Position X="4" Y="7.75" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="6.7" />
+        <Point X="6.5" Y="6.853" />
+        <Point X="4.812" Y="6.853" />
+        <Point X="4.812" Y="7.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABACASAAAAAAIEgAAAgAAAAAAAAAAAICAABQgAYAAAA=</HashCode>
+      <FileName>Forms\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.FormAuthorization">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="btnCreateAccount" Hidden="true" />
+      <Field Name="btnIsPasswordVisible" Hidden="true" />
+      <Field Name="btnIsPasswordVisible1" Hidden="true" />
+      <Field Name="btnSignIn" Hidden="true" />
+      <Field Name="btnSupport" Hidden="true" />
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="button3" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="labelLogo" Hidden="true" />
+      <Field Name="lblLogin" Hidden="true" />
+      <Field Name="lblPassword" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panelCreateAccount" Hidden="true" />
+      <Field Name="panelDesktopPanel" Hidden="true" />
+      <Field Name="panelLogo" Hidden="true" />
+      <Field Name="panelMain" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="pictureBox2" Hidden="true" />
+      <Field Name="random" Hidden="true" />
+      <Field Name="textBoxLogin" Hidden="true" />
+      <Field Name="textBoxLoginCreate" Hidden="true" />
+      <Field Name="textBoxPassword" Hidden="true" />
+      <Field Name="textBoxPasswordConfirmCreate" Hidden="true" />
+      <Field Name="textBoxPasswordCreate" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CxDAEEUCAigBAlAAAYCmIgBGAgA8BCjYs3QAAwhBAQA=</HashCode>
+      <FileName>Forms\FormAuthorization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.FormUser">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <Members>
+      <Field Name="btnAccount" Hidden="true" />
+      <Field Name="btnGames" Hidden="true" />
+      <Field Name="btnHome" Hidden="true" />
+      <Field Name="btnInstagram" Hidden="true" />
+      <Field Name="btnLiders" Hidden="true" />
+      <Field Name="btnTelegram" Hidden="true" />
+      <Field Name="btnWebsite" Hidden="true" />
+      <Field Name="buttonBack" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="labelMain" Hidden="true" />
+      <Field Name="lblBalanceValue" Hidden="true" />
+      <Field Name="lblBalence" Hidden="true" />
+      <Field Name="lblLogin" Hidden="true" />
+      <Field Name="panelDesktopPanel" Hidden="true" />
+      <Field Name="panelLogo" Hidden="true" />
+      <Field Name="panelMain" Hidden="true" />
+      <Field Name="panelMenu" Hidden="true" />
+      <Field Name="panelTitle" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQDcBAAiACCJJEAAAICACAEmIgATFoyBCGQZAAERAUA=</HashCode>
+      <FileName>Forms\FormUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.Program">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.SoundPlayer">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABoAAAAAAAAAA=</HashCode>
+      <FileName>SoundPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp3.ThemeColor">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAACAAAAAAgA=</HashCode>
+      <FileName>ThemeColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

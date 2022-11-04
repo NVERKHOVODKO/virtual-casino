@@ -39,7 +39,6 @@ namespace WindowsFormsApp3
             double red = color.R;
             double green = color.G;
             double blue = color.B;
-
             //If correction factor is less than 0, darken color.
             if (correctionFactor < 0)
             {
@@ -55,7 +54,6 @@ namespace WindowsFormsApp3
                 green = (255 - green) * correctionFactor + green;
                 blue = (255 - blue) * correctionFactor + blue;
             }
-
             return Color.FromArgb(color.A, (byte)red, (byte)green, (byte)blue);
         }
     }

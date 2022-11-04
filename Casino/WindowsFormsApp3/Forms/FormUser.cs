@@ -21,11 +21,6 @@ namespace WindowsFormsApp3
         private User user;
         static string SONG = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\phonk_house.mp3";
         private SongPlayer mediaPlayer = new SongPlayer();
-        private FormAccount fa;
-        private FormGames fg;
-        private FormHome fh;
-
-
 
         public FormUser(User user)
         {
@@ -36,20 +31,6 @@ namespace WindowsFormsApp3
             buttonBack.Visible = false;
             lblLogin.Text = user.GetLogin();
             lblBalanceValue.Text = user.GetBalance().ToString();
-        }
-        
-        private void OpenForm(Form childForm)
-        {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.panelMain.Controls.Add(childForm);
-            this.panelMain.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
         }
 
 
@@ -68,8 +49,6 @@ namespace WindowsFormsApp3
         private void ActivateButton(object btnSender)
         {
             MediaPlayer mediaPlayer = new MediaPlayer();
-            mediaPlayer.Open(new Uri(@"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\button_gta.mp3"));
-            mediaPlayer.Play();
             if (btnSender != null)
             {
                 if (currentButton != (Button)btnSender)
@@ -107,7 +86,7 @@ namespace WindowsFormsApp3
             {
                 mediaPlayer.playSong(SONG);
             }
-            
+
             if (activeForm != null)
                 activeForm.Dispose();
             ActivateButton(btnSender);
@@ -119,23 +98,6 @@ namespace WindowsFormsApp3
             this.panelDesktopPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            /*if (fa != null)
-            {
-                fa.Close();
-                MessageBox.Show("Close");
-
-            }
-            if (fh != null)
-            {
-                fh.Close();
-                MessageBox.Show("Close");
-
-            }
-            if (fg != null)
-            {
-                fg.Close();
-                MessageBox.Show("Close");
-            }*/
             labelMain.Text = titleText;
         }
 
@@ -152,16 +114,12 @@ namespace WindowsFormsApp3
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(fh = new Forms.FormHome(), sender, "HOME");
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
+            OpenChildForm(new Forms.FormHome(), sender, "HOME");
         }
 
         private void btnGames_Click(object sender, EventArgs e)
         {
-            OpenChildForm(fg = new Forms.FormGames(this, user, mediaPlayer), sender, "GAMES");
+            OpenChildForm(new Forms.FormGames(this, user, mediaPlayer), sender, "GAMES");
         }
 
         private void buttonLiders_Click(object sender, EventArgs e)
@@ -175,35 +133,13 @@ namespace WindowsFormsApp3
             ActivateButton(sender);
         }
 
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelTitle_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -215,32 +151,20 @@ namespace WindowsFormsApp3
             Reset();
         }
 
-        private void labelLogo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelDesktopPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         public void ChangeBalanceValue(string value)
         {
             lblBalanceValue.Text = value;
         }
 
+        public void ChangeLoginText(string login)
+        {
+            lblLogin.Text = login;
+        }
+
         private void btnAccount_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(fa = new FormAccount(mediaPlayer, this, user), sender, "ACCOUNT");
-            MediaPlayer mediaPlayer1 = new MediaPlayer();
-            mediaPlayer1.Open(new Uri(@"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\postal_song.mp3"));
-            mediaPlayer1.Play();
+            OpenChildForm(new FormAccount(mediaPlayer, this, user), sender, "ACCOUNT");
         }
 
         private void labelMain_Click(object sender, EventArgs e)
@@ -276,19 +200,14 @@ namespace WindowsFormsApp3
             MessageBox.Show("Link copied");
         }
 
-        private void panelMenu_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FormUser_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonBack_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new Forms.FormHome(), sender, "HOME");
+        }
 
+        private void btnLiders_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormLiders(), sender, "LIDERS");
         }
     }
 }

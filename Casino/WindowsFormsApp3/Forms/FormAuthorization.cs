@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using WindowsFormsApp3.Forms;
 using System.Threading;
+using Panel = WindowsFormsApp3.Forms.Panel;
 
 namespace WindowsFormsApp3
 {
@@ -20,15 +21,31 @@ namespace WindowsFormsApp3
 
         public FormAuthorization()
 		{
+            Console.WriteLine("-------------------");
 			InitializeComponent();
 			random = new Random();
             panelCreateAccount.Visible = false;
             isPasswordVisible = true;
             isPasswordVisible1 = true;
+            Panel pnl = new Panel();
+            pnl.SetRoundedShape(panelCreateAccount, 30);
+            pnl.SetRoundedShape(panel1, 20);
+            pnl.SetRoundedShape(button1, 20);
+            pnl.SetRoundedShape(button2, 20);
+            pnl.SetRoundedShape(button3, 20);
+            pnl.SetRoundedShape(btnSupport, 20);
+            pnl.SetRoundedShape(btnCreateAccount, 10);
+            pnl.SetRoundedShape(btnSignIn, 20);
+            pnl.SetRoundedShape(btnIsPasswordVisible, 7);
+            pnl.SetRoundedShape(btnIsPasswordVisible1, 7);
+
+
+
 
             hidePassword();
         }
 
+        
         private void hidePassword()
         {
             btnIsPasswordVisible.BackgroundImage = Properties.Resources.closed_eye;
@@ -60,7 +77,7 @@ namespace WindowsFormsApp3
             if (textBoxLogin.Text.Length < 3 || textBoxPassword.Text.Length < 3)
             {
                 MessageBox.Show("Fill in the fields");
-                user = new User(1, "login", "password", 1, 10000000);
+                user = new User(1, "login", "password", 1, 7844);
                 OpenChildForm(new FormUser(user));
                 //OpenChildForm(new FormAdmin());
             }
@@ -181,8 +198,6 @@ namespace WindowsFormsApp3
 
         }
 
-
-
         private void button1_Click(object sender, EventArgs e)
         {
         }
@@ -259,9 +274,9 @@ namespace WindowsFormsApp3
                 clearTextboxes("Password must be more than 4 characters");
                 return;
             }
-            if (textBoxLoginCreate.Text.Length < 4)
+            if (textBoxLoginCreate.Text.Length < 3)
             {
-                clearTextboxes("Login must be more than 4 characters");
+                clearTextboxes("Login must be more than 3 characters");
                 return;
             }
             if (textBoxPasswordCreate.Text.Length > 16)
@@ -269,7 +284,7 @@ namespace WindowsFormsApp3
                 clearTextboxes("Password must be less than 16 characters");
                 return;
             }
-            if (textBoxLoginCreate.Text.Length < 16)
+            if (textBoxLoginCreate.Text.Length > 16)
             {
                 clearTextboxes("Login must be less than 16 characters");
                 return;
@@ -287,6 +302,7 @@ namespace WindowsFormsApp3
             var result = cmd.ExecuteNonQuery();
             databaseObject.CloseConnection();
             panelCreateAccount.Visible = false;
+            btnIsPasswordVisible.Visible = true;
             clearTextboxes("Your account has been successfully created");
         }
 

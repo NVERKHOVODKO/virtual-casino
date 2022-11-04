@@ -65,38 +65,52 @@ namespace WindowsFormsApp3.Forms
 
         private void textBorSearch_TextChanged(object sender, EventArgs e)
         {
-            db.Search("SELECT * FROM users WHERE login LIKE '%" + textBorSearch.Text + "%'", dataGridView1);
+            db.SearchInDataBase("SELECT * FROM users WHERE login LIKE '%" + textBorSearch.Text + "%'", dataGridView1);
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            login = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            password = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            access = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            balance = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            User user = new User(Int32.Parse(id), login, password, Int32.Parse(access), Int32.Parse(balance));
-            if (e.ColumnIndex == 0)
+            try
             {
-                FormEditUser feu = new FormEditUser(user);
-                feu.ShowDialog();
-                feu.Dispose();
-                db.UpdateTable(dataGridView1);
-                return;
-            }
-            if(e.ColumnIndex == 1)
-            {
-                if (user.GetAccess() == 5)
+                id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                login = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                password = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                access = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                balance = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                User user = new User(Int32.Parse(id), login, password, Int32.Parse(access), Int32.Parse(balance));
+                if (e.ColumnIndex == 0)
                 {
-                    MessageBox.Show("You can't delete the main admin");
-                    return;
-                }else if (MessageBox.Show("Are you want to delete user record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-                    db.DeleteUser(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    if (access == "5")
+                    {
+                        MessageBox.Show("You can't edit main administrator");
+                        return;
+                    }
+                    FormEditUser feu = new FormEditUser(user);
+                    feu.ShowDialog();
+                    feu.Dispose();
                     db.UpdateTable(dataGridView1);
+                    return;
                 }
-                return;
+                if (e.ColumnIndex == 1)
+                {
+                    if (user.GetAccess() == 5)
+                    {
+                        MessageBox.Show("You can't delete the main admin");
+                        return;
+                    }
+                    else if (MessageBox.Show("Are you want to delete user record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        db.DeleteUser(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                        db.UpdateTable(dataGridView1);
+                    }
+                    return;
+                }
             }
+            catch
+            {
+
+            }
+            
         }
 
         public string GetId()

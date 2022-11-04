@@ -136,9 +136,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\CueTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Forms\FormAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,12 +153,6 @@
     </Compile>
     <Compile Include="Forms\FormAuthorization.Designer.cs">
       <DependentUpon>FormAuthorization.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Alert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Alert.Designer.cs">
-      <DependentUpon>Alert.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Database.cs" />
     <Compile Include="Forms\FormCreateNew.cs">
@@ -206,6 +197,13 @@
     <Compile Include="Forms\FormEditUser.Designer.cs">
       <DependentUpon>FormEditUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormLiders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLiders.Designer.cs">
+      <DependentUpon>FormLiders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Panel.cs" />
     <Compile Include="Forms\SongPlayer.cs" />
     <Compile Include="Forms\User.cs" />
     <Compile Include="Forms\FormUser.cs">
@@ -213,6 +211,11 @@
     </Compile>
     <Compile Include="Forms\FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SoundPlayer.cs" />
     <Compile Include="Program.cs" />
@@ -226,9 +229,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAuthorization.resx">
       <DependentUpon>FormAuthorization.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Alert.resx">
-      <DependentUpon>Alert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCreateNew.resx">
       <DependentUpon>FormCreateNew.cs</DependentUpon>
@@ -251,19 +251,18 @@
     <EmbeddedResource Include="Forms\FormEditUser.resx">
       <DependentUpon>FormEditUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLiders.resx">
+      <DependentUpon>FormLiders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <None Include="ClassDiagram3.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -279,15 +278,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\coin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1492691.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\liders.png" />
   </ItemGroup>
   <ItemGroup>
@@ -300,52 +290,13 @@
     <None Include="Resources\wooden backgroubd.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\casino roulette icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\casino roulette icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fruits icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fruits icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Jew icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cup icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow back.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Без имени-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Без имени-11.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\account icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Без имени-3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Без имени-4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Без имени-41.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Без имени-5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Без имени-51.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cup icon1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\casino roulette icon2.png" />
@@ -354,40 +305,13 @@
     <None Include="casino.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Cup icon2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1492691 - Копировать.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\account icon - Копировать.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow back - Копировать.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\casino roulette icon - Копировать.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\casino roulette icon1 - Копировать.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\casino roulette icon2 - Копировать.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cup icon - Копировать.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\coin - Копировать.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cup icon1 - Копировать.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cup icon2 - Копировать.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fruits icon - Копировать.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Rocket background.jpg" />
@@ -399,55 +323,10 @@
     <None Include="Resources\Rocket background2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1626712215_8-kartinkin-com-p-fon-among-as-korabl-vnutri-krasivo-8.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\box.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\grass.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bomb.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bomb1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\box1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background sea.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\pirat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map with X.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bomb2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bomb3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bomb4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wood button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wood button1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map with pirat.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bomb5.png" />
@@ -459,43 +338,10 @@
     <None Include="Resources\Sapper game icon1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Coin icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Coin icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\sea.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\map2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\map9.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\map10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Coin icon2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fruits icon2.png" />
@@ -513,40 +359,10 @@
     <None Include="Resources\Jew icon4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Bell icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fruits icon3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bhardvaj-lukhi-1-edit.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sci_fi_corridor_tunnel_169861_1280x720.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sun.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\saturn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\moon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\shema.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\red.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\saturn1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close_solid_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\734440_chip_512x512.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -563,16 +379,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\asteroid.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mars.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\wild west.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wood.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\barrel.png" />
@@ -623,9 +430,6 @@
     <None Include="Resources\gameInfoWest.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sapperInfo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\sapperInfo1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -645,9 +449,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\scale_coins_5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\flag.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\account icon1.png" />
@@ -671,24 +472,6 @@
     <None Include="Resources\opened_eye.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\google_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\inst_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\telegram_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\google_icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\inst_icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\telegram_icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\opened_eye1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -708,9 +491,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gold_medal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\silver_medal.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\silver_medal1.png" />
@@ -744,6 +524,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\steel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saul_goodman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без имени-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue-Background-1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

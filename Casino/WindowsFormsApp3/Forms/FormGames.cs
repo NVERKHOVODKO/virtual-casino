@@ -7,7 +7,6 @@ namespace WindowsFormsApp3.Forms
 {
     public partial class FormGames : Form
     {
-        private Form activeForm;
         private User user;
         private FormUser FormUser;
         private Form currentChildForm;
@@ -18,11 +17,23 @@ namespace WindowsFormsApp3.Forms
 
         
 
-
         public FormGames(FormUser FormUser, User user, SongPlayer mediaPlayer)
         {
             this.mediaPlayer = mediaPlayer;
             InitializeComponent();
+            Panel pnl = new Panel();
+            pnl.SetRoundedShape(button3, 40);
+            pnl.SetRoundedShape(button1, 40);
+            pnl.SetRoundedShape(button2, 40);
+            pnl.SetRoundedShape(button3, 40);
+            pnl.SetRoundedShape(button4, 40);
+            pnl.SetRoundedShape(button5, 40);
+            pnl.SetRoundedShape(button6, 40);
+            pnl.SetRoundedShape(button7, 40);
+            pnl.SetRoundedShape(button8, 40);
+            pnl.SetRoundedShape(button9, 40);
+
+
             this.mediaPlayer = mediaPlayer;
             this.user = user;
             this.FormUser = FormUser;
@@ -50,14 +61,9 @@ namespace WindowsFormsApp3.Forms
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
             if(currentChildForm != null)
             {
                 currentChildForm.Close();
-
             }
             currentChildForm = childForm;
             childForm.TopLevel = false;
@@ -83,7 +89,7 @@ namespace WindowsFormsApp3.Forms
 
         private void buttonGames_2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormGamesCrush(user), sender);
+            OpenChildForm(new Forms.FormGamesCrush(FormUser, user), sender);
             mediaPlayer.playSong(POSTAL_SONG);
         }
     }

@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCreateNew = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.btnDropDatabase = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBorSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnDropDatabase = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelDesktopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -119,6 +119,20 @@
             this.panelDesktopPanel.Size = new System.Drawing.Size(1695, 999);
             this.panelDesktopPanel.TabIndex = 6;
             // 
+            // btnDropDatabase
+            // 
+            this.btnDropDatabase.BackColor = System.Drawing.Color.Red;
+            this.btnDropDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDropDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDropDatabase.ForeColor = System.Drawing.Color.White;
+            this.btnDropDatabase.Location = new System.Drawing.Point(120, 12);
+            this.btnDropDatabase.Name = "btnDropDatabase";
+            this.btnDropDatabase.Size = new System.Drawing.Size(102, 47);
+            this.btnDropDatabase.TabIndex = 8;
+            this.btnDropDatabase.Text = "Drop";
+            this.btnDropDatabase.UseVisualStyleBackColor = false;
+            this.btnDropDatabase.Click += new System.EventHandler(this.btnDropDatabase_Click);
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -149,6 +163,35 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // edit
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.NullValue = "delete";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.edit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.edit.HeaderText = "Delete";
+            this.edit.MinimumWidth = 6;
+            this.edit.Name = "edit";
+            // 
+            // delete
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.NullValue = "edit";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.delete.DefaultCellStyle = dataGridViewCellStyle1;
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete.HeaderText = "edit";
+            this.delete.MinimumWidth = 6;
+            this.delete.Name = "delete";
+            this.delete.Text = "delete";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
@@ -167,49 +210,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1657, 895);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // delete
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.NullValue = "edit";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.delete.DefaultCellStyle = dataGridViewCellStyle1;
-            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete.HeaderText = "edit";
-            this.delete.MinimumWidth = 6;
-            this.delete.Name = "delete";
-            this.delete.Text = "delete";
-            // 
-            // edit
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.NullValue = "delete";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.edit.DefaultCellStyle = dataGridViewCellStyle2;
-            this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.edit.HeaderText = "Delete";
-            this.edit.MinimumWidth = 6;
-            this.edit.Name = "edit";
-            // 
-            // btnDropDatabase
-            // 
-            this.btnDropDatabase.BackColor = System.Drawing.Color.Red;
-            this.btnDropDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDropDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDropDatabase.ForeColor = System.Drawing.Color.White;
-            this.btnDropDatabase.Location = new System.Drawing.Point(120, 12);
-            this.btnDropDatabase.Name = "btnDropDatabase";
-            this.btnDropDatabase.Size = new System.Drawing.Size(102, 47);
-            this.btnDropDatabase.TabIndex = 8;
-            this.btnDropDatabase.Text = "Drop";
-            this.btnDropDatabase.UseVisualStyleBackColor = false;
-            this.btnDropDatabase.Click += new System.EventHandler(this.btnDropDatabase_Click);
             // 
             // FormAdmin
             // 
@@ -234,12 +234,12 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panelDesktopPanel;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBorSearch;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnDropDatabase;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
         private System.Windows.Forms.DataGridViewButtonColumn edit;
-        private System.Windows.Forms.Button btnDropDatabase;
     }
 }

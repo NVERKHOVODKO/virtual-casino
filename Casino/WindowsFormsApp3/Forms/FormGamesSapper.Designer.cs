@@ -367,7 +367,7 @@
             // 
             // buttonTryAgain
             // 
-            this.buttonTryAgain.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wood_button;
+            this.buttonTryAgain.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wood_button2;
             this.buttonTryAgain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonTryAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTryAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -382,7 +382,7 @@
             // 
             // buttonTake
             // 
-            this.buttonTake.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wood_button;
+            this.buttonTake.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wood_button2;
             this.buttonTake.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonTake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTake.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -397,7 +397,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wood_button;
+            this.buttonStart.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wood_button2;
             this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -412,7 +412,7 @@
             // 
             // textBoxBet
             // 
-            this.textBoxBet.BackColor = System.Drawing.Color.Gold;
+            this.textBoxBet.BackColor = System.Drawing.Color.Silver;
             this.textBoxBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxBet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxBet.Location = new System.Drawing.Point(530, 346);

@@ -1,17 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.Design;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
+using Panel = WindowsFormsApp3.Forms.Panel;
+
 
 namespace WindowsFormsApp3.Forms
 {
@@ -29,12 +22,16 @@ namespace WindowsFormsApp3.Forms
         int bet;
         private FormUser FormUser;
         public Form Creator;
+        private Database db = new Database();
 
         public FormGamesSapper(FormUser FormUser, User user)
 		{
             InitializeComponent();
             this.user = user;
             this.FormUser = FormUser;
+            Panel pnl = new Panel();
+            pnl.SetRoundedShape(panel3, 50);
+            pnl.SetRoundedShape(panelBoxes, 15);
             labelBalance.Text = user.GetBalance().ToString();
             panelInfo.Visible = false;
             panelInfo.Location = new System.Drawing.Point(930,410);
@@ -139,6 +136,7 @@ namespace WindowsFormsApp3.Forms
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
                 {
                     user.SetBalance(user.GetBalance() - bet);
+                    db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                     labelBalance.Text = user.GetBalance().ToString();
                     FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                     buttonStart.Visible = false;
@@ -161,6 +159,7 @@ namespace WindowsFormsApp3.Forms
 		{
             textBoxBet.Enabled = true;
             user.SetBalance(user.GetBalance() + bet);
+            db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
             buttonTake.Visible = false;
             buttonTryAgain.Visible = true;
             MessageBox.Show("You win " + bet);
@@ -177,6 +176,7 @@ namespace WindowsFormsApp3.Forms
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
                 {
                     user.SetBalance(user.GetBalance() - bet);
+                    db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                     labelBalance.Text = user.GetBalance().ToString();
                     FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                     buttonStart.Visible = false;
@@ -265,7 +265,13 @@ namespace WindowsFormsApp3.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             bet = Int16.Parse(textBoxBet.Text);
-            user.SetBalance(user.GetBalance() + bet);
+            if(bet > user.GetBalance())
+            {
+                MessageBox.Show("Insufficient balance");
+                return;
+            }
+            user.SetBalance(user.GetBalance() - bet);
+            db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
             labelBalance.Text = user.GetBalance().ToString();
             FormUser.ChangeBalanceValue(user.GetBalance().ToString());
             pictureBox1.Image = Properties.Resources.scale_coins_1;
@@ -401,10 +407,12 @@ namespace WindowsFormsApp3.Forms
                         buttonTryAgain.Visible = true;
                         if (random != numOfButton)
                         {
-                            MessageBox.Show("You win " + bet);
+                            MessageBox.Show("You win " + bet * 4 / 5);
                             playWinSound();
                             user.SetBalance(user.GetBalance() + bet);
+                            db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                             labelBalance.Text = user.GetBalance().ToString();
+                            textBoxBet.Enabled = true;
                         }
                         break;
                 }

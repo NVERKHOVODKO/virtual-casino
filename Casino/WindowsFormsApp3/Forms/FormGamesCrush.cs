@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
 
@@ -15,18 +8,26 @@ namespace WindowsFormsApp3.Forms
     {
         Random rnd = new Random();
         double curMultiplier, finalMultiplier, takeMult;
-        int bet, countOfIterations = 0, balance;
+        int bet, countOfIterations = 0;
         User user;
         int numOfIterations = 0;
         private string EXPLOSION = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\bomb.wav";
+        static string BUTTON = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\button.mp3";
         private bool isYourLblChanging = false;
-        public FormGamesCrush(User user)
+        private FormUser FormUser;
+        private bool isBombActive = true;
+        private Database db = new Database();
+        public FormGamesCrush(FormUser FormUser, User user)
         {
+            this.FormUser = FormUser;
             this.user = user;
             InitializeComponent();
-            balance = user.GetBalance();
+            Panel pnl = new Panel();
+            pnl.SetRoundedShape(panel1, 50);
+            pnl.SetRoundedShape(panel2, 20);
             label1.Text = user.GetBalance().ToString();
             lblYourBet.Text = string.Empty;
+            btnTake.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -49,6 +50,7 @@ namespace WindowsFormsApp3.Forms
                 return 6 + rnd.Next(-2, 2);
             if (num < 100)
                 return 3 + rnd.Next(-1, 2);
+
             if (num < 300)
                 return 3 + rnd.Next(-1, 2);
             if (num < 500)
@@ -56,20 +58,43 @@ namespace WindowsFormsApp3.Forms
             if (num < 600)
                 return 1.5;
             if (num < 800)
-                return 1.3;
+                return 1.1;
             if (num < 900)
-                return 1.09;
+                return 1.02;
             if (num < 950)
                 return 1.01;
-            return 1.05;
+            return 1.00;
+        }
+
+        private void playButtonSound()
+        {
+            MediaPlayer coin = new MediaPlayer();
+            coin.Open(new Uri(BUTTON));
+            coin.Play();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            playButtonSound();
+            if (bet > user.GetBalance())
+            {
+                MessageBox.Show("Insufficient balance");
+                return;
+            }
+            if(bet < 1)
+            {
+                MessageBox.Show("Place your bet");
+                return;
+            }
+            isBombActive = true;
+            user.SetBalance(user.GetBalance() - bet);
+            db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
+            btnGo.Visible = false;
+            btnTake.Visible = true;
             panel2.BackgroundImage = Properties.Resources.dude_jpg;
             textBoxBet.Enabled = false;
-            user.SetBalance(user.GetBalance() - bet);
             label1.Text = user.GetBalance().ToString();
+            FormUser.ChangeBalanceValue(user.GetBalance().ToString());
             labelMult.ForeColor = System.Drawing.Color.Green;
             finalMultiplier = GetMultiplier();
             timer1.Enabled = true;
@@ -105,6 +130,20 @@ namespace WindowsFormsApp3.Forms
             }
         }
 
+        private void textBoxBet_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                bet = Int32.Parse(textBoxBet.Text);
+                if (bet == 0)
+                    textBoxBet.Text = "";
+            }
+            catch
+            {
+                textBoxBet.Text = "";
+            }
+        }
+
         private void changePicture(int numOfIter)
         {
             switch (numOfIter)
@@ -123,16 +162,21 @@ namespace WindowsFormsApp3.Forms
                     break;
                 default:
                     timer1.Stop();
-                    //MessageBox.Show("You lose");
                     curMultiplier = 0;
                     countOfIterations = 0;
                     numOfIterations = 0;
                     btnGo.Enabled = true;
-                    MediaPlayer mediaPlayer = new MediaPlayer();
-                    mediaPlayer.Open(new Uri(EXPLOSION));
-                    mediaPlayer.Play();
+                    btnTake.Visible = false;
+                    btnGo.Visible = true;
                     break;
             }
+        }
+
+        private void explosion()
+        {
+            MediaPlayer bomb = new MediaPlayer();
+            bomb.Open(new Uri(EXPLOSION));
+            bomb.Play();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -159,10 +203,16 @@ namespace WindowsFormsApp3.Forms
                 textBoxBet.Enabled = true;
                 if (isYourLblChanging)
                     lblYourBet.Text = "0";
+                if (isBombActive)
+                {
+                    explosion();
+                    isBombActive = false;
+                }
             }
-            if(isYourLblChanging)
+            if (isYourLblChanging)
                 lblYourBet.Text = getMult(curMultiplier.ToString());
-            labelMult.Text = getMult(curMultiplier.ToString());
+            if(curMultiplier != 0)
+                labelMult.Text = getMult(curMultiplier.ToString());
         }
 
         private string getMult(string str)
@@ -180,12 +230,15 @@ namespace WindowsFormsApp3.Forms
 
         private void btnTake_Click(object sender, EventArgs e)
         {
+            playButtonSound();
             labelMult.ForeColor = System.Drawing.Color.Gray;
             countOfIterations += 50;
             btnGo.Enabled = false;
             takeMult = curMultiplier;
             btnTake.Enabled = false;
             user.SetBalance(user.GetBalance() + Convert.ToInt32(bet * curMultiplier));
+            db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
+            FormUser.ChangeBalanceValue(user.GetBalance().ToString());
             label1.Text = user.GetBalance().ToString();
             isYourLblChanging = false;
         }

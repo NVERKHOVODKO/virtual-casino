@@ -33,6 +33,7 @@
             this.labelLogo = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnSupport = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIsPasswordVisible = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelDesktopPanel.SuspendLayout();
@@ -114,6 +114,22 @@
             this.panelDesktopPanel.Size = new System.Drawing.Size(1228, 563);
             this.panelDesktopPanel.TabIndex = 4;
             this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(12, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(196, 50);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Go to desktop";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // btnSupport
             // 
@@ -178,7 +194,7 @@
             this.panelCreateAccount.Controls.Add(this.textBoxLoginCreate);
             this.panelCreateAccount.Controls.Add(this.label1);
             this.panelCreateAccount.Controls.Add(this.label2);
-            this.panelCreateAccount.Location = new System.Drawing.Point(3, 3);
+            this.panelCreateAccount.Location = new System.Drawing.Point(0, 0);
             this.panelCreateAccount.Name = "panelCreateAccount";
             this.panelCreateAccount.Size = new System.Drawing.Size(488, 489);
             this.panelCreateAccount.TabIndex = 6;
@@ -403,22 +419,6 @@
             this.btnSignIn.Text = "Go";
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(12, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(196, 50);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Go to desktop";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // FormAuthorization
             // 

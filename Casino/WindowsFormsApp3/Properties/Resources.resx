@@ -130,8 +130,8 @@
   <data name="wild_west_tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wild_west_tag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bomb2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bomb2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fire_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="casino" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\casino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,17 +142,8 @@
   <data name="gold_medal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gold_medal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Jew icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Jew icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scale_coins_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scale_coins_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="scale_coins_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scale_coins_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="infIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\infIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,35 +151,20 @@
   <data name="inst_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inst_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Coin icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coin icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="account icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\account icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="account icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\account icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inst_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inst_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sapper game icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sapper game icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cup icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cup icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="map7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wood" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wood.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Jew icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Jew icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Без имени-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Без имени-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="saul_goodman1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saul_goodman1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,83 +172,38 @@
   <data name="fruits icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fruits icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Без имени-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Без имени-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="google_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\google_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="google_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\google_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="box1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scale_coins_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scale_coins_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dude.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dude.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bomb3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bomb3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="map with X" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map with X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cup icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cup icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="liders" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\liders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fire_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wood button2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wood button2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow back1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wood button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wood button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Без имени-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Без имени-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cola" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Без имени-41" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Без имени-41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="silver_medal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\silver_medal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cactoos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cactoos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Jew icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jew icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="silver_medal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\silver_medal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Jew icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jew icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sci_fi_corridor_tunnel_169861_1280x720" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sci_fi_corridor_tunnel_169861_1280x720.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sea.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,14 +211,8 @@
   <data name="telegram_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\telegram_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="telegram_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\telegram_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="google_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\google_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fruits icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fruits icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -298,17 +223,11 @@
   <data name="Rocket background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rocket background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chiken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chiken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rocket background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rocket background2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bronze_medal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bronze_medal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,32 +241,17 @@
   <data name="scale_coins_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scale_coins_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="liders1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\liders1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Без имени-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Без имени-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="postal_table" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\postal_table.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inst_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inst_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Без имени-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Без имени-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wood1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wood1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background sea" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background sea.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="steel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\steel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="scale_coins_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scale_coins_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,107 +262,59 @@
   <data name="Sapper game icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sapper game icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="asteroid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\asteroid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Jew icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jew icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fire_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fire_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Jew icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Jew icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bomb4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bomb4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Coin icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coin icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="scale_coins_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scale_coins_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mars" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gameInfoWest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gameInfoWest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bell icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bell icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="moon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\moon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background_postal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background_postal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bomb1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bomb1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fruits icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fruits icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chiken" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chiken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="casino roulette icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\casino roulette icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close_solid_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_solid_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="saturn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saturn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bhardvaj-lukhi-1-edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bhardvaj-lukhi-1-edit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Без имени-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Без имени-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="casino roulette icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\casino roulette icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fire_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sapperInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sapperInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fruits icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fruits icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wild west" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wild west.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wood button2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wood button2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background_postal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background_postal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="liders1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\liders1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wooden board" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wooden board.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue-Background-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue-Background-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fire_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="liders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\liders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cactoos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cactoos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dude" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dude.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="volume_min" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\volume_min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="money sack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\money sack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wood button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wood button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="account icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1626712215_8-kartinkin-com-p-fon-among-as-korabl-vnutri-krasivo-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1626712215_8-kartinkin-com-p-fon-among-as-korabl-vnutri-krasivo-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wooden backgroubd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wooden backgroubd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -469,47 +325,26 @@
   <data name="account icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bomb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="money sack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\money sack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sapper game icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sapper game icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cup icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cup icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map with pirat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map with pirat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1492691" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1492691.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="opened_eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\opened_eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="account icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\account icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Jew icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jew icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bomb5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bomb5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="map8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Jew icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jew icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Без имени-51" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Без имени-51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Coin icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coin icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="saturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saturn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="volume_min1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\volume_min1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pirat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pirat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -517,14 +352,11 @@
   <data name="Rocket background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rocket background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wooden board" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wooden board.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="map10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dude" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dude.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="734440_chip_512x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\734440_chip_512x512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="closed_eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closed_eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -532,10 +364,10 @@
   <data name="rum" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="telegram_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\telegram_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="volume_min2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\volume_min2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="steel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\steel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="volume_max" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\volume_max.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

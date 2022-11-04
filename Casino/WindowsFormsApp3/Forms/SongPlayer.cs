@@ -29,9 +29,14 @@ namespace WindowsFormsApp3.Forms
             return false;
         }
 
-        public void Dispose()
+        public void Stop()
         {
-            this.Dispose();
+            mediaPlayer.Close();
+        }
+
+        public void SetVolume(double volume)
+        {
+            mediaPlayer.Volume = volume;
         }
     }
 }

@@ -29,8 +29,18 @@
         private void InitializeComponent()
         {
             this.panelAccount = new System.Windows.Forms.Panel();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.panelChangeLogin = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBoxNewLogin = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnChangeLogin = new System.Windows.Forms.Button();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelDeposit = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,66 +56,209 @@
             this.pictureBoxMedal = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelBalance = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.buttonSignOut = new System.Windows.Forms.Button();
+            this.panelVolume = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelAccount.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.panelChangeLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMain.SuspendLayout();
             this.panelDeposit.SuspendLayout();
             this.panelCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedal)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panelVolume.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAccount
             // 
-            this.panelAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(167)))), ((int)(((byte)(53)))));
-            this.panelAccount.Controls.Add(this.button2);
-            this.panelAccount.Controls.Add(this.panel2);
+            this.panelAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(155)))), ((int)(((byte)(151)))));
+            this.panelAccount.Controls.Add(this.panelVolume);
+            this.panelAccount.Controls.Add(this.panelChangeLogin);
             this.panelAccount.Controls.Add(this.button1);
+            this.panelAccount.Controls.Add(this.pictureBox1);
+            this.panelAccount.Controls.Add(this.btnChangeLogin);
+            this.panelAccount.Controls.Add(this.panelMain);
             this.panelAccount.Controls.Add(this.buttonSignOut);
-            this.panelAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAccount.Location = new System.Drawing.Point(0, 0);
             this.panelAccount.Name = "panelAccount";
-            this.panelAccount.Size = new System.Drawing.Size(1289, 716);
+            this.panelAccount.Size = new System.Drawing.Size(1450, 960);
             this.panelAccount.TabIndex = 0;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.trackBar1.Location = new System.Drawing.Point(77, 25);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(559, 56);
+            this.trackBar1.TabIndex = 22;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBar1.Value = 5;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // panelChangeLogin
+            // 
+            this.panelChangeLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelChangeLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
+            this.panelChangeLogin.Controls.Add(this.label5);
+            this.panelChangeLogin.Controls.Add(this.button2);
+            this.panelChangeLogin.Controls.Add(this.pictureBox2);
+            this.panelChangeLogin.Controls.Add(this.textBoxNewLogin);
+            this.panelChangeLogin.Controls.Add(this.button4);
+            this.panelChangeLogin.Controls.Add(this.label4);
+            this.panelChangeLogin.ForeColor = System.Drawing.Color.Coral;
+            this.panelChangeLogin.Location = new System.Drawing.Point(367, 257);
+            this.panelChangeLogin.Name = "panelChangeLogin";
+            this.panelChangeLogin.Size = new System.Drawing.Size(716, 443);
+            this.panelChangeLogin.TabIndex = 21;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
+            this.label5.Location = new System.Drawing.Point(181, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(392, 54);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Login changing";
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
-            this.button2.Location = new System.Drawing.Point(1098, 12);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
+            this.button2.Location = new System.Drawing.Point(280, 341);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 87);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Change\r\nlogin";
+            this.button2.Size = new System.Drawing.Size(169, 87);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Confirm";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // panel2
+            // pictureBox2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
-            this.panel2.Controls.Add(this.panelDeposit);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.labelLogin);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.labelID);
-            this.panel2.Controls.Add(this.pictureBoxMedal);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel2.Location = new System.Drawing.Point(286, 141);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(704, 437);
-            this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pictureBox2.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.account_icon3;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(303, 76);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(113, 108);
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
+            // textBoxNewLogin
+            // 
+            this.textBoxNewLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(155)))), ((int)(((byte)(151)))));
+            this.textBoxNewLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNewLogin.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxNewLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
+            this.textBoxNewLogin.Location = new System.Drawing.Point(143, 262);
+            this.textBoxNewLogin.MaxLength = 14;
+            this.textBoxNewLogin.Name = "textBoxNewLogin";
+            this.textBoxNewLogin.Size = new System.Drawing.Size(421, 53);
+            this.textBoxNewLogin.TabIndex = 21;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
+            this.button4.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.arrow_back1;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(18, 9);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(64, 61);
+            this.button4.TabIndex = 20;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
+            this.label4.Location = new System.Drawing.Point(137, 213);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(368, 41);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Enter new login: ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
+            this.button1.Location = new System.Drawing.Point(1259, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 87);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Deposit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.pictureBox1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.saul_goodman1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 485);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(349, 475);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnChangeLogin
+            // 
+            this.btnChangeLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangeLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
+            this.btnChangeLogin.FlatAppearance.BorderSize = 0;
+            this.btnChangeLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnChangeLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
+            this.btnChangeLogin.Location = new System.Drawing.Point(1259, 12);
+            this.btnChangeLogin.Name = "btnChangeLogin";
+            this.btnChangeLogin.Size = new System.Drawing.Size(179, 87);
+            this.btnChangeLogin.TabIndex = 12;
+            this.btnChangeLogin.Text = "Change\r\nlogin";
+            this.btnChangeLogin.UseVisualStyleBackColor = false;
+            this.btnChangeLogin.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panelMain
+            // 
+            this.panelMain.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
+            this.panelMain.Controls.Add(this.panelDeposit);
+            this.panelMain.Controls.Add(this.label3);
+            this.panelMain.Controls.Add(this.labelLogin);
+            this.panelMain.Controls.Add(this.label2);
+            this.panelMain.Controls.Add(this.labelID);
+            this.panelMain.Controls.Add(this.pictureBoxMedal);
+            this.panelMain.Controls.Add(this.panel1);
+            this.panelMain.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panelMain.Location = new System.Drawing.Point(367, 263);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(704, 437);
+            this.panelMain.TabIndex = 3;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panelDeposit
             // 
             this.panelDeposit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
+            this.panelDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
             this.panelDeposit.Controls.Add(this.button3);
             this.panelDeposit.Controls.Add(this.label1);
             this.panelDeposit.Controls.Add(this.panelCard);
@@ -118,7 +271,7 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
             this.button3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.arrow_back1;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
@@ -136,7 +289,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
             this.label1.Location = new System.Drawing.Point(112, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(484, 54);
@@ -165,7 +318,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox3.Location = new System.Drawing.Point(28, 158);
+            this.textBox3.Location = new System.Drawing.Point(26, 159);
             this.textBox3.MaxLength = 3;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(118, 29);
@@ -178,8 +331,8 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.Location = new System.Drawing.Point(28, 114);
-            this.textBox2.MaxLength = 8;
+            this.textBox2.Location = new System.Drawing.Point(28, 113);
+            this.textBox2.MaxLength = 5;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(165, 29);
             this.textBox2.TabIndex = 2;
@@ -217,7 +370,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
             this.label3.Location = new System.Drawing.Point(264, 245);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 39);
@@ -227,10 +380,10 @@
             // labelLogin
             // 
             this.labelLogin.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogin.ForeColor = System.Drawing.Color.White;
-            this.labelLogin.Location = new System.Drawing.Point(135, 284);
+            this.labelLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
+            this.labelLogin.Location = new System.Drawing.Point(41, 284);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(451, 74);
+            this.labelLogin.Size = new System.Drawing.Size(635, 74);
             this.labelLogin.TabIndex = 3;
             this.labelLogin.Text = "nverkhovodko";
             this.labelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,7 +393,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
             this.label2.Location = new System.Drawing.Point(283, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 39);
@@ -250,7 +403,7 @@
             // labelID
             // 
             this.labelID.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelID.ForeColor = System.Drawing.Color.White;
+            this.labelID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
             this.labelID.Location = new System.Drawing.Point(267, 171);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(164, 74);
@@ -271,7 +424,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(167)))), ((int)(((byte)(53)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
             this.panel1.Controls.Add(this.labelBalance);
             this.panel1.Location = new System.Drawing.Point(443, 17);
             this.panel1.Name = "panel1";
@@ -281,7 +434,7 @@
             // labelBalance
             // 
             this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBalance.ForeColor = System.Drawing.Color.White;
+            this.labelBalance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
             this.labelBalance.Location = new System.Drawing.Point(3, 11);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.Size = new System.Drawing.Size(230, 42);
@@ -289,31 +442,15 @@
             this.labelBalance.Text = "94895 NC";
             this.labelBalance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
-            this.button1.Location = new System.Drawing.Point(1098, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 87);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Deposit";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // buttonSignOut
             // 
             this.buttonSignOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(196)))), ((int)(((byte)(153)))));
+            this.buttonSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
             this.buttonSignOut.FlatAppearance.BorderSize = 0;
             this.buttonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignOut.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSignOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
-            this.buttonSignOut.Location = new System.Drawing.Point(1098, 198);
+            this.buttonSignOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
+            this.buttonSignOut.Location = new System.Drawing.Point(1259, 231);
             this.buttonSignOut.Name = "buttonSignOut";
             this.buttonSignOut.Size = new System.Drawing.Size(179, 87);
             this.buttonSignOut.TabIndex = 2;
@@ -321,23 +458,64 @@
             this.buttonSignOut.UseVisualStyleBackColor = false;
             this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
             // 
+            // panelVolume
+            // 
+            this.panelVolume.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
+            this.panelVolume.Controls.Add(this.pictureBox4);
+            this.panelVolume.Controls.Add(this.trackBar1);
+            this.panelVolume.Controls.Add(this.pictureBox3);
+            this.panelVolume.Location = new System.Drawing.Point(367, 25);
+            this.panelVolume.Name = "panelVolume";
+            this.panelVolume.Size = new System.Drawing.Size(716, 100);
+            this.panelVolume.TabIndex = 24;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.volume_max;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(651, 25);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox4.TabIndex = 24;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.volume_min1;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(18, 25);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            // 
             // FormAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1289, 716);
+            this.ClientSize = new System.Drawing.Size(1450, 960);
             this.Controls.Add(this.panelAccount);
             this.Name = "FormAccount";
             this.Text = "FormAccount";
             this.panelAccount.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.panelChangeLogin.ResumeLayout(false);
+            this.panelChangeLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.panelDeposit.ResumeLayout(false);
             this.panelDeposit.PerformLayout();
             this.panelCard.ResumeLayout(false);
             this.panelCard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedal)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panelVolume.ResumeLayout(false);
+            this.panelVolume.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,21 +526,33 @@
         private System.Windows.Forms.Panel panelCard;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnPay;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.PictureBox pictureBoxMedal;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Button buttonSignOut;
         private System.Windows.Forms.Panel panelDeposit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelBalance;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnChangeLogin;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelChangeLogin;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBoxNewLogin;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Panel panelVolume;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

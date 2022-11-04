@@ -66,7 +66,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(200, 638);
             this.panelMenu.TabIndex = 0;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint_1);
             // 
             // btnTelegram
             // 
@@ -156,7 +155,7 @@
             this.btnHome.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.btnHome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 205);
+            this.btnHome.Location = new System.Drawing.Point(0, 208);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(200, 60);
             this.btnHome.TabIndex = 3;
@@ -178,6 +177,7 @@
             this.btnLiders.TabIndex = 5;
             this.btnLiders.Text = "Liders";
             this.btnLiders.UseVisualStyleBackColor = false;
+            this.btnLiders.Click += new System.EventHandler(this.btnLiders_Click);
             // 
             // panelLogo
             // 
@@ -206,9 +206,9 @@
             // 
             this.lblLogin.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(3, 17);
+            this.lblLogin.Location = new System.Drawing.Point(-4, 18);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(191, 43);
+            this.lblLogin.Size = new System.Drawing.Size(207, 43);
             this.lblLogin.TabIndex = 9;
             this.lblLogin.Text = "nverkhovodko";
             this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -253,8 +253,8 @@
             // buttonBack
             // 
             this.buttonBack.AutoSize = true;
-            this.buttonBack.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.Без_имени_51;
-            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonBack.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.arrow_back1;
+            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -298,7 +298,6 @@
             this.Controls.Add(this.panelMain);
             this.Name = "FormUser";
             this.Text = "FormUser";
-            this.Load += new System.EventHandler(this.FormUser_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();

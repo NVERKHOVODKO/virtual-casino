@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System.Windows.Media;
 using Color = System.Drawing.Color;
+using Panel = WindowsFormsApp3.Forms.Panel;
+
 
 namespace WindowsFormsApp3.Forms
 {
@@ -11,10 +13,8 @@ namespace WindowsFormsApp3.Forms
         static string BUTTON = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\button.mp3";
         static string LOSE = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\lose.mp3";
         static string AUGH = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\aughhhhhh.mp3";
-        static string SONG = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\wild_west_3.mp3";
         static string SPIN = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\spin.wav";
         static string PAPER = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\filing_paper.mp3";
-
 
         Random rnd = new Random();
         int a, b, c, move, bet;
@@ -32,6 +32,14 @@ namespace WindowsFormsApp3.Forms
             this.FormUser = FormUser;
             this.user = user;
             InitializeComponent();
+            Panel pnl = new Panel();
+            pnl.SetRoundedShape(panel1, 50);
+            pnl.SetRoundedShape(btnClear, 20);
+            pnl.SetRoundedShape(btnAllIn, 20);
+            pnl.SetRoundedShape(bntBet100, 20);
+            pnl.SetRoundedShape(bntBet20, 20);
+            pnl.SetRoundedShape(bntBet5, 20);
+            pnl.SetRoundedShape(bntBet1, 20);
 
             panelInfo.Location = new System.Drawing.Point(1030, 400);
             panelInfo.Visible = false;
@@ -96,7 +104,7 @@ namespace WindowsFormsApp3.Forms
             }
         }
 
-        private void playCoinSound()
+        private void playButtonSound()
         {
             MediaPlayer coin = new MediaPlayer();
             coin.Open(new Uri(BUTTON));
@@ -128,7 +136,7 @@ namespace WindowsFormsApp3.Forms
 
         private void addBet(int bet1)
         {
-            playCoinSound();
+            playButtonSound();
             if(bet + bet1 <= user.GetBalance())
                 bet += bet1;
             else
@@ -182,7 +190,7 @@ namespace WindowsFormsApp3.Forms
 
         private void button1_Click_3(object sender, EventArgs e)
         {
-            playCoinSound();
+            playButtonSound();
             bet = user.GetBalance();
             textBoxBet.Text = bet.ToString();
         }
@@ -232,7 +240,7 @@ namespace WindowsFormsApp3.Forms
                     user.SetBalance(user.GetBalance() - bet);
                     textBoxBalance.Text = user.GetBalance().ToString();
                     FormUser.ChangeBalanceValue(user.GetBalance().ToString());
-                    db.updateBalance(user.GetId().ToString(), user.GetBalance());
+                    db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                     timer1.Enabled = true;
                     isBtnStartActive = false;
                 }
@@ -288,9 +296,9 @@ namespace WindowsFormsApp3.Forms
                 spin.Play();
 
                 move++;
-                a = rnd.Next(1, 8);
-                b = rnd.Next(1, 8);
-                c = rnd.Next(1, 8);
+                a = rnd.Next(1, 9);
+                b = rnd.Next(1, 9);
+                c = rnd.Next(1, 9);
 
                 changeImage(pictureBox1, a);
                 changeImage(pictureBox2, b);
@@ -309,14 +317,12 @@ namespace WindowsFormsApp3.Forms
                         bet *= 10;
                         LblTitle.Text = "---X10--- You win " + bet + "! Three matches!------";
                         LblTitle.BackColor = System.Drawing.Color.Red;
-                        //alert.ShowAlert("You win " + bet * 30 +  "!", Alert.enmType.Success);
                     }
                     else
                     {
                         bet *= 5;
                         LblTitle.Text = "---X5--- You win " + bet + "! Three matches!------";
                         LblTitle.BackColor = System.Drawing.Color.Red;
-                        //alert.ShowAlert("You win " + bet * 10 + "!", Alert.enmType.Success);
                     }
                     isBtnStartActive = true;
                     coin.Open(new Uri(COIN));
@@ -344,7 +350,6 @@ namespace WindowsFormsApp3.Forms
                     MediaPlayer mediaPlayer = new MediaPlayer();
                     mediaPlayer.Open(new Uri(LOSE));
                     mediaPlayer.Play();
-                    //alert.ShowAlert("You lose!", Alert.enmType.Error);
                     isBtnStartActive = true;
                     bet = 0;
                 }
@@ -352,7 +357,7 @@ namespace WindowsFormsApp3.Forms
 
                 textBoxBalance.Text = user.GetBalance().ToString();
                 FormUser.ChangeBalanceValue(user.GetBalance().ToString());
-                db.updateBalance(user.GetId().ToString(), user.GetBalance());
+                db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                 move = 0;
                 isSpining = false;
             }

@@ -8,19 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp3.Forms
 {
     public partial class FormEditUser : Form
     {
         FormAdmin fa;
-
-        int id;
+        Database db = new Database();
+        string id;
 
         public FormEditUser(User user)
         {
             fa = new FormAdmin();
-            id = user.GetId();
+            id = user.GetId().ToString();
 
             InitializeComponent();
             
@@ -40,31 +41,7 @@ namespace WindowsFormsApp3.Forms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            Database db = new Database();
-
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter();
-            Database databaseObject = new Database();
-            DataTable datatable = new DataTable();
-            string sql = "UPDATE users SET login = @userLogin, password = @userPassword, role = @userRole, balance = @userBalance WHERE id = @userId";
-            databaseObject.OpenConnection();
-            SQLiteCommand cmd = new SQLiteCommand(sql, databaseObject.myConnection);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@userLogin", textBoxLogin.Text);
-            cmd.Parameters.AddWithValue("@userPassword", textBoxPassword.Text);
-            cmd.Parameters.AddWithValue("@userRole", textBoxAccess.Text);
-            cmd.Parameters.AddWithValue("@userBalance", textBoxBalance.Text);
-            cmd.Parameters.AddWithValue("@userId", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Edited succesfully");
-            }
-            catch
-            {
-                MessageBox.Show("Error. Can't update user");
-            }
-            databaseObject.CloseConnection();
+            db.EditUser(textBoxLogin.Text, textBoxPassword.Text, id, textBoxBalance.Text, textBoxAccess.Text);
             this.Close();
         }
 
