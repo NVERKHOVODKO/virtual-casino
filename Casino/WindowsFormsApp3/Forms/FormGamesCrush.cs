@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Windows.Forms;
 using System.Windows.Media;
 
@@ -17,17 +18,18 @@ namespace WindowsFormsApp3.Forms
         private FormUser FormUser;
         private bool isBombActive = true;
         private Database db = new Database();
+        int numOfPlayers = 0;
+
         public FormGamesCrush(FormUser FormUser, User user)
         {
             this.FormUser = FormUser;
             this.user = user;
             InitializeComponent();
             Panel pnl = new Panel();
-            pnl.SetRoundedShape(panel1, 50);
             pnl.SetRoundedShape(panel2, 20);
-            label1.Text = user.GetBalance().ToString();
             lblYourBet.Text = string.Empty;
             btnTake.Visible = false;
+            SetRadius();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -73,52 +75,28 @@ namespace WindowsFormsApp3.Forms
             coin.Play();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            playButtonSound();
-            if (bet > user.GetBalance())
-            {
-                MessageBox.Show("Insufficient balance");
-                return;
-            }
-            if(bet < 1)
-            {
-                MessageBox.Show("Place your bet");
-                return;
-            }
-            isBombActive = true;
-            user.SetBalance(user.GetBalance() - bet);
-            db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
-            btnGo.Visible = false;
-            btnTake.Visible = true;
-            panel2.BackgroundImage = Properties.Resources.dude_jpg;
-            textBoxBet.Enabled = false;
-            label1.Text = user.GetBalance().ToString();
-            FormUser.ChangeBalanceValue(user.GetBalance().ToString());
-            labelMult.ForeColor = System.Drawing.Color.Green;
-            finalMultiplier = GetMultiplier();
-            timer1.Enabled = true;
-            btnTake.Enabled = true;
-            btnGo.Enabled = false;
-            curMultiplier = 1;
-            isYourLblChanging = true;
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBoxBet_TextChanged(object sender, EventArgs e)
+        private void SetRadius()
         {
-            try
-            {
-                bet = Int32.Parse(textBoxBet.Text);
-            }
-            catch
-            {
-                bet = 0;
-            }
+            Panel pnl = new Panel();
+            pnl.SetRoundedShape(btnTake, 30);
+            pnl.SetRoundedShape(btnGo, 30);
+            pnl.SetRoundedShape(btn10, 30);
+            pnl.SetRoundedShape(btn100, 30);
+            pnl.SetRoundedShape(btn5, 30);
+            pnl.SetRoundedShape(btn50, 30);
+            pnl.SetRoundedShape(btnPlus, 30);
+            pnl.SetRoundedShape(btnMinus, 30);
+            pnl.SetRoundedShape(btnAll, 30);
+            pnl.SetRoundedShape(panel5, 30);
+            pnl.SetRoundedShape(panel4, 30);
+            pnl.SetRoundedShape(panel6, 30);
+            pnl.SetRoundedShape(btnDelBet, 30);
         }
 
         private void textBoxBet_KeyPress(object sender, KeyPressEventArgs e)
@@ -127,20 +105,6 @@ namespace WindowsFormsApp3.Forms
             if (!Char.IsDigit(number) && number != 8)// цифры и клавиша BackSpace
             {
                 e.Handled = true;
-            }
-        }
-
-        private void textBoxBet_TextChanged_1(object sender, EventArgs e)
-        {
-            try
-            {
-                bet = Int32.Parse(textBoxBet.Text);
-                if (bet == 0)
-                    textBoxBet.Text = "";
-            }
-            catch
-            {
-                textBoxBet.Text = "";
             }
         }
 
@@ -179,6 +143,137 @@ namespace WindowsFormsApp3.Forms
             bomb.Play();
         }
 
+        private void addBet(int bet1)
+        {
+            playButtonSound();
+            if (bet + bet1 < 0)
+                MessageBox.Show("Bet must be possitive");
+            else if (bet + bet1 <= user.GetBalance())
+                bet += bet1;
+            else
+                MessageBox.Show("Insuffcieint balance");
+            lblBet.Text = bet.ToString();
+        }
+
+        private void textBoxBet_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTake_Click_1(object sender, EventArgs e)
+        {
+            playButtonSound();
+            numOfPlayers++;
+            string str = "";
+            str = "\n" + user.GetLogin() + " won " + curMultiplier;
+            label2.Text += str;
+            labelMult.ForeColor = System.Drawing.Color.Gray;
+            countOfIterations += 50;
+            btnGo.Enabled = false;
+            takeMult = curMultiplier;
+            btnTake.Enabled = false;
+            user.SetBalance(user.GetBalance() + Convert.ToInt32(bet * curMultiplier));
+            db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
+            FormUser.ChangeBalanceValue(user.GetBalance().ToString());
+            isYourLblChanging = false;
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            playButtonSound();
+            bet = user.GetBalance();
+            lblBet.Text = bet.ToString();
+        }
+
+        private void btn10_Click(object sender, EventArgs e)
+        {
+            addBet(10);
+        }
+
+        private void btn100_Click(object sender, EventArgs e)
+        {
+            addBet(100);
+        }
+
+        private void btn50_Click(object sender, EventArgs e)
+        {
+            addBet(50);
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            addBet(5);
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            addBet(1);
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            addBet(-1);
+        }
+
+        private void btnGo_Click(object sender, EventArgs e)
+        {
+            playButtonSound();
+            if (bet > user.GetBalance())
+            {
+                MessageBox.Show("Insufficient balance");
+                return;
+            }
+            if (bet < 1)
+            {
+                MessageBox.Show("Place your bet");
+                return;
+            }
+            changeButtonsAvailability(false);
+            isBombActive = true;
+            user.SetBalance(user.GetBalance() - bet);
+            db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
+            btnGo.Visible = false;
+            btnTake.Visible = true;
+            panel2.BackgroundImage = Properties.Resources.dude_jpg;
+            FormUser.ChangeBalanceValue(user.GetBalance().ToString());
+            labelMult.ForeColor = System.Drawing.Color.Green;
+            finalMultiplier = GetMultiplier();
+            timer1.Enabled = true;
+            btnTake.Enabled = true;
+            btnGo.Enabled = false;
+            curMultiplier = 1;
+            isYourLblChanging = true;
+            numOfPlayers = 0;
+            label2.Text = string.Empty;
+        }
+
+        private void changeWinnersTable()
+        {
+            if (numOfPlayers > 15)
+                return;
+            numOfPlayers++;
+            string str = "";
+            str = "\nplayer" + numOfPlayers + " won " + curMultiplier;
+            label2.Text += str;
+        }
+
+        private void btnDelBet_Click(object sender, EventArgs e)
+        {
+            playButtonSound();
+            bet = 0;
+            lblBet.Text = "0";
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (countOfIterations > 100)
@@ -194,25 +289,47 @@ namespace WindowsFormsApp3.Forms
             else
                 curMultiplier += 0.005;
             countOfIterations++;
+            if (rnd.Next(1, 12) == 1)
+            {
+                changeWinnersTable();
+            }
             if (curMultiplier >= finalMultiplier)
             {
                 btnTake.Enabled = false;
                 numOfIterations++;
                 changePicture(numOfIterations);
                 labelMult.ForeColor = System.Drawing.Color.Red;
-                textBoxBet.Enabled = true;
                 if (isYourLblChanging)
+                {
                     lblYourBet.Text = "0";
+                    lblWinBet.Text = "0";
+                }
                 if (isBombActive)
                 {
                     explosion();
                     isBombActive = false;
                 }
+                changeButtonsAvailability(true);
             }
             if (isYourLblChanging)
-                lblYourBet.Text = getMult(curMultiplier.ToString());
+                lblYourBet.Text = getMult(curMultiplier.
+                    ToString());
             if(curMultiplier != 0)
                 labelMult.Text = getMult(curMultiplier.ToString());
+            if(btnTake.Enabled)
+                lblWinBet.Text = (curMultiplier * bet).ToString();
+        }
+
+        private void changeButtonsAvailability(bool value)
+        {
+            btnMinus.Enabled = value;
+            btnPlus.Enabled = value;
+            btn10.Enabled = value;
+            btn100.Enabled = value;
+            btn50.Enabled = value;
+            btn5.Enabled = value;
+            btnAll.Enabled = value;
+            btnDelBet.Enabled = value;
         }
 
         private string getMult(string str)
@@ -226,21 +343,6 @@ namespace WindowsFormsApp3.Forms
                 length--;
             }
             return "X " + final;
-        }
-
-        private void btnTake_Click(object sender, EventArgs e)
-        {
-            playButtonSound();
-            labelMult.ForeColor = System.Drawing.Color.Gray;
-            countOfIterations += 50;
-            btnGo.Enabled = false;
-            takeMult = curMultiplier;
-            btnTake.Enabled = false;
-            user.SetBalance(user.GetBalance() + Convert.ToInt32(bet * curMultiplier));
-            db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
-            FormUser.ChangeBalanceValue(user.GetBalance().ToString());
-            label1.Text = user.GetBalance().ToString();
-            isYourLblChanging = false;
         }
     }
 }

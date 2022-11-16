@@ -2,6 +2,7 @@
 using Org.BouncyCastle.Tls.Crypto;
 using Org.BouncyCastle.Utilities.Collections;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -28,9 +29,10 @@ namespace WindowsFormsApp3
             InitializeComponent();
             mediaPlayer.playSong(SONG);
             random = new Random(); 
-            buttonBack.Visible = false;
             lblLogin.Text = user.GetLogin();
             lblBalanceValue.Text = user.GetBalance().ToString();
+            OpenChildForm(new Forms.FormHome(mediaPlayer, this, user), null, "HOME");
+            ActivateButton(btnHome);
         }
 
 
@@ -63,7 +65,6 @@ namespace WindowsFormsApp3
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    buttonBack.Visible = true;
                 }
             }
         }
@@ -101,20 +102,9 @@ namespace WindowsFormsApp3
             labelMain.Text = titleText;
         }
 
-        private void Reset()
-        {
-            DisableButton();
-            panelTitle.Text = "HOME";
-            panelTitle.BackColor = System.Drawing.Color.FromArgb(0, 150, 136);
-            panelLogo.BackColor = System.Drawing.Color.FromArgb(39, 39, 58);
-            currentButton = null;
-            buttonBack.Visible = false;
-        }
-
-
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormHome(), sender, "HOME");
+            OpenChildForm(new Forms.FormHome(mediaPlayer, this, user), sender, "HOME");
         }
 
         private void btnGames_Click(object sender, EventArgs e)
@@ -137,18 +127,6 @@ namespace WindowsFormsApp3
         {
             ActivateButton(sender);
 
-        }
-
-        
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            MediaPlayer mediaPlayer = new MediaPlayer();
-
-            mediaPlayer.Stop();
-            if (activeForm != null)
-                activeForm.Close();
-            Reset();
         }
 
 
@@ -184,25 +162,22 @@ namespace WindowsFormsApp3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("https://1xbet.by/");
-            MessageBox.Show("Link copied");
+            Process.Start("https://1xbet.by/");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("https://www.instagram.com/1xbet.official/?hl=en");
-            MessageBox.Show("Link copied");
+            Process.Start("https://www.instagram.com/1xbet.official/?hl=en");
         }
 
         private void btnTelegram_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("https://telegram.me/xBetChannel");
-            MessageBox.Show("Link copied");
+            Process.Start("https://telegram.me/xBetChannel");
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormHome(), sender, "HOME");
+            OpenChildForm(new Forms.FormHome(mediaPlayer, this, user), sender, "HOME");
         }
 
         private void btnLiders_Click(object sender, EventArgs e)

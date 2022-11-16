@@ -34,7 +34,7 @@ namespace WindowsFormsApp3.Forms
             pnl.SetRoundedShape(panelBoxes, 15);
             labelBalance.Text = user.GetBalance().ToString();
             panelInfo.Visible = false;
-            panelInfo.Location = new System.Drawing.Point(930,410);
+            panelInfo.Location = new System.Drawing.Point(1000,410);
             panelFlag.Location = new Point(1070, 0);
             pictureBomb1.Visible = false;
 			buttonTake.Visible = false;

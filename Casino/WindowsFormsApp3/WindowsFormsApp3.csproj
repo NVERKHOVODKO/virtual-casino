@@ -543,6 +543,15 @@
   <ItemGroup>
     <None Include="Resources\Blue-Background-1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_picture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_metal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metal_button_crush.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

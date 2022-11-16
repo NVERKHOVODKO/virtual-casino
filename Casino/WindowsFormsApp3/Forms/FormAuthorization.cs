@@ -9,12 +9,12 @@ using System.Windows.Media;
 using WindowsFormsApp3.Forms;
 using System.Threading;
 using Panel = WindowsFormsApp3.Forms.Panel;
+using System.Diagnostics;
 
 namespace WindowsFormsApp3
 {
 	public partial class FormAuthorization : Form
 	{
-		private Random random;
 		private Form activeForm;
         bool isPasswordVisible, isPasswordVisible1;
         private User user;
@@ -23,10 +23,15 @@ namespace WindowsFormsApp3
 		{
             Console.WriteLine("-------------------");
 			InitializeComponent();
-			random = new Random();
             panelCreateAccount.Visible = false;
             isPasswordVisible = true;
             isPasswordVisible1 = true;
+            SetRadius();
+            hidePassword();
+        }
+
+        private void SetRadius()
+        {
             Panel pnl = new Panel();
             pnl.SetRoundedShape(panelCreateAccount, 30);
             pnl.SetRoundedShape(panel1, 20);
@@ -38,11 +43,6 @@ namespace WindowsFormsApp3
             pnl.SetRoundedShape(btnSignIn, 20);
             pnl.SetRoundedShape(btnIsPasswordVisible, 7);
             pnl.SetRoundedShape(btnIsPasswordVisible1, 7);
-
-
-
-
-            hidePassword();
         }
 
         
@@ -332,6 +332,11 @@ namespace WindowsFormsApp3
         private void button3_Click_2(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnSupport_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://telegram.me/xBetChannel");
         }
 
         private void button3_Click_1(object sender, EventArgs e)

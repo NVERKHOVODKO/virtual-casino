@@ -44,7 +44,7 @@ namespace WindowsFormsApp3.Forms
             panelInfo.Location = new System.Drawing.Point(1030, 400);
             panelInfo.Visible = false;
             panelLogInfo.Location = new System.Drawing.Point(1300, 650);
-            textBoxBalance.Text = user.GetBalance().ToString();
+            labelBalance.Text = user.GetBalance().ToString();
 
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
@@ -238,7 +238,7 @@ namespace WindowsFormsApp3.Forms
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
                 {
                     user.SetBalance(user.GetBalance() - bet);
-                    textBoxBalance.Text = user.GetBalance().ToString();
+                    labelBalance.Text = user.GetBalance().ToString();
                     FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                     db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                     timer1.Enabled = true;
@@ -355,7 +355,7 @@ namespace WindowsFormsApp3.Forms
                 }
                 user.SetBalance(user.GetBalance() + bet);
 
-                textBoxBalance.Text = user.GetBalance().ToString();
+                labelBalance.Text = user.GetBalance().ToString();
                 FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                 db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                 move = 0;

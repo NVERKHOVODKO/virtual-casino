@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Forms;
 using System.Windows.Media;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp3.Forms
 {
@@ -12,7 +13,7 @@ namespace WindowsFormsApp3.Forms
         private Form activeForm;
         private Database db = new Database();
         private SongPlayer mediaPlayer;
-
+        private MediaPlayer paySound = new MediaPlayer();
 
         public FormAccount(SongPlayer mediaPlayer, FormUser FormUser, User user)
         {
@@ -20,6 +21,7 @@ namespace WindowsFormsApp3.Forms
             this.FormUser = FormUser;
             this.user = user; 
             InitializeComponent();
+            trackBar1.Value = Convert.ToInt32(mediaPlayer.GetVolume() * 10);
             Panel pnl = new Panel();
             pnl.SetRoundedShape(panelChangeLogin, 50);
             pnl.SetRoundedShape(panelDeposit, 50);
@@ -31,8 +33,6 @@ namespace WindowsFormsApp3.Forms
             pnl.SetRoundedShape(buttonSignOut, 20);
             pnl.SetRoundedShape(btnChangeLogin, 20);
             pnl.SetRoundedShape(button1, 20);
-
-
             panelDeposit.Visible = false;
             panelChangeLogin.Visible = false;
             choiseMedal();
@@ -71,19 +71,34 @@ namespace WindowsFormsApp3.Forms
         {
             try
             {
-                if(user.GetBalance() > 999999)
+                int addBalance = 0;
+                try
+                {
+                    addBalance = Int32.Parse(textBoxMoney.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Payment wasn't successful");
+                    return;
+                }
+                if (user.GetBalance() + addBalance > 99999)
                 {
                     MessageBox.Show("Too much balance");
                     return;
                 }
-                
-                int addBalance = Int32.Parse(Char.ToString(textBox1.Text[15]) + Char.ToString(textBox1.Text[16]) + Char.ToString(textBox1.Text[17]) + Char.ToString(textBox1.Text[18]));
-                user.SetBalance(user.GetBalance() + addBalance);
-                MessageBox.Show("Payment was successful");
+                if (textBox1.Text.Length == 19)
+                {
+                    user.SetBalance(user.GetBalance() + addBalance);
+                }
+                else
+                {
+                    MessageBox.Show("Field card data" +
+                        "");
+                    return;
+                }
                 labelBalance.Text = user.GetBalance().ToString();
-                MediaPlayer player = new MediaPlayer();
-                player.Open(new Uri(@"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\saul_goodman.mp3"));
-                player.Play();
+                paySound.Open(new Uri(@"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\saul_goodman.mp3"));
+                paySound.Play();
                 FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                 db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                 choiseMedal();
@@ -224,6 +239,20 @@ namespace WindowsFormsApp3.Forms
         {
             var volume = trackBar1.Value / 10.0;
             mediaPlayer.SetVolume(volume);
+        }
+
+        private void textBoxMoney_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMoney_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

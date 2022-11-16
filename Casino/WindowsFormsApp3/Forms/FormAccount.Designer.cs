@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.panelAccount = new System.Windows.Forms.Panel();
+            this.panelVolume = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelChangeLogin = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -57,11 +60,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelBalance = new System.Windows.Forms.Label();
             this.buttonSignOut = new System.Windows.Forms.Button();
-            this.panelVolume = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textBoxMoney = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panelAccount.SuspendLayout();
+            this.panelVolume.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelChangeLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,14 +75,12 @@
             this.panelCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedal)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panelVolume.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAccount
             // 
             this.panelAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(155)))), ((int)(((byte)(151)))));
+            this.panelAccount.Controls.Add(this.panelDeposit);
             this.panelAccount.Controls.Add(this.panelVolume);
             this.panelAccount.Controls.Add(this.panelChangeLogin);
             this.panelAccount.Controls.Add(this.button1);
@@ -85,10 +88,33 @@
             this.panelAccount.Controls.Add(this.btnChangeLogin);
             this.panelAccount.Controls.Add(this.panelMain);
             this.panelAccount.Controls.Add(this.buttonSignOut);
+            this.panelAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAccount.Location = new System.Drawing.Point(0, 0);
             this.panelAccount.Name = "panelAccount";
             this.panelAccount.Size = new System.Drawing.Size(1450, 960);
             this.panelAccount.TabIndex = 0;
+            // 
+            // panelVolume
+            // 
+            this.panelVolume.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
+            this.panelVolume.Controls.Add(this.pictureBox4);
+            this.panelVolume.Controls.Add(this.trackBar1);
+            this.panelVolume.Controls.Add(this.pictureBox3);
+            this.panelVolume.Location = new System.Drawing.Point(367, 25);
+            this.panelVolume.Name = "panelVolume";
+            this.panelVolume.Size = new System.Drawing.Size(716, 100);
+            this.panelVolume.TabIndex = 24;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.volume_max;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(651, 25);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox4.TabIndex = 24;
+            this.pictureBox4.TabStop = false;
             // 
             // trackBar1
             // 
@@ -101,6 +127,16 @@
             this.trackBar1.Value = 5;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.volume_min1;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(18, 25);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            // 
             // panelChangeLogin
             // 
             this.panelChangeLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -112,9 +148,9 @@
             this.panelChangeLogin.Controls.Add(this.button4);
             this.panelChangeLogin.Controls.Add(this.label4);
             this.panelChangeLogin.ForeColor = System.Drawing.Color.Coral;
-            this.panelChangeLogin.Location = new System.Drawing.Point(367, 257);
+            this.panelChangeLogin.Location = new System.Drawing.Point(367, 254);
             this.panelChangeLogin.Name = "panelChangeLogin";
-            this.panelChangeLogin.Size = new System.Drawing.Size(716, 443);
+            this.panelChangeLogin.Size = new System.Drawing.Size(704, 455);
             this.panelChangeLogin.TabIndex = 21;
             // 
             // label5
@@ -135,7 +171,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
-            this.button2.Location = new System.Drawing.Point(280, 341);
+            this.button2.Location = new System.Drawing.Point(268, 341);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 87);
             this.button2.TabIndex = 22;
@@ -175,7 +211,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(18, 9);
+            this.button4.Location = new System.Drawing.Point(15, 23);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(64, 61);
             this.button4.TabIndex = 20;
@@ -241,7 +277,6 @@
             // 
             this.panelMain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
-            this.panelMain.Controls.Add(this.panelDeposit);
             this.panelMain.Controls.Add(this.label3);
             this.panelMain.Controls.Add(this.labelLogin);
             this.panelMain.Controls.Add(this.label2);
@@ -259,13 +294,15 @@
             // 
             this.panelDeposit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
+            this.panelDeposit.Controls.Add(this.label6);
+            this.panelDeposit.Controls.Add(this.textBoxMoney);
             this.panelDeposit.Controls.Add(this.button3);
             this.panelDeposit.Controls.Add(this.label1);
             this.panelDeposit.Controls.Add(this.panelCard);
             this.panelDeposit.ForeColor = System.Drawing.Color.Coral;
-            this.panelDeposit.Location = new System.Drawing.Point(0, 0);
+            this.panelDeposit.Location = new System.Drawing.Point(367, 178);
             this.panelDeposit.Name = "panelDeposit";
-            this.panelDeposit.Size = new System.Drawing.Size(704, 437);
+            this.panelDeposit.Size = new System.Drawing.Size(704, 599);
             this.panelDeposit.TabIndex = 8;
             // 
             // button3
@@ -278,7 +315,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(12, 9);
+            this.button3.Location = new System.Drawing.Point(18, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 61);
             this.button3.TabIndex = 20;
@@ -306,7 +343,7 @@
             this.panelCard.Controls.Add(this.textBox2);
             this.panelCard.Controls.Add(this.btnPay);
             this.panelCard.Controls.Add(this.textBox1);
-            this.panelCard.Location = new System.Drawing.Point(140, 157);
+            this.panelCard.Location = new System.Drawing.Point(140, 319);
             this.panelCard.Name = "panelCard";
             this.panelCard.Size = new System.Drawing.Size(419, 244);
             this.panelCard.TabIndex = 1;
@@ -318,7 +355,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox3.Location = new System.Drawing.Point(26, 159);
+            this.textBox3.Location = new System.Drawing.Point(28, 159);
             this.textBox3.MaxLength = 3;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(118, 29);
@@ -334,7 +371,7 @@
             this.textBox2.Location = new System.Drawing.Point(28, 113);
             this.textBox2.MaxLength = 5;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 29);
+            this.textBox2.Size = new System.Drawing.Size(169, 29);
             this.textBox2.TabIndex = 2;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
@@ -414,7 +451,6 @@
             // 
             // pictureBoxMedal
             // 
-            this.pictureBoxMedal.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.bronze_medal;
             this.pictureBoxMedal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxMedal.Location = new System.Drawing.Point(0, -6);
             this.pictureBoxMedal.Name = "pictureBoxMedal";
@@ -458,37 +494,30 @@
             this.buttonSignOut.UseVisualStyleBackColor = false;
             this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
             // 
-            // panelVolume
+            // textBoxMoney
             // 
-            this.panelVolume.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panelVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
-            this.panelVolume.Controls.Add(this.pictureBox4);
-            this.panelVolume.Controls.Add(this.trackBar1);
-            this.panelVolume.Controls.Add(this.pictureBox3);
-            this.panelVolume.Location = new System.Drawing.Point(367, 25);
-            this.panelVolume.Name = "panelVolume";
-            this.panelVolume.Size = new System.Drawing.Size(716, 100);
-            this.panelVolume.TabIndex = 24;
+            this.textBoxMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
+            this.textBoxMoney.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxMoney.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMoney.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxMoney.Location = new System.Drawing.Point(238, 218);
+            this.textBoxMoney.MaxLength = 4;
+            this.textBoxMoney.Name = "textBoxMoney";
+            this.textBoxMoney.Size = new System.Drawing.Size(231, 50);
+            this.textBoxMoney.TabIndex = 4;
+            this.textBoxMoney.TextChanged += new System.EventHandler(this.textBoxMoney_TextChanged);
+            this.textBoxMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMoney_KeyPress);
             // 
-            // pictureBox4
+            // label6
             // 
-            this.pictureBox4.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.volume_max;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(651, 25);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(53, 50);
-            this.pictureBox4.TabIndex = 24;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.volume_min1;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(53, 50);
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
+            this.label6.Location = new System.Drawing.Point(303, 183);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 32);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Money";
             // 
             // FormAccount
             // 
@@ -499,7 +528,11 @@
             this.Name = "FormAccount";
             this.Text = "FormAccount";
             this.panelAccount.ResumeLayout(false);
+            this.panelVolume.ResumeLayout(false);
+            this.panelVolume.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelChangeLogin.ResumeLayout(false);
             this.panelChangeLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -512,10 +545,6 @@
             this.panelCard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedal)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panelVolume.ResumeLayout(false);
-            this.panelVolume.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -554,5 +583,7 @@
         private System.Windows.Forms.Panel panelVolume;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxMoney;
     }
 }

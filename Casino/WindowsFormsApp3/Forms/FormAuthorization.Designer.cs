@@ -144,6 +144,7 @@
             this.btnSupport.TabIndex = 6;
             this.btnSupport.Text = "Contact support";
             this.btnSupport.UseVisualStyleBackColor = false;
+            this.btnSupport.Click += new System.EventHandler(this.btnSupport_Click);
             // 
             // panel1
             // 
@@ -430,6 +431,7 @@
             this.KeyPreview = true;
             this.Name = "FormAuthorization";
             this.Text = "More Gold";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAuthorization_KeyDown);
             this.panelLogo.ResumeLayout(false);

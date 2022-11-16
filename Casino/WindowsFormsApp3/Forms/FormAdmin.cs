@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Utilities.Collections;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -72,11 +73,11 @@ namespace WindowsFormsApp3.Forms
         {
             try
             {
-                id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                login = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                password = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                access = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                balance = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                id = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                login = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                password = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                access = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                balance = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
                 User user = new User(Int32.Parse(id), login, password, Int32.Parse(access), Int32.Parse(balance));
                 if (e.ColumnIndex == 0)
                 {
@@ -98,10 +99,37 @@ namespace WindowsFormsApp3.Forms
                         MessageBox.Show("You can't delete the main admin");
                         return;
                     }
-                    else if (MessageBox.Show("Are you want to delete user record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                    else if (MessageBox.Show("Are you want to delete user record?", "Delete", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        db.DeleteUser(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                        db.DeleteUser(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
                         db.UpdateTable(dataGridView1);
+                    }
+                    return;
+                }
+                if (e.ColumnIndex == 2)
+                {
+                    if (user.GetAccess() == 5)
+                    {
+                        MessageBox.Show("You can't block the main admin");
+                        return;
+                    }
+                    if(access == "0")
+                    {
+                        if (MessageBox.Show("Are you want to unblock user?", "Block", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                        {
+                            user.SetAccess(1);
+                            db.EditUser(login, password, id, balance, "1");
+                            db.UpdateTable(dataGridView1);
+                        }
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Are you want to block user?", "Block", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                        {
+                            user.SetAccess(0);
+                            db.EditUser(login, password, id, balance, "0");
+                            db.UpdateTable(dataGridView1);
+                        }
                     }
                     return;
                 }
@@ -110,7 +138,6 @@ namespace WindowsFormsApp3.Forms
             {
 
             }
-            
         }
 
         public string GetId()

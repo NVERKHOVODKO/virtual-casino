@@ -23,18 +23,25 @@ namespace WindowsFormsApp3.Forms
             InitializeComponent();
             Panel pnl = new Panel();
             pnl.SetRoundedShape(panel2, 30);
-            db.GetLidersFromDataBase(logins, balances);
-            label1.Text = "1) " + logins[9] + ": " + balances[9];
-            label2.Text = "2) " + logins[8] + ": " + balances[8];
-            label3.Text = "3) " + logins[7] + ": " + balances[7];
-            label4.Text = "4) " + logins[6] + ": " + balances[6];
-            label5.Text = "5) " + logins[5] + ": " + balances[5];
-            label6.Text = "6) " + logins[4] + ": " + balances[4];
-            label7.Text = "7) " + logins[3] + ": " + balances[3];
-            label8.Text = "8) " + logins[2] + ": " + balances[2];
-            label9.Text = "9) " + logins[1] + ": " + balances[1];
-            label10.Text = "10) " + logins[0] + ": " + balances[0];
+            pnl.SetRoundedShape(panel3, 50);
+            try
+            {
+                db.GetLidersFromDataBase(logins, balances);
+                label1.Text = "1) " + logins[9] + ": " + balances[9];
+                label2.Text = "2) " + logins[8] + ": " + balances[8];
+                label3.Text = "3) " + logins[7] + ": " + balances[7];
+                label4.Text = "4) " + logins[6] + ": " + balances[6];
+                label5.Text = "5) " + logins[5] + ": " + balances[5];
+                label6.Text = "6) " + logins[4] + ": " + balances[4];
+                label7.Text = "7) " + logins[3] + ": " + balances[3];
+                label8.Text = "8) " + logins[2] + ": " + balances[2];
+                label9.Text = "9) " + logins[1] + ": " + balances[1];
+                label10.Text = "10) " + logins[0] + ": " + balances[0];
+            }
+            catch
+            {
 
+            }
         }
     }
 }

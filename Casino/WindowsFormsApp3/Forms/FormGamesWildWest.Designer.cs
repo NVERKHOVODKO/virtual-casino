@@ -35,7 +35,6 @@
             this.panelInfo = new System.Windows.Forms.Panel();
             this.panelLogInfo = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBoxBalance = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAllIn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,6 +49,7 @@
             this.bntBet100 = new System.Windows.Forms.Button();
             this.textBoxBet = new System.Windows.Forms.TextBox();
             this.btnStart = new System.Windows.Forms.Button();
+            this.labelBalance = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -102,26 +102,11 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))), ((int)(((byte)(34)))));
             this.panel4.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wooden_tag;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.textBoxBalance);
+            this.panel4.Controls.Add(this.labelBalance);
             this.panel4.Location = new System.Drawing.Point(1471, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(400, 150);
             this.panel4.TabIndex = 9;
-            // 
-            // textBoxBalance
-            // 
-            this.textBoxBalance.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.textBoxBalance.BackColor = System.Drawing.Color.LightSalmon;
-            this.textBoxBalance.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBalance.Enabled = false;
-            this.textBoxBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxBalance.Location = new System.Drawing.Point(92, 65);
-            this.textBoxBalance.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxBalance.Name = "textBoxBalance";
-            this.textBoxBalance.Size = new System.Drawing.Size(220, 49);
-            this.textBoxBalance.TabIndex = 0;
-            this.textBoxBalance.Text = "2345";
-            this.textBoxBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -319,6 +304,17 @@
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.button1_Click);
             // 
+            // labelBalance
+            // 
+            this.labelBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBalance.ForeColor = System.Drawing.Color.Yellow;
+            this.labelBalance.Location = new System.Drawing.Point(113, 67);
+            this.labelBalance.Name = "labelBalance";
+            this.labelBalance.Size = new System.Drawing.Size(191, 45);
+            this.labelBalance.TabIndex = 0;
+            this.labelBalance.Text = "balance";
+            this.labelBalance.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // FormGamesWildWest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -334,7 +330,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormGamesWildWest_KeyDown);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -365,6 +360,6 @@
         private System.Windows.Forms.Button btnAllIn;
         private System.Windows.Forms.Panel panelLogInfo;
         private System.Windows.Forms.Panel panelInfo;
-        private System.Windows.Forms.TextBox textBoxBalance;
+        private System.Windows.Forms.Label labelBalance;
     }
 }

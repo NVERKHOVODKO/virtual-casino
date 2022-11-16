@@ -143,6 +143,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_metal {
+            get {
+                object obj = ResourceManager.GetObject("background_metal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_postal {
             get {
                 object obj = ResourceManager.GetObject("background_postal", resourceCulture);
@@ -403,6 +413,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_picture {
+            get {
+                object obj = ResourceManager.GetObject("home_picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap infIcon {
             get {
                 object obj = ResourceManager.GetObject("infIcon", resourceCulture);
@@ -496,6 +516,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap map10 {
             get {
                 object obj = ResourceManager.GetObject("map10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap metal_button_crush {
+            get {
+                object obj = ResourceManager.GetObject("metal_button_crush", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

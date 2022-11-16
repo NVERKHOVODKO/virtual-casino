@@ -38,5 +38,10 @@ namespace WindowsFormsApp3.Forms
         {
             mediaPlayer.Volume = volume;
         }
+
+        public double GetVolume()
+        {
+            return mediaPlayer.Volume;
+        }
     }
 }

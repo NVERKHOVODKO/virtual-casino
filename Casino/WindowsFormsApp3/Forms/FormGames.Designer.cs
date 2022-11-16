@@ -43,8 +43,7 @@
             // 
             // panelGames
             // 
-            this.panelGames.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelGames.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.Blue_Background_1;
+            this.panelGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(155)))), ((int)(((byte)(151)))));
             this.panelGames.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelGames.Controls.Add(this.button7);
             this.panelGames.Controls.Add(this.button8);
