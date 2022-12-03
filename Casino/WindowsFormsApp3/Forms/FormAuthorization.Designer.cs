@@ -74,7 +74,6 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(200, 80);
             this.panelLogo.TabIndex = 4;
-            this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
             // labelLogo
             // 
@@ -88,7 +87,6 @@
             this.labelLogo.TabIndex = 0;
             this.labelLogo.Text = "More Gold";
             this.labelLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelLogo.Click += new System.EventHandler(this.labelLogo_Click);
             // 
             // panelMain
             // 
@@ -98,7 +96,7 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1228, 563);
+            this.panelMain.Size = new System.Drawing.Size(1484, 938);
             this.panelMain.TabIndex = 0;
             // 
             // panelDesktopPanel
@@ -111,9 +109,8 @@
             this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPanel.Location = new System.Drawing.Point(0, 0);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(1228, 563);
+            this.panelDesktopPanel.Size = new System.Drawing.Size(1484, 938);
             this.panelDesktopPanel.TabIndex = 4;
-            this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
             // 
             // button3
             // 
@@ -161,12 +158,11 @@
             this.panel1.Controls.Add(this.lblLogin);
             this.panel1.Controls.Add(this.btnCreateAccount);
             this.panel1.Controls.Add(this.btnSignIn);
-            this.panel1.Location = new System.Drawing.Point(379, 42);
+            this.panel1.Location = new System.Drawing.Point(508, 290);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(488, 489);
             this.panel1.TabIndex = 5;
             this.panel1.Tag = "";
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnIsPasswordVisible
             // 
@@ -183,7 +179,7 @@
             // 
             // panelCreateAccount
             // 
-            this.panelCreateAccount.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panelCreateAccount.BackColor = System.Drawing.Color.Silver;
             this.panelCreateAccount.Controls.Add(this.btnIsPasswordVisible1);
             this.panelCreateAccount.Controls.Add(this.label5);
             this.panelCreateAccount.Controls.Add(this.pictureBox2);
@@ -195,7 +191,7 @@
             this.panelCreateAccount.Controls.Add(this.textBoxLoginCreate);
             this.panelCreateAccount.Controls.Add(this.label1);
             this.panelCreateAccount.Controls.Add(this.label2);
-            this.panelCreateAccount.Location = new System.Drawing.Point(0, 0);
+            this.panelCreateAccount.Location = new System.Drawing.Point(3, 3);
             this.panelCreateAccount.Name = "panelCreateAccount";
             this.panelCreateAccount.Size = new System.Drawing.Size(488, 489);
             this.panelCreateAccount.TabIndex = 6;
@@ -425,14 +421,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 563);
+            this.ClientSize = new System.Drawing.Size(1484, 938);
             this.Controls.Add(this.panelMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FormAuthorization";
-            this.Text = "More Gold";
+            this.Text = "Sharpie casino";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAuthorization_KeyDown);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();

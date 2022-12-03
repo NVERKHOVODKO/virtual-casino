@@ -56,7 +56,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(444, 12);
+            this.btnUpdate.Location = new System.Drawing.Point(521, 12);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(102, 47);
             this.btnUpdate.TabIndex = 5;
@@ -70,7 +70,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(336, 12);
+            this.btnSave.Location = new System.Drawing.Point(413, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(102, 47);
             this.btnSave.TabIndex = 4;
@@ -84,7 +84,7 @@
             this.btnCreateNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCreateNew.ForeColor = System.Drawing.Color.White;
-            this.btnCreateNew.Location = new System.Drawing.Point(228, 12);
+            this.btnCreateNew.Location = new System.Drawing.Point(305, 12);
             this.btnCreateNew.Name = "btnCreateNew";
             this.btnCreateNew.Size = new System.Drawing.Size(102, 47);
             this.btnCreateNew.TabIndex = 0;
@@ -123,11 +123,11 @@
             // 
             // btnDropDatabase
             // 
-            this.btnDropDatabase.BackColor = System.Drawing.Color.Red;
+            this.btnDropDatabase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDropDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDropDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDropDatabase.ForeColor = System.Drawing.Color.White;
-            this.btnDropDatabase.Location = new System.Drawing.Point(120, 12);
+            this.btnDropDatabase.Location = new System.Drawing.Point(197, 12);
             this.btnDropDatabase.Name = "btnDropDatabase";
             this.btnDropDatabase.Size = new System.Drawing.Size(102, 47);
             this.btnDropDatabase.TabIndex = 8;
@@ -140,9 +140,9 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.textBorSearch);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(1427, 25);
+            this.panel1.Location = new System.Drawing.Point(1307, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 34);
+            this.panel1.Size = new System.Drawing.Size(362, 34);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -151,7 +151,7 @@
             this.textBorSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBorSearch.Location = new System.Drawing.Point(3, 3);
             this.textBorSearch.Name = "textBorSearch";
-            this.textBorSearch.Size = new System.Drawing.Size(201, 34);
+            this.textBorSearch.Size = new System.Drawing.Size(322, 34);
             this.textBorSearch.TabIndex = 1;
             this.textBorSearch.TextChanged += new System.EventHandler(this.textBorSearch_TextChanged);
             // 
@@ -159,7 +159,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.opened_eye1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(201, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(324, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 34);
             this.pictureBox1.TabIndex = 2;

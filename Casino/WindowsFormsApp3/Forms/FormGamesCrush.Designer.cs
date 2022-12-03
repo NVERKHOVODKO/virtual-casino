@@ -50,11 +50,14 @@
             this.btnGo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblWinBet = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblYourBet = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelMult = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelDesktop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -86,7 +89,7 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panelDesktop.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background_metal;
-            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelDesktop.Controls.Add(this.panel3);
             this.panelDesktop.Controls.Add(this.panel1);
             this.panelDesktop.Controls.Add(this.panel2);
@@ -119,9 +122,9 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.btnTake);
             this.panel4.Controls.Add(this.btnGo);
-            this.panel4.Location = new System.Drawing.Point(351, 41);
+            this.panel4.Location = new System.Drawing.Point(254, 41);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(814, 211);
+            this.panel4.Size = new System.Drawing.Size(1163, 211);
             this.panel4.TabIndex = 17;
             // 
             // btnDelBet
@@ -271,6 +274,7 @@
             this.btnMinus.Size = new System.Drawing.Size(40, 40);
             this.btnMinus.TabIndex = 13;
             this.btnMinus.Text = "-";
+            this.btnMinus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMinus.UseVisualStyleBackColor = false;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
@@ -319,6 +323,9 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.lblWinBet);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.lblYourBet);
@@ -327,15 +334,40 @@
             this.panel6.Size = new System.Drawing.Size(379, 873);
             this.panel6.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(3, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 87);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Your X: ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(3, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 87);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Your bet: ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblWinBet
             // 
             this.lblWinBet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.lblWinBet.Font = new System.Drawing.Font("Palatino Linotype", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblWinBet.ForeColor = System.Drawing.Color.Red;
-            this.lblWinBet.Location = new System.Drawing.Point(36, 95);
+            this.lblWinBet.Font = new System.Drawing.Font("Comic Sans MS", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblWinBet.ForeColor = System.Drawing.Color.Black;
+            this.lblWinBet.Location = new System.Drawing.Point(137, 85);
             this.lblWinBet.Name = "lblWinBet";
-            this.lblWinBet.Size = new System.Drawing.Size(317, 87);
+            this.lblWinBet.Size = new System.Drawing.Size(239, 87);
             this.lblWinBet.TabIndex = 23;
+            this.lblWinBet.Text = "---";
             this.lblWinBet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -345,20 +377,19 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(16, 226);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(348, 611);
+            this.label2.Size = new System.Drawing.Size(564, 611);
             this.label2.TabIndex = 22;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblYourBet
             // 
             this.lblYourBet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.lblYourBet.Font = new System.Drawing.Font("Palatino Linotype", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblYourBet.ForeColor = System.Drawing.Color.Red;
-            this.lblYourBet.Location = new System.Drawing.Point(36, 20);
+            this.lblYourBet.Font = new System.Drawing.Font("Comic Sans MS", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblYourBet.ForeColor = System.Drawing.Color.Black;
+            this.lblYourBet.Location = new System.Drawing.Point(137, 0);
             this.lblYourBet.Name = "lblYourBet";
-            this.lblYourBet.Size = new System.Drawing.Size(317, 87);
+            this.lblYourBet.Size = new System.Drawing.Size(239, 118);
             this.lblYourBet.TabIndex = 20;
-            this.lblYourBet.Text = "Your X: 1.43";
+            this.lblYourBet.Text = "---";
             this.lblYourBet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -377,12 +408,24 @@
             this.labelMult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.labelMult.Font = new System.Drawing.Font("Palatino Linotype", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMult.ForeColor = System.Drawing.Color.Red;
-            this.labelMult.Location = new System.Drawing.Point(87, 171);
+            this.labelMult.Location = new System.Drawing.Point(69, 171);
             this.labelMult.Name = "labelMult";
-            this.labelMult.Size = new System.Drawing.Size(428, 188);
+            this.labelMult.Size = new System.Drawing.Size(425, 188);
             this.labelMult.TabIndex = 7;
             this.labelMult.Text = "X 777";
-            this.labelMult.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelMult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(17, 182);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(359, 33);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Other players";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormGamesCrush
             // 
@@ -432,5 +475,8 @@
         private System.Windows.Forms.Label lblYourBet;
         private System.Windows.Forms.Label lblWinBet;
         private System.Windows.Forms.Button btnDelBet;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

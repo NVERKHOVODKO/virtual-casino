@@ -13,13 +13,13 @@ namespace WindowsFormsApp3.Forms
 		bool isSecondlineActive = false, isThirdlineActive = false, isFourthlineActive = false, isFifthlineActive = false, isFirstineActive = false;
 		Random rnd = new Random();
         static string BOMB = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\bomb.wav";
-        static string KNOCK = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\wooden_knock";
         static string PAPER = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\filing_paper.mp3";
         static string COIN = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\coin.mp3";
+        static string BOX = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\wooden_sound.mp3";
         bool isBlownedUp = false;
         public MediaPlayer song = new MediaPlayer();
         User user;
-        int bet;
+        int bet, startBet;
         private FormUser FormUser;
         public Form Creator;
         private Database db = new Database();
@@ -135,6 +135,7 @@ namespace WindowsFormsApp3.Forms
             {
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
                 {
+                    startBet = bet;
                     user.SetBalance(user.GetBalance() - bet);
                     db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                     labelBalance.Text = user.GetBalance().ToString();
@@ -227,44 +228,22 @@ namespace WindowsFormsApp3.Forms
             }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelWin_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBomb1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            bet = Int16.Parse(textBoxBet.Text);
+            isFifthlineActive = false;
+            isFourthlineActive = false;
+            isThirdlineActive = false;
+            isSecondlineActive = false;
+            try
+            {
+                bet = Int16.Parse(textBoxBet.Text);
+                startBet = bet;
+            }
+            catch
+            {
+                MessageBox.Show("Incorrect bet");
+                return;
+            }
             if(bet > user.GetBalance())
             {
                 MessageBox.Show("Insufficient balance");
@@ -335,11 +314,6 @@ namespace WindowsFormsApp3.Forms
             }
         }
 
-        private void textBoxBet_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
         private void playWinSound()
         {
             MediaPlayer coin = new MediaPlayer();
@@ -351,11 +325,11 @@ namespace WindowsFormsApp3.Forms
         private void activateLine(int numOfButton,int numOfLine, Button btn1, Button btn2, Button btn3)
         {
             MediaPlayer knock = new MediaPlayer();
-            knock.Open(new Uri(KNOCK));
+            knock.Open(new Uri(BOX));
             knock.Play();
             if (isLineActive(numOfLine) && bet > 0)
             {
-                int random = rnd.Next(1, 4);
+                int random = rnd.Next(1, 3);
                 pictureBomb1.Visible = true;
           
                 switch (random)
@@ -407,7 +381,7 @@ namespace WindowsFormsApp3.Forms
                         buttonTryAgain.Visible = true;
                         if (random != numOfButton)
                         {
-                            MessageBox.Show("You win " + bet * 4 / 5);
+                            MessageBox.Show("You win " + (startBet * 5).ToString());
                             playWinSound();
                             user.SetBalance(user.GetBalance() + bet);
                             db.UpdateBalance(user.GetId().ToString(), user.GetBalance());

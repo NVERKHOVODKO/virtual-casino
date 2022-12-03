@@ -27,9 +27,9 @@ namespace WindowsFormsApp3.Forms
             InitializeComponent();
             Panel pnl = new Panel();
             pnl.SetRoundedShape(panel2, 20);
-            lblYourBet.Text = string.Empty;
             btnTake.Visible = false;
             SetRadius();
+            labelMult.Text = String.Empty;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -41,30 +41,29 @@ namespace WindowsFormsApp3.Forms
         {
             int num = rnd.Next(1, 1000);
             if (num < 3)
-                return 40 + rnd.Next(-3, 2);
+                return 100 + rnd.Next(-3, 2);
             if (num < 10)
-                return 20 + rnd.Next(-3, 2);
+                return 60 + rnd.Next(-3, 2);
             if (num < 40)
-                return 15 + rnd.Next(-3, 2);
+                return 25 + rnd.Next(-3, 2);
             if (num < 60)
-                return 8 + rnd.Next(-2, 2);
+                return 10 + rnd.Next(-2, 2);
             if (num < 90)
                 return 6 + rnd.Next(-2, 2);
             if (num < 100)
-                return 3 + rnd.Next(-1, 2);
-
+                return 4 + rnd.Next(-1, 2);
             if (num < 300)
                 return 3 + rnd.Next(-1, 2);
             if (num < 500)
-                return 1.75;
+                return 2;
             if (num < 600)
-                return 1.5;
+                return 1.7;
             if (num < 800)
-                return 1.1;
+                return 1.5;
             if (num < 900)
-                return 1.02;
+                return 1.2;
             if (num < 950)
-                return 1.01;
+                return 1.1;
             return 1.00;
         }
 
@@ -86,17 +85,11 @@ namespace WindowsFormsApp3.Forms
             Panel pnl = new Panel();
             pnl.SetRoundedShape(btnTake, 30);
             pnl.SetRoundedShape(btnGo, 30);
-            pnl.SetRoundedShape(btn10, 30);
-            pnl.SetRoundedShape(btn100, 30);
-            pnl.SetRoundedShape(btn5, 30);
-            pnl.SetRoundedShape(btn50, 30);
-            pnl.SetRoundedShape(btnPlus, 30);
-            pnl.SetRoundedShape(btnMinus, 30);
-            pnl.SetRoundedShape(btnAll, 30);
             pnl.SetRoundedShape(panel5, 30);
             pnl.SetRoundedShape(panel4, 30);
             pnl.SetRoundedShape(panel6, 30);
-            pnl.SetRoundedShape(btnDelBet, 30);
+            pnl.SetRoundedShape(btnMinus, 20);
+            pnl.SetRoundedShape(btnPlus, 20);
         }
 
         private void textBoxBet_KeyPress(object sender, KeyPressEventArgs e)
@@ -153,21 +146,6 @@ namespace WindowsFormsApp3.Forms
             else
                 MessageBox.Show("Insuffcieint balance");
             lblBet.Text = bet.ToString();
-        }
-
-        private void textBoxBet_TextChanged_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnTake_Click_1(object sender, EventArgs e)
@@ -274,6 +252,11 @@ namespace WindowsFormsApp3.Forms
             lblBet.Text = "0";
         }
 
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (countOfIterations > 100)
@@ -342,7 +325,7 @@ namespace WindowsFormsApp3.Forms
                 i++;
                 length--;
             }
-            return "X " + final;
+            return final;
         }
     }
 }

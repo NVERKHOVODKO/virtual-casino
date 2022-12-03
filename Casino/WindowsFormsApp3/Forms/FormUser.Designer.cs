@@ -194,11 +194,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.account_icon;
+            this.pictureBox1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.account_icon2;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(146, 134);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -218,7 +218,7 @@
             // 
             this.lblLogin.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(-7, 103);
+            this.lblLogin.Location = new System.Drawing.Point(-6, 127);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(207, 43);
             this.lblLogin.TabIndex = 9;
@@ -240,12 +240,11 @@
             // labelMain
             // 
             this.labelMain.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelMain.AutoSize = true;
             this.labelMain.Font = new System.Drawing.Font("Malgun Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMain.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelMain.Location = new System.Drawing.Point(548, 18);
+            this.labelMain.Location = new System.Drawing.Point(536, 18);
             this.labelMain.Name = "labelMain";
-            this.labelMain.Size = new System.Drawing.Size(117, 45);
+            this.labelMain.Size = new System.Drawing.Size(201, 45);
             this.labelMain.TabIndex = 0;
             this.labelMain.Text = "HOME";
             this.labelMain.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -296,7 +295,6 @@
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitle.ResumeLayout(false);
-            this.panelTitle.PerformLayout();
             this.panelMain.ResumeLayout(false);
             this.ResumeLayout(false);
 

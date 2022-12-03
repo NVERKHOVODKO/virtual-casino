@@ -3,12 +3,12 @@
   <Class Name="WindowsFormsApp3.Forms.Database">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAgAEAAAAABQAAYAAAAAAAAAAAAAgAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAgAEAAAAIBQAAYAAAAAACAAAAAAAAgA=</HashCode>
       <FileName>Forms\Database.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.Forms.FormAccount">
-    <Position X="9.25" Y="6.75" Width="1.5" />
+    <Position X="14.5" Y="0.5" Width="1.5" />
     <Members>
       <Field Name="btnPay" Hidden="true" />
       <Field Name="button1" Hidden="true" />
@@ -25,7 +25,6 @@
       <Field Name="labelID" Hidden="true" />
       <Field Name="labelLogin" Hidden="true" />
       <Field Name="panel1" Hidden="true" />
-      <Field Name="panel2" Hidden="true" />
       <Field Name="panelAccount" Hidden="true" />
       <Field Name="panelCard" Hidden="true" />
       <Field Name="panelDeposit" Hidden="true" />
@@ -35,7 +34,7 @@
       <Field Name="textBox3" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>gDEBAAABACBQABAAAICCSABTQAA6AACKkFAAAQAYiUA=</HashCode>
+      <HashCode>wDFBAlAhUSBQABCAAICCSGBTYMA7ALiKkHAIAwBYiUA=</HashCode>
       <FileName>Forms\FormAccount.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -57,12 +56,12 @@
       <Field Name="textBorSearch" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>gBAAAAAARCAQAAgQAKCAEYAKAgggohDAAEAAAwJAkgg=</HashCode>
+      <HashCode>gBAEAAAARCAQAAgQAKCAEYAKAgggohDAAEAAAwJAkgg=</HashCode>
       <FileName>Forms\FormAdmin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.Forms.FormCreateNew">
-    <Position X="0.5" Y="9.25" Width="1.5" />
+    <Position X="5.75" Y="10" Width="1.5" />
     <Members>
       <Field Name="btnSave" Hidden="true" />
       <Field Name="button2" Hidden="true" />
@@ -105,28 +104,27 @@
       <Field Name="textBoxPassword" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>CAiAgAAAACAAAJAAAACAAkECAQAQAAAGAQAAAAAAAkA=</HashCode>
+      <HashCode>CAiAgAAAACAQAJAAAACAAkECAQAQAAAGAQAAAAAAAkA=</HashCode>
       <FileName>Forms\FormEditUser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.Forms.FormGames">
-    <Position X="11" Y="0.5" Width="1.5" />
+    <Position X="9.25" Y="6.75" Width="1.5" />
     <Members>
       <Field Name="button1" Hidden="true" />
       <Field Name="button2" Hidden="true" />
-      <Field Name="buttonGames_2" Hidden="true" />
       <Field Name="components" Hidden="true" />
       <Method Name="Dispose" Hidden="true" />
       <Method Name="InitializeComponent" Hidden="true" />
       <Field Name="panelGames" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>CAAACAAIACAABCAAAICAAAAKABAYAACAgGAAAAAUAUA=</HashCode>
+      <HashCode>CAAACAAIACAABCAAAICAAAAKAMw7AAAAgGAAAAAUAUA=</HashCode>
       <FileName>Forms\FormGames.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.Forms.FormGamesCrush">
-    <Position X="11" Y="5" Width="1.5" />
+    <Position X="11" Y="0.5" Width="1.5" />
     <Members>
       <Field Name="btnGo" Hidden="true" />
       <Field Name="btnTake" Hidden="true" />
@@ -141,11 +139,10 @@
       <Field Name="panel1" Hidden="true" />
       <Field Name="panel2" Hidden="true" />
       <Field Name="panelDesktop" Hidden="true" />
-      <Field Name="textBoxBet" Hidden="true" />
       <Field Name="timer1" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>QBYEEAQSwCAAIBgAAACABgAKAAAAYAAAkNAAAQAFAQg=</HashCode>
+      <HashCode>QBREFCQT4CwQIhAAAASBBgAaIQQAZIwImJDAgQCVCQo=</HashCode>
       <FileName>Forms\FormGamesCrush.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -185,7 +182,7 @@
       <Field Name="textBoxBet" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>DBJEUAQAED9AAgwEAAOANkASgAAMAQAQEECAEUR8BUA=</HashCode>
+      <HashCode>DBZEUAAAED9QAgwEAAOAJkASgAAIAQAQEECAAUR8BUA=</HashCode>
       <FileName>Forms\FormGamesSapper.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -213,33 +210,31 @@
       <Field Name="pictureBox1" Hidden="true" />
       <Field Name="pictureBox2" Hidden="true" />
       <Field Name="pictureBox3" Hidden="true" />
-      <Field Name="textBoxBalance" Hidden="true" />
       <Field Name="textBoxBet" Hidden="true" />
       <Field Name="timer1" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>JhYEJRQkECQQBQ3AAEDABgQSAEAKZAi0AXAJERRQAQA=</HashCode>
+      <HashCode>JhYEJRQkECRQBQ3AAEDABgQSAEAKZAiwAXAJERRQAQA=</HashCode>
       <FileName>Forms\FormGamesWildWest.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.Forms.FormHome">
-    <Position X="5.75" Y="9.5" Width="1.5" />
+    <Position X="0.5" Y="6.25" Width="1.5" />
     <Members>
       <Field Name="components" Hidden="true" />
       <Method Name="Dispose" Hidden="true" />
       <Method Name="InitializeComponent" Hidden="true" />
       <Field Name="panelHome" Hidden="true" />
-      <Field Name="pictureBox1" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAQAAAACAAAACAAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>ABQAAAQAACAAATAAAICAAAACAAAYIACQAGAACQCWAUA=</HashCode>
       <FileName>Forms\FormHome.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.Forms.SongPlayer">
     <Position X="4" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAIAAAAAAAAAAAAAAAAAAAAKAAIAAAAAEA=</HashCode>
+      <HashCode>AAAAAEAAAAAIAAAAAAAAAAAAAAAACACAKAAIAAAAAEA=</HashCode>
       <FileName>Forms\SongPlayer.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -248,8 +243,8 @@
     <InheritanceLine Type="System.Object" FixedToPoint="true">
       <Path>
         <Point X="6.5" Y="6.7" />
-        <Point X="6.5" Y="6.853" />
-        <Point X="4.812" Y="6.853" />
+        <Point X="6.5" Y="7.375" />
+        <Point X="4.812" Y="7.375" />
         <Point X="4.812" Y="7.75" />
       </Path>
     </InheritanceLine>
@@ -287,7 +282,6 @@
       <Field Name="panelMain" Hidden="true" />
       <Field Name="pictureBox1" Hidden="true" />
       <Field Name="pictureBox2" Hidden="true" />
-      <Field Name="random" Hidden="true" />
       <Field Name="textBoxLogin" Hidden="true" />
       <Field Name="textBoxLoginCreate" Hidden="true" />
       <Field Name="textBoxPassword" Hidden="true" />
@@ -295,7 +289,7 @@
       <Field Name="textBoxPasswordCreate" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>CxDAEEUCAigBAlAAAYCmIgBGAgA8BCjYs3QAAwhBAQA=</HashCode>
+      <HashCode>CwDAEAQCAiAAAlAAAICiAgBCAgA4BCiYkzEAAwjAAQA=</HashCode>
       <FileName>Forms\FormAuthorization.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -309,7 +303,6 @@
       <Field Name="btnLiders" Hidden="true" />
       <Field Name="btnTelegram" Hidden="true" />
       <Field Name="btnWebsite" Hidden="true" />
-      <Field Name="buttonBack" Hidden="true" />
       <Field Name="components" Hidden="true" />
       <Method Name="Dispose" Hidden="true" />
       <Method Name="InitializeComponent" Hidden="true" />
@@ -324,7 +317,7 @@
       <Field Name="panelTitle" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AQDcBAAiACCJJEAAAICACAEmIgATFoyBCGQZAAERAUA=</HashCode>
+      <HashCode>AQRcBAACACCJAEAAAICACAEmIgADFoyBiGQYAAFAAUA=</HashCode>
       <FileName>Forms\FormUser.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -343,7 +336,15 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.ThemeColor">
-    <Position X="5.75" Y="7" Width="1.5" />
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="6.7" />
+        <Point X="6.5" Y="7.375" />
+        <Point X="6.438" Y="7.375" />
+        <Point X="6.438" Y="7.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAACAAAAAAgA=</HashCode>
       <FileName>ThemeColor.cs</FileName>

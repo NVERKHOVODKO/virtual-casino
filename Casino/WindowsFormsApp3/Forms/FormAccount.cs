@@ -1,8 +1,6 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using System;
+﻿using System;
 using System.Windows.Forms;
 using System.Windows.Media;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp3.Forms
 {
@@ -14,6 +12,7 @@ namespace WindowsFormsApp3.Forms
         private Database db = new Database();
         private SongPlayer mediaPlayer;
         private MediaPlayer paySound = new MediaPlayer();
+        private int withdrawMoney = 0;
 
         public FormAccount(SongPlayer mediaPlayer, FormUser FormUser, User user)
         {
@@ -30,11 +29,15 @@ namespace WindowsFormsApp3.Forms
             pnl.SetRoundedShape(button3, 20);
             pnl.SetRoundedShape(panel1, 15);
             pnl.SetRoundedShape(button2, 20);
+            pnl.SetRoundedShape(btnWithdrawMoney, 20);
+            pnl.SetRoundedShape(panelWithdraw, 50);
+            pnl.SetRoundedShape(button5, 20);
             pnl.SetRoundedShape(buttonSignOut, 20);
             pnl.SetRoundedShape(btnChangeLogin, 20);
             pnl.SetRoundedShape(button1, 20);
             panelDeposit.Visible = false;
             panelChangeLogin.Visible = false;
+            panelWithdraw.Visible = false;
             choiseMedal();
             labelLogin.Text = user.GetLogin();
             labelID.Text = user.GetId().ToString();
@@ -51,11 +54,6 @@ namespace WindowsFormsApp3.Forms
             else if (user.GetBalance() > 1000)
                 pictureBoxMedal.BackgroundImage = Properties.Resources.bronze_medal;
             pictureBoxMedal.BackgroundImageLayout = ImageLayout.Stretch;
-        }
-
-        private void panelCard_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -92,8 +90,7 @@ namespace WindowsFormsApp3.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Field card data" +
-                        "");
+                    MessageBox.Show("Field card data" + "");
                     return;
                 }
                 labelBalance.Text = user.GetBalance().ToString();
@@ -102,27 +99,12 @@ namespace WindowsFormsApp3.Forms
                 FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                 db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
                 choiseMedal();
+                panelDeposit.Visible = false;
             }
             catch
             {
                 MessageBox.Show("Payment was't successful");
             }
-
-        }
-
-        private void labelID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelLogin_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -141,7 +123,7 @@ namespace WindowsFormsApp3.Forms
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
-            if (!Char.IsDigit(number) && number != 8)
+            if (!Char.IsDigit(number))
             {
                 e.Handled = true;
             }
@@ -211,13 +193,10 @@ namespace WindowsFormsApp3.Forms
             panelChangeLogin.Visible = false;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-        }
-
         private void button1_Click_2(object sender, EventArgs e)
         {
             panelChangeLogin.Visible = false;
+            panelWithdraw.Visible = false;
             panelDeposit.Visible = true;
         }
 
@@ -241,17 +220,72 @@ namespace WindowsFormsApp3.Forms
             mediaPlayer.SetVolume(volume);
         }
 
-        private void textBoxMoney_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBoxMoney_KeyPress(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
             if (!Char.IsDigit(number) && number != 8)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btnWithdrawMoney_Click(object sender, EventArgs e)
+        {
+            panelWithdraw.Visible = true;
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panelWithdraw.Visible = false;
+            panelChangeLogin.Visible = false;
+            panelDeposit.Visible = false;
+        }
+
+        private void btnWithdrawMoney_Click_1(object sender, EventArgs e)
+        {
+            panelWithdraw.Visible = true;
+            panelChangeLogin.Visible = false;
+            panelDeposit.Visible = false;
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void buttonWithdrawMoneyGo_Click(object sender, EventArgs e)
+        {
+            if (textBox4.Text != String.Empty)
+            {
+                try
+                {
+                    withdrawMoney = Int16.Parse(textBox4.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Can't withdraw money");
+                    return;
+                }
+                if(user.GetBalance() < withdrawMoney)
+                {
+                    MessageBox.Show("Influenced balance");
+                    return;
+                }
+                user.SetBalance(user.GetBalance() - withdrawMoney);
+                Database db = new Database();
+                db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
+                FormUser.ChangeBalanceValue(user.GetBalance().ToString());
+                choiseMedal();
+                labelBalance.Text = user.GetBalance().ToString() + " NC";
+            }
+            else
+            {
+                MessageBox.Show("Can't withdraw money. Fill in the field");
             }
         }
     }

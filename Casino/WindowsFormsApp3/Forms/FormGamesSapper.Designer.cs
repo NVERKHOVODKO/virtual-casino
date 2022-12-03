@@ -67,8 +67,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.sea;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.sea1;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.Controls.Add(this.panelFlag);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panelLogInfo);
@@ -78,7 +78,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1704, 838);
             this.panel2.TabIndex = 4;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panelFlag
             // 
@@ -166,7 +165,6 @@
             this.pictureBomb1.Size = new System.Drawing.Size(70, 70);
             this.pictureBomb1.TabIndex = 21;
             this.pictureBomb1.TabStop = false;
-            this.pictureBomb1.Click += new System.EventHandler(this.pictureBomb1_Click);
             // 
             // btn5_2
             // 
@@ -422,7 +420,6 @@
             this.textBoxBet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxBet.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBoxBet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBet_KeyPress);
-            this.textBoxBet.MouseEnter += new System.EventHandler(this.textBoxBet_MouseEnter);
             // 
             // panelLogInfo
             // 
