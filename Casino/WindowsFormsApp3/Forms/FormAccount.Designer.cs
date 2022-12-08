@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelAccount = new System.Windows.Forms.Panel();
+            this.btnWithdrawMoney = new System.Windows.Forms.Button();
             this.panelWithdraw = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -72,7 +73,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelBalance = new System.Windows.Forms.Label();
             this.buttonSignOut = new System.Windows.Forms.Button();
-            this.btnWithdrawMoney = new System.Windows.Forms.Button();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panelAccount.SuspendLayout();
             this.panelWithdraw.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -109,10 +111,27 @@
             this.panelAccount.Size = new System.Drawing.Size(1450, 960);
             this.panelAccount.TabIndex = 0;
             // 
+            // btnWithdrawMoney
+            // 
+            this.btnWithdrawMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWithdrawMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
+            this.btnWithdrawMoney.FlatAppearance.BorderSize = 0;
+            this.btnWithdrawMoney.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWithdrawMoney.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnWithdrawMoney.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
+            this.btnWithdrawMoney.Location = new System.Drawing.Point(1259, 228);
+            this.btnWithdrawMoney.Name = "btnWithdrawMoney";
+            this.btnWithdrawMoney.Size = new System.Drawing.Size(179, 87);
+            this.btnWithdrawMoney.TabIndex = 26;
+            this.btnWithdrawMoney.Text = "Withdraw";
+            this.btnWithdrawMoney.UseVisualStyleBackColor = false;
+            this.btnWithdrawMoney.Click += new System.EventHandler(this.btnWithdrawMoney_Click_1);
+            // 
             // panelWithdraw
             // 
             this.panelWithdraw.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelWithdraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
+            this.panelWithdraw.Controls.Add(this.button6);
             this.panelWithdraw.Controls.Add(this.label7);
             this.panelWithdraw.Controls.Add(this.textBox4);
             this.panelWithdraw.Controls.Add(this.button5);
@@ -240,11 +259,14 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(391, 29);
             this.textBox7.TabIndex = 0;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // panelDeposit
             // 
             this.panelDeposit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
+            this.panelDeposit.Controls.Add(this.buttonDel);
             this.panelDeposit.Controls.Add(this.label6);
             this.panelDeposit.Controls.Add(this.textBoxMoney);
             this.panelDeposit.Controls.Add(this.button3);
@@ -661,21 +683,33 @@
             this.buttonSignOut.UseVisualStyleBackColor = false;
             this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
             // 
-            // btnWithdrawMoney
+            // buttonDel
             // 
-            this.btnWithdrawMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnWithdrawMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(74)))), ((int)(((byte)(82)))));
-            this.btnWithdrawMoney.FlatAppearance.BorderSize = 0;
-            this.btnWithdrawMoney.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWithdrawMoney.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnWithdrawMoney.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))));
-            this.btnWithdrawMoney.Location = new System.Drawing.Point(1259, 228);
-            this.btnWithdrawMoney.Name = "btnWithdrawMoney";
-            this.btnWithdrawMoney.Size = new System.Drawing.Size(179, 87);
-            this.btnWithdrawMoney.TabIndex = 26;
-            this.btnWithdrawMoney.Text = "Withdraw";
-            this.btnWithdrawMoney.UseVisualStyleBackColor = false;
-            this.btnWithdrawMoney.Click += new System.EventHandler(this.btnWithdrawMoney_Click_1);
+            this.buttonDel.BackColor = System.Drawing.Color.Red;
+            this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDel.ForeColor = System.Drawing.Color.Black;
+            this.buttonDel.Location = new System.Drawing.Point(587, 302);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(89, 46);
+            this.buttonDel.TabIndex = 22;
+            this.buttonDel.Text = "Clear";
+            this.buttonDel.UseVisualStyleBackColor = false;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(570, 324);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(89, 46);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Clear";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // FormAccount
             // 
@@ -758,5 +792,7 @@
         private System.Windows.Forms.Button buttonWithdrawMoneyGo;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button btnWithdrawMoney;
+        private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.Button button6;
     }
 }

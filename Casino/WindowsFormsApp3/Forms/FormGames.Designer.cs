@@ -97,7 +97,7 @@
             // button9
             // 
             this.button9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button9.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.Jew_icon4;
+            this.button9.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.casino_roulette_icon;
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button9.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.button9.FlatAppearance.BorderSize = 0;

@@ -222,7 +222,7 @@ namespace WindowsFormsApp3
             cmd.Parameters.AddWithValue("@balance", 0);
             cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@password", password);
-            cmd.Parameters.AddWithValue("@role", 0);
+            cmd.Parameters.AddWithValue("@role", 1);
             var result = cmd.ExecuteNonQuery();
             databaseObject.CloseConnection();
             panelCreateAccount.Visible = false;

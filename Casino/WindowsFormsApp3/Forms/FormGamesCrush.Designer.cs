@@ -50,6 +50,7 @@
             this.btnGo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblWinBet = new System.Windows.Forms.Label();
@@ -57,7 +58,9 @@
             this.lblYourBet = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelMult = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelDesktop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -113,6 +116,9 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.btnDelBet);
             this.panel4.Controls.Add(this.btnAll);
             this.panel4.Controls.Add(this.btn10);
@@ -122,9 +128,9 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.btnTake);
             this.panel4.Controls.Add(this.btnGo);
-            this.panel4.Location = new System.Drawing.Point(254, 41);
+            this.panel4.Location = new System.Drawing.Point(170, 41);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1163, 211);
+            this.panel4.Size = new System.Drawing.Size(1247, 211);
             this.panel4.TabIndex = 17;
             // 
             // btnDelBet
@@ -334,6 +340,18 @@
             this.panel6.Size = new System.Drawing.Size(379, 873);
             this.panel6.TabIndex = 0;
             // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(17, 182);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(359, 33);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Other players";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
@@ -415,17 +433,42 @@
             this.labelMult.Text = "X 777";
             this.labelMult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // label6
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(17, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(359, 33);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Other players";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(872, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(187, 67);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Get on:";
+            // 
+            // button1
+            // 
+            this.button1.AllowDrop = true;
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(1070, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 161);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "DELETE";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(884, 110);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(175, 68);
+            this.textBox1.TabIndex = 25;
             // 
             // FormGamesCrush
             // 
@@ -478,5 +521,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -128,7 +128,7 @@ namespace WindowsFormsApp3.Forms
             SQLiteDataAdapter adapter = new SQLiteDataAdapter();
             Database databaseObject = new Database();
             DataTable datatable = new DataTable();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM users WHERE role = 1 ORDER BY balance LIMIT 10", databaseObject.myConnection);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM users WHERE role = 1 ORDER BY balance DESC", databaseObject.myConnection);
             databaseObject.OpenConnection();
             adapter.SelectCommand = cmd;
             adapter.Fill(datatable);

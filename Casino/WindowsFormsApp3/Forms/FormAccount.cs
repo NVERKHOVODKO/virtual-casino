@@ -147,6 +147,7 @@ namespace WindowsFormsApp3.Forms
             }
         }
 
+        
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             if (textBox2.Text.Length == 2)
@@ -260,7 +261,7 @@ namespace WindowsFormsApp3.Forms
 
         private void buttonWithdrawMoneyGo_Click(object sender, EventArgs e)
         {
-            if (textBox4.Text != String.Empty)
+            if (textBox7.Text.Length == 19)
             {
                 try
                 {
@@ -282,11 +283,41 @@ namespace WindowsFormsApp3.Forms
                 FormUser.ChangeBalanceValue(user.GetBalance().ToString());
                 choiseMedal();
                 labelBalance.Text = user.GetBalance().ToString() + " NC";
+                paySound.Open(new Uri(@"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\saul_goodman.mp3"));
+                paySound.Play();
             }
             else
             {
                 MessageBox.Show("Can't withdraw money. Fill in the field");
             }
+        }
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = String.Empty;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox7.Text = String.Empty;
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox7.Text.Length == 4 || textBox7.Text.Length == 9 || textBox7.Text.Length == 14)
+            {
+                textBox7.Text += "-";
+            }
+            textBox7.SelectionStart = textBox7.Text.Length;
         }
     }
 }

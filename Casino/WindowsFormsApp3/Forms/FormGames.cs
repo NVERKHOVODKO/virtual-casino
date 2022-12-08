@@ -12,7 +12,7 @@ namespace WindowsFormsApp3.Forms
         private Form currentChildForm;
         SongPlayer mediaPlayer;
         static string SONG_WILD_WEST = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\wild_west_3.mp3";
-        static string SONG_PIRATES = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_1.wav";
+        static string SONG_PIRATES = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\pirate_song_3.wav";
         static string POSTAL_SONG = @"C:\НЕ СИСТЕМА\BSUIR\второй курс\OOP-CourseWork\Songs\postal_song.mp3";
 
         

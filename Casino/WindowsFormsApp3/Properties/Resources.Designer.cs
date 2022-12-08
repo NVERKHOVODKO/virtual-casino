@@ -293,6 +293,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap casino_roulette_icon {
+            get {
+                object obj = ResourceManager.GetObject("casino roulette icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap casino_roulette_icon2 {
             get {
                 object obj = ResourceManager.GetObject("casino roulette icon2", resourceCulture);
@@ -396,6 +406,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap fire_4 {
             get {
                 object obj = ResourceManager.GetObject("fire_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frame {
+            get {
+                object obj = ResourceManager.GetObject("frame", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

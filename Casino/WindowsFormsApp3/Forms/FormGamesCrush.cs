@@ -237,7 +237,7 @@ namespace WindowsFormsApp3.Forms
 
         private void changeWinnersTable()
         {
-            if (numOfPlayers > 15)
+            if (numOfPlayers > 14)
                 return;
             numOfPlayers++;
             string str = "";
@@ -272,7 +272,7 @@ namespace WindowsFormsApp3.Forms
             else
                 curMultiplier += 0.005;
             countOfIterations++;
-            if (rnd.Next(1, 12) == 1)
+            if (rnd.Next(1, 14) == 3)
             {
                 changeWinnersTable();
             }

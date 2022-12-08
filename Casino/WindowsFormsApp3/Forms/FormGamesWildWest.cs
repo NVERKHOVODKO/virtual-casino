@@ -66,7 +66,6 @@ namespace WindowsFormsApp3.Forms
 
         }
 
-
         void panelLogInfo_MouseLeave(object sender, EventArgs e)
         {
             MediaPlayer coin = new MediaPlayer();
@@ -228,6 +227,11 @@ namespace WindowsFormsApp3.Forms
             catch
             {
                 textBoxBet.Text = "Place your bet";
+            }
+            if(bet == 0)
+            {
+                MessageBox.Show("Place a bet");
+                return;
             }
             if (isBtnStartActive && bet <= user.GetBalance())
             {

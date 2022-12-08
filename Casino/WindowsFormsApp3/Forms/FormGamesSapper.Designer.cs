@@ -30,10 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGamesSapper));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelInfo = new System.Windows.Forms.Panel();
             this.panelFlag = new System.Windows.Forms.Panel();
             this.labelBalance = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelBoxes = new System.Windows.Forms.Panel();
             this.pictureBomb1 = new System.Windows.Forms.PictureBox();
             this.btn5_2 = new System.Windows.Forms.Button();
@@ -56,10 +59,10 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.textBoxBet = new System.Windows.Forms.TextBox();
             this.panelLogInfo = new System.Windows.Forms.Panel();
-            this.panelInfo = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panelFlag.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBoxes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBomb1)).BeginInit();
@@ -69,15 +72,26 @@
             // 
             this.panel2.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.sea1;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.Controls.Add(this.panelInfo);
             this.panel2.Controls.Add(this.panelFlag);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panelLogInfo);
-            this.panel2.Controls.Add(this.panelInfo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1704, 838);
             this.panel2.TabIndex = 4;
+            // 
+            // panelInfo
+            // 
+            this.panelInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.panelInfo.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.sapperInfo1;
+            this.panelInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelInfo.Location = new System.Drawing.Point(1411, 562);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(422, 239);
+            this.panelInfo.TabIndex = 13;
             // 
             // panelFlag
             // 
@@ -109,25 +123,48 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.wooden_board;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panelBoxes);
             this.panel3.Controls.Add(this.buttonTryAgain);
             this.panel3.Controls.Add(this.buttonTake);
             this.panel3.Controls.Add(this.buttonStart);
             this.panel3.Controls.Add(this.textBoxBet);
-            this.panel3.Location = new System.Drawing.Point(462, 58);
+            this.panel3.Location = new System.Drawing.Point(330, 161);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(869, 569);
+            this.panel3.Size = new System.Drawing.Size(1000, 629);
             this.panel3.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.frame;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(542, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(403, 374);
+            this.panel1.TabIndex = 14;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp3.Properties.Resources.scale_coins_1;
-            this.pictureBox1.Location = new System.Drawing.Point(529, 66);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 56);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 267);
+            this.pictureBox1.Size = new System.Drawing.Size(290, 260);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(234)))));
+            this.label1.Font = new System.Drawing.Font("Bradley Hand ITC", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(593, 387);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 29);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Bet";
             // 
             // panelBoxes
             // 
@@ -149,9 +186,9 @@
             this.panelBoxes.Controls.Add(this.btn4_3);
             this.panelBoxes.Controls.Add(this.btn4_2);
             this.panelBoxes.Controls.Add(this.btn3_3);
-            this.panelBoxes.Location = new System.Drawing.Point(53, 66);
+            this.panelBoxes.Location = new System.Drawing.Point(29, 45);
             this.panelBoxes.Name = "panelBoxes";
-            this.panelBoxes.Size = new System.Drawing.Size(391, 438);
+            this.panelBoxes.Size = new System.Drawing.Size(470, 544);
             this.panelBoxes.TabIndex = 3;
             this.panelBoxes.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -159,10 +196,10 @@
             // 
             this.pictureBomb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.pictureBomb1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.bomb5;
-            this.pictureBomb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBomb1.Location = new System.Drawing.Point(309, 352);
+            this.pictureBomb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBomb1.Location = new System.Drawing.Point(367, 440);
             this.pictureBomb1.Name = "pictureBomb1";
-            this.pictureBomb1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBomb1.Size = new System.Drawing.Size(82, 83);
             this.pictureBomb1.TabIndex = 21;
             this.pictureBomb1.TabStop = false;
             // 
@@ -172,10 +209,9 @@
             this.btn5_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn5_2.BackgroundImage")));
             this.btn5_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn5_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_2.Image = ((System.Drawing.Image)(resources.GetObject("btn5_2.Image")));
-            this.btn5_2.Location = new System.Drawing.Point(97, 18);
+            this.btn5_2.Location = new System.Drawing.Point(130, 31);
             this.btn5_2.Name = "btn5_2";
-            this.btn5_2.Size = new System.Drawing.Size(70, 70);
+            this.btn5_2.Size = new System.Drawing.Size(82, 83);
             this.btn5_2.TabIndex = 7;
             this.btn5_2.UseVisualStyleBackColor = false;
             this.btn5_2.Click += new System.EventHandler(this.btn5_2_Click);
@@ -183,12 +219,12 @@
             // btn5_1
             // 
             this.btn5_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn5_1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.box1;
             this.btn5_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn5_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_1.Image = ((System.Drawing.Image)(resources.GetObject("btn5_1.Image")));
-            this.btn5_1.Location = new System.Drawing.Point(21, 18);
+            this.btn5_1.Location = new System.Drawing.Point(32, 31);
             this.btn5_1.Name = "btn5_1";
-            this.btn5_1.Size = new System.Drawing.Size(70, 70);
+            this.btn5_1.Size = new System.Drawing.Size(82, 83);
             this.btn5_1.TabIndex = 6;
             this.btn5_1.UseVisualStyleBackColor = false;
             this.btn5_1.Click += new System.EventHandler(this.btn5_1_Click);
@@ -196,12 +232,12 @@
             // btn1_3
             // 
             this.btn1_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn1_3.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.box1;
             this.btn1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn1_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_3.Image = ((System.Drawing.Image)(resources.GetObject("btn1_3.Image")));
-            this.btn1_3.Location = new System.Drawing.Point(173, 352);
+            this.btn1_3.Location = new System.Drawing.Point(231, 440);
             this.btn1_3.Name = "btn1_3";
-            this.btn1_3.Size = new System.Drawing.Size(70, 70);
+            this.btn1_3.Size = new System.Drawing.Size(82, 83);
             this.btn1_3.TabIndex = 20;
             this.btn1_3.UseVisualStyleBackColor = false;
             this.btn1_3.Click += new System.EventHandler(this.btn1_3_Click);
@@ -209,12 +245,12 @@
             // btn2_3
             // 
             this.btn2_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn2_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn2_3.BackgroundImage")));
             this.btn2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn2_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_3.Image = ((System.Drawing.Image)(resources.GetObject("btn2_3.Image")));
-            this.btn2_3.Location = new System.Drawing.Point(172, 268);
+            this.btn2_3.Location = new System.Drawing.Point(231, 337);
             this.btn2_3.Name = "btn2_3";
-            this.btn2_3.Size = new System.Drawing.Size(70, 70);
+            this.btn2_3.Size = new System.Drawing.Size(82, 83);
             this.btn2_3.TabIndex = 17;
             this.btn2_3.UseVisualStyleBackColor = false;
             this.btn2_3.Click += new System.EventHandler(this.btn2_3_Click);
@@ -222,12 +258,12 @@
             // btn1_2
             // 
             this.btn1_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn1_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn1_2.BackgroundImage")));
             this.btn1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_2.Image = ((System.Drawing.Image)(resources.GetObject("btn1_2.Image")));
-            this.btn1_2.Location = new System.Drawing.Point(97, 352);
+            this.btn1_2.Location = new System.Drawing.Point(130, 440);
             this.btn1_2.Name = "btn1_2";
-            this.btn1_2.Size = new System.Drawing.Size(70, 70);
+            this.btn1_2.Size = new System.Drawing.Size(82, 83);
             this.btn1_2.TabIndex = 19;
             this.btn1_2.UseVisualStyleBackColor = false;
             this.btn1_2.Click += new System.EventHandler(this.btn1_2_Click);
@@ -238,10 +274,9 @@
             this.btn5_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn5_3.BackgroundImage")));
             this.btn5_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn5_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5_3.Image = ((System.Drawing.Image)(resources.GetObject("btn5_3.Image")));
-            this.btn5_3.Location = new System.Drawing.Point(173, 18);
+            this.btn5_3.Location = new System.Drawing.Point(231, 31);
             this.btn5_3.Name = "btn5_3";
-            this.btn5_3.Size = new System.Drawing.Size(70, 70);
+            this.btn5_3.Size = new System.Drawing.Size(82, 83);
             this.btn5_3.TabIndex = 8;
             this.btn5_3.UseVisualStyleBackColor = false;
             this.btn5_3.Click += new System.EventHandler(this.btn5_3_Click);
@@ -249,12 +284,12 @@
             // btn1_1
             // 
             this.btn1_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn1_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn1_1.BackgroundImage")));
             this.btn1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_1.Image = ((System.Drawing.Image)(resources.GetObject("btn1_1.Image")));
-            this.btn1_1.Location = new System.Drawing.Point(21, 352);
+            this.btn1_1.Location = new System.Drawing.Point(31, 440);
             this.btn1_1.Name = "btn1_1";
-            this.btn1_1.Size = new System.Drawing.Size(70, 70);
+            this.btn1_1.Size = new System.Drawing.Size(82, 83);
             this.btn1_1.TabIndex = 18;
             this.btn1_1.UseVisualStyleBackColor = false;
             this.btn1_1.Click += new System.EventHandler(this.button15_Click);
@@ -262,12 +297,12 @@
             // btn2_2
             // 
             this.btn2_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn2_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn2_2.BackgroundImage")));
             this.btn2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_2.Image = ((System.Drawing.Image)(resources.GetObject("btn2_2.Image")));
-            this.btn2_2.Location = new System.Drawing.Point(96, 268);
+            this.btn2_2.Location = new System.Drawing.Point(130, 337);
             this.btn2_2.Name = "btn2_2";
-            this.btn2_2.Size = new System.Drawing.Size(70, 70);
+            this.btn2_2.Size = new System.Drawing.Size(82, 83);
             this.btn2_2.TabIndex = 16;
             this.btn2_2.UseVisualStyleBackColor = false;
             this.btn2_2.Click += new System.EventHandler(this.btn2_2_Click);
@@ -275,12 +310,12 @@
             // btn3_1
             // 
             this.btn3_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn3_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn3_1.BackgroundImage")));
             this.btn3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn3_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3_1.Image = ((System.Drawing.Image)(resources.GetObject("btn3_1.Image")));
-            this.btn3_1.Location = new System.Drawing.Point(20, 184);
+            this.btn3_1.Location = new System.Drawing.Point(32, 238);
             this.btn3_1.Name = "btn3_1";
-            this.btn3_1.Size = new System.Drawing.Size(70, 70);
+            this.btn3_1.Size = new System.Drawing.Size(82, 83);
             this.btn3_1.TabIndex = 12;
             this.btn3_1.UseVisualStyleBackColor = false;
             this.btn3_1.Click += new System.EventHandler(this.btn3_1_Click);
@@ -288,12 +323,12 @@
             // btn4_1
             // 
             this.btn4_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn4_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn4_1.BackgroundImage")));
             this.btn4_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn4_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4_1.Image = ((System.Drawing.Image)(resources.GetObject("btn4_1.Image")));
-            this.btn4_1.Location = new System.Drawing.Point(20, 100);
+            this.btn4_1.Location = new System.Drawing.Point(31, 130);
             this.btn4_1.Name = "btn4_1";
-            this.btn4_1.Size = new System.Drawing.Size(70, 70);
+            this.btn4_1.Size = new System.Drawing.Size(82, 83);
             this.btn4_1.TabIndex = 9;
             this.btn4_1.UseVisualStyleBackColor = false;
             this.btn4_1.Click += new System.EventHandler(this.btn4_1_Click);
@@ -301,12 +336,12 @@
             // btn3_2
             // 
             this.btn3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn3_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn3_2.BackgroundImage")));
             this.btn3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn3_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3_2.Image = ((System.Drawing.Image)(resources.GetObject("btn3_2.Image")));
-            this.btn3_2.Location = new System.Drawing.Point(96, 184);
+            this.btn3_2.Location = new System.Drawing.Point(130, 238);
             this.btn3_2.Name = "btn3_2";
-            this.btn3_2.Size = new System.Drawing.Size(70, 70);
+            this.btn3_2.Size = new System.Drawing.Size(82, 83);
             this.btn3_2.TabIndex = 13;
             this.btn3_2.UseVisualStyleBackColor = false;
             this.btn3_2.Click += new System.EventHandler(this.btn3_2_Click);
@@ -314,12 +349,12 @@
             // btn2_1
             // 
             this.btn2_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn2_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn2_1.BackgroundImage")));
             this.btn2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_1.Image = ((System.Drawing.Image)(resources.GetObject("btn2_1.Image")));
-            this.btn2_1.Location = new System.Drawing.Point(21, 268);
+            this.btn2_1.Location = new System.Drawing.Point(31, 337);
             this.btn2_1.Name = "btn2_1";
-            this.btn2_1.Size = new System.Drawing.Size(70, 70);
+            this.btn2_1.Size = new System.Drawing.Size(82, 83);
             this.btn2_1.TabIndex = 15;
             this.btn2_1.UseVisualStyleBackColor = false;
             this.btn2_1.Click += new System.EventHandler(this.btn2_1_Click);
@@ -327,12 +362,12 @@
             // btn4_3
             // 
             this.btn4_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn4_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn4_3.BackgroundImage")));
             this.btn4_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn4_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4_3.Image = ((System.Drawing.Image)(resources.GetObject("btn4_3.Image")));
-            this.btn4_3.Location = new System.Drawing.Point(173, 100);
+            this.btn4_3.Location = new System.Drawing.Point(231, 130);
             this.btn4_3.Name = "btn4_3";
-            this.btn4_3.Size = new System.Drawing.Size(70, 70);
+            this.btn4_3.Size = new System.Drawing.Size(82, 83);
             this.btn4_3.TabIndex = 11;
             this.btn4_3.UseVisualStyleBackColor = false;
             this.btn4_3.Click += new System.EventHandler(this.btn4_3_Click);
@@ -340,12 +375,12 @@
             // btn4_2
             // 
             this.btn4_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn4_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn4_2.BackgroundImage")));
             this.btn4_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn4_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4_2.Image = ((System.Drawing.Image)(resources.GetObject("btn4_2.Image")));
-            this.btn4_2.Location = new System.Drawing.Point(96, 100);
+            this.btn4_2.Location = new System.Drawing.Point(130, 130);
             this.btn4_2.Name = "btn4_2";
-            this.btn4_2.Size = new System.Drawing.Size(70, 70);
+            this.btn4_2.Size = new System.Drawing.Size(82, 83);
             this.btn4_2.TabIndex = 10;
             this.btn4_2.UseVisualStyleBackColor = false;
             this.btn4_2.Click += new System.EventHandler(this.btn4_2_Click);
@@ -353,12 +388,12 @@
             // btn3_3
             // 
             this.btn3_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn3_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn3_3.BackgroundImage")));
             this.btn3_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn3_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3_3.Image = ((System.Drawing.Image)(resources.GetObject("btn3_3.Image")));
-            this.btn3_3.Location = new System.Drawing.Point(173, 184);
+            this.btn3_3.Location = new System.Drawing.Point(231, 238);
             this.btn3_3.Name = "btn3_3";
-            this.btn3_3.Size = new System.Drawing.Size(70, 70);
+            this.btn3_3.Size = new System.Drawing.Size(82, 83);
             this.btn3_3.TabIndex = 14;
             this.btn3_3.UseVisualStyleBackColor = false;
             this.btn3_3.Click += new System.EventHandler(this.btn3_3_Click);
@@ -370,9 +405,9 @@
             this.buttonTryAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTryAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonTryAgain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonTryAgain.Location = new System.Drawing.Point(529, 436);
+            this.buttonTryAgain.Location = new System.Drawing.Point(598, 500);
             this.buttonTryAgain.Name = "buttonTryAgain";
-            this.buttonTryAgain.Size = new System.Drawing.Size(284, 68);
+            this.buttonTryAgain.Size = new System.Drawing.Size(303, 89);
             this.buttonTryAgain.TabIndex = 10;
             this.buttonTryAgain.Text = "Try Again";
             this.buttonTryAgain.UseVisualStyleBackColor = true;
@@ -385,9 +420,9 @@
             this.buttonTake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTake.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonTake.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonTake.Location = new System.Drawing.Point(529, 436);
+            this.buttonTake.Location = new System.Drawing.Point(598, 500);
             this.buttonTake.Name = "buttonTake";
-            this.buttonTake.Size = new System.Drawing.Size(284, 68);
+            this.buttonTake.Size = new System.Drawing.Size(303, 89);
             this.buttonTake.TabIndex = 9;
             this.buttonTake.Text = "Take!";
             this.buttonTake.UseVisualStyleBackColor = true;
@@ -400,9 +435,9 @@
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonStart.Location = new System.Drawing.Point(529, 436);
+            this.buttonStart.Location = new System.Drawing.Point(598, 500);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(284, 68);
+            this.buttonStart.Size = new System.Drawing.Size(303, 89);
             this.buttonStart.TabIndex = 5;
             this.buttonStart.Text = "Go!";
             this.buttonStart.UseVisualStyleBackColor = true;
@@ -413,9 +448,9 @@
             this.textBoxBet.BackColor = System.Drawing.Color.Silver;
             this.textBoxBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxBet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxBet.Location = new System.Drawing.Point(530, 346);
+            this.textBoxBet.Location = new System.Drawing.Point(598, 419);
             this.textBoxBet.Name = "textBoxBet";
-            this.textBoxBet.Size = new System.Drawing.Size(284, 75);
+            this.textBoxBet.Size = new System.Drawing.Size(303, 75);
             this.textBoxBet.TabIndex = 0;
             this.textBoxBet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxBet.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -432,17 +467,6 @@
             this.panelLogInfo.Size = new System.Drawing.Size(100, 100);
             this.panelLogInfo.TabIndex = 14;
             // 
-            // panelInfo
-            // 
-            this.panelInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.panelInfo.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.sapperInfo1;
-            this.panelInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelInfo.Location = new System.Drawing.Point(1411, 562);
-            this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(422, 239);
-            this.panelInfo.TabIndex = 13;
-            // 
             // FormGamesSapper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -457,6 +481,7 @@
             this.panelFlag.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBoxes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBomb1)).EndInit();
@@ -466,33 +491,35 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelBoxes;
-        private System.Windows.Forms.Button btn1_3;
-        private System.Windows.Forms.Button btn1_2;
-        private System.Windows.Forms.Button btn1_1;
-        private System.Windows.Forms.Button btn3_1;
-        private System.Windows.Forms.Button btn3_2;
-        private System.Windows.Forms.Button btn4_3;
-        private System.Windows.Forms.Button btn3_3;
-        private System.Windows.Forms.Button btn4_2;
-        private System.Windows.Forms.Button btn2_1;
-        private System.Windows.Forms.Button btn4_1;
-        private System.Windows.Forms.Button btn2_2;
-        private System.Windows.Forms.Button btn5_3;
-        private System.Windows.Forms.Button btn2_3;
-        private System.Windows.Forms.Button btn5_1;
-        private System.Windows.Forms.Button btn5_2;
-        private System.Windows.Forms.PictureBox pictureBomb1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBoxBet;
-        private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Button buttonTake;
-        private System.Windows.Forms.Button buttonTryAgain;
         private System.Windows.Forms.Panel panelInfo;
         private System.Windows.Forms.Panel panelLogInfo;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelBoxes;
+        private System.Windows.Forms.PictureBox pictureBomb1;
+        private System.Windows.Forms.Button btn5_2;
+        private System.Windows.Forms.Button btn5_1;
+        private System.Windows.Forms.Button btn1_3;
+        private System.Windows.Forms.Button btn2_3;
+        private System.Windows.Forms.Button btn1_2;
+        private System.Windows.Forms.Button btn5_3;
+        private System.Windows.Forms.Button btn1_1;
+        private System.Windows.Forms.Button btn2_2;
+        private System.Windows.Forms.Button btn3_1;
+        private System.Windows.Forms.Button btn4_1;
+        private System.Windows.Forms.Button btn3_2;
+        private System.Windows.Forms.Button btn2_1;
+        private System.Windows.Forms.Button btn4_3;
+        private System.Windows.Forms.Button btn4_2;
+        private System.Windows.Forms.Button btn3_3;
+        private System.Windows.Forms.Button buttonTryAgain;
+        private System.Windows.Forms.Button buttonTake;
+        private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.TextBox textBoxBet;
         private System.Windows.Forms.Panel panelFlag;
         private System.Windows.Forms.Label labelBalance;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
