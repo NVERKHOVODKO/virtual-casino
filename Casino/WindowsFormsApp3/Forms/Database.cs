@@ -61,6 +61,13 @@ namespace WindowsFormsApp3.Forms
             try
             {
                 cmd.ExecuteNonQuery();
+                cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
+                databaseObject.OpenConnection();
+                cmd.Parameters.AddWithValue("@login", "main");
+                cmd.Parameters.AddWithValue("@password", "main");
+                cmd.Parameters.AddWithValue("@role", 5);
+                var result = cmd.ExecuteNonQuery();
+                databaseObject.CloseConnection();
             }
             catch (SQLiteException ex)
             {
@@ -128,7 +135,7 @@ namespace WindowsFormsApp3.Forms
             SQLiteDataAdapter adapter = new SQLiteDataAdapter();
             Database databaseObject = new Database();
             DataTable datatable = new DataTable();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM users WHERE role = 1 ORDER BY balance DESC", databaseObject.myConnection);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM users WHERE role = 1 ORDER BY balance DESC LIMIT 10", databaseObject.myConnection);
             databaseObject.OpenConnection();
             adapter.SelectCommand = cmd;
             adapter.Fill(datatable);

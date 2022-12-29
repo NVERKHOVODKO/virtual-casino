@@ -49,7 +49,7 @@
       <Field Name="user" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>QCFBAlAhUSBQABLAAICCSKBTYcA7ALiLkHAOA5BaiWA=</HashCode>
+      <HashCode>QCNBAlAhUSBQABLIAICCSKBTYcA7ALiLkHAOA5Bai2A=</HashCode>
       <FileName>Forms\FormAccount.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -108,7 +108,7 @@
       <Method Name="InitializeComponent" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>QBREFCQT4CwQIhAAAASBBgAaIQQIZIwImJDAgQCVCQo=</HashCode>
+      <HashCode>QBREFCQT4CwQIhAAAASBBgAaIQQIZIwImNDAgQCVCQo=</HashCode>
       <FileName>Forms\FormGamesCrush.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -148,7 +148,7 @@
   <Class Name="WindowsFormsApp3.Forms.FormLiders">
     <Position X="12" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>MAAAAAAAACARABAAAACAAAACAAAAAAAAAAAAAQAAEAA=</HashCode>
+      <HashCode>MAAAAAQAACARABAAAACAAAACAAAAAAAAAAAAAQAAEAA=</HashCode>
       <FileName>Forms\FormLiders.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -167,7 +167,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.Forms.User">
-    <Position X="25" Y="9" Width="1.5" />
+    <Position X="18.5" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACASAAAAAAIEgAAAgAAAAAAAAAAAICAABQgAYAAAA=</HashCode>
       <FileName>Forms\User.cs</FileName>
@@ -232,21 +232,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.SoundPlayer">
-    <Position X="25" Y="6.25" Width="1.5" />
+    <Position X="23" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABoAAAAAAAAAA=</HashCode>
       <FileName>SoundPlayer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp3.ThemeColor">
-    <Position X="25" Y="3.25" Width="1.5" />
+    <Position X="23" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAACAAAAAAgA=</HashCode>
       <FileName>ThemeColor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="System.Windows.Forms.Form" Collapsed="true">
-    <Position X="12" Y="21.25" Width="1.5" />
+    <Position X="12" Y="20" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="System.Object" Collapsed="true">

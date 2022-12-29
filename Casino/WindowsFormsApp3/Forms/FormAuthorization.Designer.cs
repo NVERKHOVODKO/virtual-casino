@@ -158,7 +158,7 @@
             this.panel1.Controls.Add(this.lblLogin);
             this.panel1.Controls.Add(this.btnCreateAccount);
             this.panel1.Controls.Add(this.btnSignIn);
-            this.panel1.Location = new System.Drawing.Point(508, 290);
+            this.panel1.Location = new System.Drawing.Point(512, 228);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(488, 489);
             this.panel1.TabIndex = 5;

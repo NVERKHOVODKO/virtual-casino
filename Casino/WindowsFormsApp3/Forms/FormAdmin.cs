@@ -10,11 +10,16 @@ namespace WindowsFormsApp3.Forms
         private Form activeForm;
         private string id, balance, login, password, access;
         private Database db = new Database();
+        private User user;
+        private int curUserId = 0;
 
-        public FormAdmin()
+        public FormAdmin(User user)
         {
             InitializeComponent();
             db.UpdateTable(dataGridView1);
+            this.user = user;
+            curUserId = user.GetId();
+            label1.Text = user.GetLogin();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -57,6 +62,7 @@ namespace WindowsFormsApp3.Forms
         private void btnBack_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormAuthorization());
+            this.Dispose();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -88,7 +94,7 @@ namespace WindowsFormsApp3.Forms
                     }
                     FormEditUser feu = new FormEditUser(user);
                     feu.ShowDialog();
-                    feu.Dispose();
+                    //feu.Dispose();
                     db.UpdateTable(dataGridView1);
                     return;
                 }
@@ -97,6 +103,11 @@ namespace WindowsFormsApp3.Forms
                     if (user.GetAccess() == 5)
                     {
                         MessageBox.Show("You can't delete the main admin");
+                        return;
+                    }
+                    if (id == curUserId.ToString())
+                    {
+                        MessageBox.Show("You can't delete yourselt");
                         return;
                     }
                     else if (MessageBox.Show("Are you want to delete user record?", "Delete", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -113,7 +124,12 @@ namespace WindowsFormsApp3.Forms
                         MessageBox.Show("You can't block the main admin");
                         return;
                     }
-                    if(access == "0")
+                    if (id == curUserId.ToString())
+                    {
+                        MessageBox.Show("You can't block yourselt");
+                        return;
+                    }
+                    if (access == "0")
                     {
                         if (MessageBox.Show("Are you want to unblock user?", "Block", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                         {
@@ -144,6 +160,22 @@ namespace WindowsFormsApp3.Forms
         {
             return id;
         }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSearch_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            db.SearchInDataBase("SELECT * FROM users WHERE login LIKE '%" + textBox1.Text + "%'", dataGridView1);
+        }
+
         public string GetPassword()
         {
             return password;

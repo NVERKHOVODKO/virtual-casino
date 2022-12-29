@@ -69,6 +69,7 @@
             this.textBoxAccess.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxAccess.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxAccess.Location = new System.Drawing.Point(85, 335);
+            this.textBoxAccess.MaxLength = 1;
             this.textBoxAccess.Name = "textBoxAccess";
             this.textBoxAccess.Size = new System.Drawing.Size(332, 37);
             this.textBoxAccess.TabIndex = 25;
@@ -79,6 +80,7 @@
             this.textBoxBalance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBalance.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxBalance.Location = new System.Drawing.Point(84, 269);
+            this.textBoxBalance.MaxLength = 6;
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(332, 37);
             this.textBoxBalance.TabIndex = 24;
@@ -153,6 +155,7 @@
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.Location = new System.Drawing.Point(84, 197);
+            this.textBoxPassword.MaxLength = 16;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(332, 37);
             this.textBoxPassword.TabIndex = 15;
@@ -162,6 +165,7 @@
             this.textBoxLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLogin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLogin.Location = new System.Drawing.Point(84, 131);
+            this.textBoxLogin.MaxLength = 16;
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(332, 37);
             this.textBoxLogin.TabIndex = 14;

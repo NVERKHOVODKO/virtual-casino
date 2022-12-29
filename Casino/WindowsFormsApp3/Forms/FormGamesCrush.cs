@@ -19,6 +19,7 @@ namespace WindowsFormsApp3.Forms
         private bool isBombActive = true;
         private Database db = new Database();
         int numOfPlayers = 0;
+        private double takeOn = 999;
 
         public FormGamesCrush(FormUser FormUser, User user)
         {
@@ -257,8 +258,31 @@ namespace WindowsFormsApp3.Forms
 
         }
 
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if(takeOn <= curMultiplier)
+            {
+                playButtonSound();
+                numOfPlayers++;
+                string str = "";
+                str = "\n" + user.GetLogin() + " won " + curMultiplier;
+                label2.Text += str;
+                labelMult.ForeColor = System.Drawing.Color.Gray;
+                countOfIterations += 50;
+                btnGo.Enabled = false;
+                takeMult = curMultiplier;
+                btnTake.Enabled = false;
+                user.SetBalance(user.GetBalance() + Convert.ToInt32(bet * curMultiplier));
+                db.UpdateBalance(user.GetId().ToString(), user.GetBalance());
+                FormUser.ChangeBalanceValue(user.GetBalance().ToString());
+                isYourLblChanging = false;
+            }
             if (countOfIterations > 100)
                 curMultiplier += 0.1;
             else if (countOfIterations > 70)

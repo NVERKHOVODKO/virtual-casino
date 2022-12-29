@@ -30,7 +30,7 @@ namespace WindowsFormsApp3.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (textBoxLogin.Text == "" || textBoxPassword.Text == "" || textBoxBalance.Text == "" || textBoxAccess.Text == "")
+            if (textBoxLogin.Text == "" || textBoxPassword.Text == "" || textBoxAccess.Text == "")
             {
                 MessageBox.Show("Fill in the fields");
             }
@@ -47,7 +47,14 @@ namespace WindowsFormsApp3.Forms
                         Database databaseObject = new Database();
                         SQLiteCommand cmd = new SQLiteCommand("INSERT INTO users ('balance', 'login', 'password', 'role') VALUES (@balance, @login, @password, @role)", databaseObject.myConnection);
                         databaseObject.OpenConnection();
-                        cmd.Parameters.AddWithValue("@balance", Int64.Parse(textBoxBalance.Text));
+                        try
+                        {
+                            cmd.Parameters.AddWithValue("@balance", Int64.Parse(textBoxBalance.Text));
+                        }
+                        catch
+                        {
+                            cmd.Parameters.AddWithValue("@balance", Int64.Parse("0"));
+                        }
                         cmd.Parameters.AddWithValue("@login", textBoxLogin.Text);
                         cmd.Parameters.AddWithValue("@password", textBoxPassword.Text);
                         cmd.Parameters.AddWithValue("@role", Int64.Parse(textBoxAccess.Text));

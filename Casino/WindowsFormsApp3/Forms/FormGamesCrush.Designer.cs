@@ -58,9 +58,6 @@
             this.lblYourBet = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelMult = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelDesktop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -116,9 +113,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.btnDelBet);
             this.panel4.Controls.Add(this.btnAll);
             this.panel4.Controls.Add(this.btn10);
@@ -142,7 +136,7 @@
             this.btnDelBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelBet.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDelBet.ForeColor = System.Drawing.Color.Black;
-            this.btnDelBet.Location = new System.Drawing.Point(426, 128);
+            this.btnDelBet.Location = new System.Drawing.Point(526, 121);
             this.btnDelBet.Name = "btnDelBet";
             this.btnDelBet.Size = new System.Drawing.Size(70, 70);
             this.btnDelBet.TabIndex = 21;
@@ -159,7 +153,7 @@
             this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAll.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAll.ForeColor = System.Drawing.Color.Black;
-            this.btnAll.Location = new System.Drawing.Point(350, 128);
+            this.btnAll.Location = new System.Drawing.Point(450, 121);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(70, 70);
             this.btnAll.TabIndex = 20;
@@ -176,7 +170,7 @@
             this.btn10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn10.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn10.ForeColor = System.Drawing.Color.Black;
-            this.btn10.Location = new System.Drawing.Point(122, 129);
+            this.btn10.Location = new System.Drawing.Point(221, 122);
             this.btn10.Name = "btn10";
             this.btn10.Size = new System.Drawing.Size(70, 70);
             this.btn10.TabIndex = 19;
@@ -193,7 +187,7 @@
             this.btn100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn100.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn100.ForeColor = System.Drawing.Color.Black;
-            this.btn100.Location = new System.Drawing.Point(274, 129);
+            this.btn100.Location = new System.Drawing.Point(374, 122);
             this.btn100.Name = "btn100";
             this.btn100.Size = new System.Drawing.Size(70, 70);
             this.btn100.TabIndex = 18;
@@ -210,7 +204,7 @@
             this.btn50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn50.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn50.ForeColor = System.Drawing.Color.Black;
-            this.btn50.Location = new System.Drawing.Point(198, 129);
+            this.btn50.Location = new System.Drawing.Point(298, 122);
             this.btn50.Name = "btn50";
             this.btn50.Size = new System.Drawing.Size(70, 70);
             this.btn50.TabIndex = 17;
@@ -227,7 +221,7 @@
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn5.ForeColor = System.Drawing.Color.Black;
-            this.btn5.Location = new System.Drawing.Point(46, 129);
+            this.btn5.Location = new System.Drawing.Point(145, 122);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(70, 70);
             this.btn5.TabIndex = 15;
@@ -241,7 +235,7 @@
             this.panel5.Controls.Add(this.lblBet);
             this.panel5.Controls.Add(this.btnPlus);
             this.panel5.Controls.Add(this.btnMinus);
-            this.panel5.Location = new System.Drawing.Point(45, 15);
+            this.panel5.Location = new System.Drawing.Point(145, 22);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(451, 93);
             this.panel5.TabIndex = 14;
@@ -293,7 +287,7 @@
             this.btnTake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTake.Font = new System.Drawing.Font("Comic Sans MS", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnTake.ForeColor = System.Drawing.Color.Black;
-            this.btnTake.Location = new System.Drawing.Point(518, 24);
+            this.btnTake.Location = new System.Drawing.Point(846, 24);
             this.btnTake.Name = "btnTake";
             this.btnTake.Size = new System.Drawing.Size(271, 161);
             this.btnTake.TabIndex = 10;
@@ -308,7 +302,7 @@
             this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGo.Font = new System.Drawing.Font("Comic Sans MS", 52.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnGo.ForeColor = System.Drawing.Color.Black;
-            this.btnGo.Location = new System.Drawing.Point(518, 24);
+            this.btnGo.Location = new System.Drawing.Point(846, 22);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(271, 163);
             this.btnGo.TabIndex = 11;
@@ -420,6 +414,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(550, 550);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // labelMult
             // 
@@ -432,43 +427,6 @@
             this.labelMult.TabIndex = 7;
             this.labelMult.Text = "X 777";
             this.labelMult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(872, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(187, 67);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Get on:";
-            // 
-            // button1
-            // 
-            this.button1.AllowDrop = true;
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1070, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 161);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "DELETE";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(884, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 68);
-            this.textBox1.TabIndex = 25;
             // 
             // FormGamesCrush
             // 
@@ -521,8 +479,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -36,7 +36,7 @@ namespace WindowsFormsApp3.Forms
             panelInfo.Visible = false;
             panelInfo.Location = new System.Drawing.Point(1000,410);
             panelFlag.Location = new Point(1070, 0);
-            pictureBomb1.Visible = false;
+            hideBombs();
 			buttonTake.Visible = false;
             buttonTryAgain.Visible = false;
             panelLogInfo.MouseEnter += new EventHandler(panelLogInfo_MouseEnter);
@@ -172,6 +172,7 @@ namespace WindowsFormsApp3.Forms
 
         private void buttonTryAgain_Click(object sender, EventArgs e)
         {
+            hideBombs();
             if (textBoxBet.Text != "" && bet > 0 && bet <= user.GetBalance())
             {
                 if (textBoxBet.Text != "" && textBoxBet.Text != "0")
@@ -230,6 +231,7 @@ namespace WindowsFormsApp3.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            hideBombs();
             isFifthlineActive = false;
             isFourthlineActive = false;
             isThirdlineActive = false;
@@ -287,19 +289,31 @@ namespace WindowsFormsApp3.Forms
                     break;
                 case 2:
                     if(isSecondlineActive)
+                    {
+                        pictureBox2.Visible = true;
                         return true;
+                    }
                     break;
                 case 3:
                     if (isThirdlineActive)
+                    {
+                        pictureBox3.Visible = true;
                         return true;
+                    }
                     break;
                 case 4:
                     if (isFourthlineActive)
+                    {
+                        pictureBox4.Visible = true;
                         return true;
+                    }
                     break;
                 case 5:
                     if (isFifthlineActive)
+                    {
+                        pictureBox5.Visible = true;
                         return true;
+                    }
                     break;
             }
             return false;
@@ -321,6 +335,36 @@ namespace WindowsFormsApp3.Forms
             coin.Volume = 0.7;
             coin.Play();
         }
+        private void putBomb(Button button, int numOfLine)
+        {
+            switch (numOfLine)
+            {
+                case 1:
+                    pictureBomb1.Location = button.Location;
+                    break;
+                case 2:
+                    pictureBox2.Location = button.Location;
+                    break;
+                case 3:
+                    pictureBox3.Location = button.Location;
+                    break;
+                case 4:
+                    pictureBox4.Location = button.Location;
+                    break;
+                case 5:
+                    pictureBox5.Location = button.Location;
+                    break;
+            }
+        }
+
+        private void hideBombs()
+        {
+            pictureBomb1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+            pictureBox5.Visible = false;
+        }
 
         private void activateLine(int numOfButton,int numOfLine, Button btn1, Button btn2, Button btn3)
         {
@@ -329,19 +373,19 @@ namespace WindowsFormsApp3.Forms
             knock.Play();
             if (isLineActive(numOfLine) && bet > 0)
             {
-                int random = rnd.Next(1, 3);
+                int random = rnd.Next(1, 4);
                 pictureBomb1.Visible = true;
           
                 switch (random)
                 {
                     case 1:
-                        pictureBomb1.Location = btn1.Location;
+                        putBomb(btn1, numOfLine);
                         break;
                     case 2:
-                        pictureBomb1.Location = btn2.Location;
+                        putBomb(btn2, numOfLine);
                         break;
                     case 3:
-                        pictureBomb1.Location = btn3.Location;
+                        putBomb(btn3, numOfLine);
                         break;
                 }
                 btn1.Visible = false;

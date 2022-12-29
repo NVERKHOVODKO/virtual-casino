@@ -31,6 +31,7 @@
             this.panelAccount = new System.Windows.Forms.Panel();
             this.btnWithdrawMoney = new System.Windows.Forms.Button();
             this.panelWithdraw = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             this.buttonWithdrawMoneyGo = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.panelDeposit = new System.Windows.Forms.Panel();
+            this.buttonDel = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxMoney = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -73,8 +75,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelBalance = new System.Windows.Forms.Label();
             this.buttonSignOut = new System.Windows.Forms.Button();
-            this.buttonDel = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.panelAccount.SuspendLayout();
             this.panelWithdraw.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -110,6 +110,7 @@
             this.panelAccount.Name = "panelAccount";
             this.panelAccount.Size = new System.Drawing.Size(1450, 960);
             this.panelAccount.TabIndex = 0;
+            this.panelAccount.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAccount_Paint);
             // 
             // btnWithdrawMoney
             // 
@@ -138,11 +139,25 @@
             this.panelWithdraw.Controls.Add(this.label8);
             this.panelWithdraw.Controls.Add(this.panel3);
             this.panelWithdraw.ForeColor = System.Drawing.Color.Coral;
-            this.panelWithdraw.Location = new System.Drawing.Point(367, 192);
+            this.panelWithdraw.Location = new System.Drawing.Point(367, 206);
             this.panelWithdraw.Name = "panelWithdraw";
             this.panelWithdraw.Size = new System.Drawing.Size(704, 569);
             this.panelWithdraw.TabIndex = 22;
             this.panelWithdraw.Visible = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(570, 324);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(89, 46);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Clear";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label7
             // 
@@ -162,7 +177,7 @@
             this.textBox4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBox4.Location = new System.Drawing.Point(236, 169);
-            this.textBox4.MaxLength = 4;
+            this.textBox4.MaxLength = 7;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(231, 50);
             this.textBox4.TabIndex = 4;
@@ -210,6 +225,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(419, 244);
             this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // textBox5
             // 
@@ -222,6 +238,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(118, 29);
             this.textBox5.TabIndex = 3;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox6
             // 
@@ -234,6 +251,8 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(169, 29);
             this.textBox6.TabIndex = 2;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // buttonWithdrawMoneyGo
             // 
@@ -278,6 +297,20 @@
             this.panelDeposit.Size = new System.Drawing.Size(704, 552);
             this.panelDeposit.TabIndex = 8;
             // 
+            // buttonDel
+            // 
+            this.buttonDel.BackColor = System.Drawing.Color.Red;
+            this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDel.ForeColor = System.Drawing.Color.Black;
+            this.buttonDel.Location = new System.Drawing.Point(587, 302);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(89, 46);
+            this.buttonDel.TabIndex = 22;
+            this.buttonDel.Text = "Clear";
+            this.buttonDel.UseVisualStyleBackColor = false;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -296,7 +329,7 @@
             this.textBoxMoney.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxMoney.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxMoney.Location = new System.Drawing.Point(236, 169);
-            this.textBoxMoney.MaxLength = 4;
+            this.textBoxMoney.MaxLength = 7;
             this.textBoxMoney.Name = "textBoxMoney";
             this.textBoxMoney.Size = new System.Drawing.Size(231, 50);
             this.textBoxMoney.TabIndex = 4;
@@ -682,34 +715,6 @@
             this.buttonSignOut.Text = "Sign out";
             this.buttonSignOut.UseVisualStyleBackColor = false;
             this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
-            // 
-            // buttonDel
-            // 
-            this.buttonDel.BackColor = System.Drawing.Color.Red;
-            this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDel.ForeColor = System.Drawing.Color.Black;
-            this.buttonDel.Location = new System.Drawing.Point(587, 302);
-            this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(89, 46);
-            this.buttonDel.TabIndex = 22;
-            this.buttonDel.Text = "Clear";
-            this.buttonDel.UseVisualStyleBackColor = false;
-            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Red;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(570, 324);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 46);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "Clear";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // FormAccount
             // 

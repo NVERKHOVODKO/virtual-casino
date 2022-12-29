@@ -73,8 +73,8 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("Fill in the fields");
                 user = new User(1, "login", "password", 1, 7844);
-                OpenChildForm(new FormUser(user));
-                //OpenChildForm(new FormAdmin());
+                //OpenChildForm(new FormUser(user));
+                //OpenChildForm(new FormAdmin(user));
             }
             else
             {
@@ -93,7 +93,11 @@ namespace WindowsFormsApp3
                     user = new User(Convert.ToInt32(datatable.Rows[0][0].ToString()), datatable.Rows[0][1].ToString(), datatable.Rows[0][2].ToString(), Convert.ToInt32(datatable.Rows[0][3]), Convert.ToInt32(datatable.Rows[0][4]));
                     if(user.GetAccess() == 2)
                     {
-                        OpenChildForm(new FormAdmin());
+                        OpenChildForm(new FormAdmin(user));
+                    }
+                    if (user.GetAccess() == 5)
+                    {
+                        OpenChildForm(new FormAdmin(user));
                     }
                     else if(user.GetAccess() == 1)
                     {

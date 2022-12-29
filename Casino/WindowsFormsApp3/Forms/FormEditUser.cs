@@ -20,7 +20,7 @@ namespace WindowsFormsApp3.Forms
 
         public FormEditUser(User user)
         {
-            fa = new FormAdmin();
+            fa = new FormAdmin(user);
             id = user.GetId().ToString();
 
             InitializeComponent();
@@ -41,6 +41,21 @@ namespace WindowsFormsApp3.Forms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (textBoxLogin.Text.Length < 3)
+            {
+                MessageBox.Show("Login must be 3 characters minimum");
+                return;
+            }
+            if (textBoxPassword.Text.Length < 4)
+            {
+                MessageBox.Show("Password must be 4 characters minimum");
+                return;
+            }
+            if (textBoxAccess.Text == string.Empty)
+            {
+                MessageBox.Show("Enter access");
+                return;
+            }
             db.EditUser(textBoxLogin.Text, textBoxPassword.Text, id, textBoxBalance.Text, textBoxAccess.Text);
             this.Close();
         }

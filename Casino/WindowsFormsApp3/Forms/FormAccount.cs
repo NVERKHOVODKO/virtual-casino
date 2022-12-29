@@ -44,7 +44,6 @@ namespace WindowsFormsApp3.Forms
             labelBalance.Text = user.GetBalance().ToString() + " NC";        
         }
 
-
         private void choiseMedal()
         {
             if (user.GetBalance() > 10000)
@@ -78,12 +77,12 @@ namespace WindowsFormsApp3.Forms
                 {
                     MessageBox.Show("Payment wasn't successful");
                     return;
-                }
+                }/*
                 if (user.GetBalance() + addBalance > 99999)
                 {
                     MessageBox.Show("Too much balance");
                     return;
-                }
+                }*/
                 if (textBox1.Text.Length == 19)
                 {
                     user.SetBalance(user.GetBalance() + addBalance);
@@ -288,18 +287,22 @@ namespace WindowsFormsApp3.Forms
             }
             else
             {
-                MessageBox.Show("Can't withdraw money. Fill in the field");
+                MessageBox.Show("Can't withdraw money. Fill cald data");
             }
         }
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
             textBox1.Text = String.Empty;
+            textBox2.Text = String.Empty;
+            textBox3.Text = String.Empty;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             textBox7.Text = String.Empty;
+            textBox6.Text = String.Empty;
+            textBox5.Text = String.Empty;
         }
 
         private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
@@ -318,6 +321,44 @@ namespace WindowsFormsApp3.Forms
                 textBox7.Text += "-";
             }
             textBox7.SelectionStart = textBox7.Text.Length;
+        }
+
+        private void panelAccount_Paint(object sender, PaintEventArgs e)
+        {
+
+
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox6.Text.Length == 2)
+            {
+                textBox6.Text += "/";
+            }
+            textBox6.SelectionStart = textBox6.Text.Length;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
